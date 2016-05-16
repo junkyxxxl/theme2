@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!--  css and js filed added	-->
+        <template id="clean_script_footer" inherit_id="website.layout" name="Clean scripts">
+            <xpath expr="//footer[last()]" position="after">
+                <link rel="stylesheet" href="/v9_e_wordica_theme/static/src/css/loading.css"/>
+				<link rel="stylesheet" href="/v9_e_wordica_theme/static/src/css/font-awesome/css/font-awesome.min.css"/>
+				<link rel="stylesheet" href="/v9_e_wordica_theme/static/src/css/animate.css" type="text/css"/>
+				<link rel="stylesheet" href="/v9_e_wordica_theme/static/src/css/animate2.css" type="text/css"/>
+				<link rel="stylesheet" href="/v9_e_wordica_theme/static/src/css/owl/owl.carousel.css" type="text/css"/>
+				<link rel="stylesheet" href="/v9_e_wordica_theme/static/src/css/owl/owl.theme.css" type="text/css"/>
+				<link rel="stylesheet" href="/v9_e_wordica_theme/static/src/css/owl/owl.transitions.css" type="text/css"/>
+				<link rel="stylesheet" href="/v9_e_wordica_theme/static/src/css/colorbox.css" type="text/css"/>
+				<link rel="stylesheet" href="/v9_e_wordica_theme/static/src/css/tooltipster.css" type="text/css"/>
+				<link rel="stylesheet" href="/v9_e_wordica_theme/static/src/css/tooltipster-punk.css" type="text/css"/>
+				<link rel="stylesheet" href="/v9_e_wordica_theme/static/src/css/media.css" type="text/css"/>
+				<link rel="stylesheet" href="/v9_e_wordica_theme/static/src/css/style.css" type="text/css"/>
+				
+				<script type="text/javascript" src="/v9_e_wordica_theme/static/src/js/jquery-ui.min.js"></script>
+				<script type="text/javascript" src="/v9_e_wordica_theme/static/src/js/jquery.nav.js"></script>
+				<script type="text/javascript" src="/v9_e_wordica_theme/static/src/js/owl.carousel.js"></script>
+				<script type="text/javascript" src="/v9_e_wordica_theme/static/src/js/jquery.nicescroll.js"></script>
+				<script type="text/javascript" src="/v9_e_wordica_theme/static/src/js/noty/jquery.noty.js"></script>
+				<script type="text/javascript" src="/v9_e_wordica_theme/static/src/js/noty/themes/default.js"></script>
+				<script type="text/javascript" src="/v9_e_wordica_theme/static/src/js/noty/layouts/center.js"></script>
+				<script type="text/javascript" src="/v9_e_wordica_theme/static/src/js/validator.min.js"></script>
+				<script type="text/javascript" src="/v9_e_wordica_theme/static/src/js/jquery.colorbox-min.js"></script>
+				<script type="text/javascript" src="/v9_e_wordica_theme/static/src/js/scrollReveal.min.js"></script>
+				<script type="text/javascript" src="/v9_e_wordica_theme/static/src/js/ChartNew.js"></script>
+				<script type="text/javascript" src="/v9_e_wordica_theme/static/src/js/jquery.prettySocial.min.js"></script>
+				<script type="text/javascript" src="/v9_e_wordica_theme/static/src/js/jquery.parallax-1.1.3.js"></script>
+				<script type="text/javascript" src="/v9_e_wordica_theme/static/src/js/jquery.tooltipster.min.js"></script>
+				<script type="text/javascript" src="/v9_e_wordica_theme/static/src/js/main.js"></script>
+            </xpath>
+        </template>
+        <!--  footer added	-->
+        <template id="theme_lauout_footer_copyright" inherit_id="website.layout_footer_copyright" name="footer">
+            <xpath expr="//*[@id='footer']" position="replace">
+            </xpath>
+        </template>
+        <!--  user navigation	-->
+        <template id="header_top_main_menu_navbar" name="Header top hide" inherit_id="website.user_navbar">
+            <xpath expr="//nav[@id='oe_main_menu_navbar']" position="replace">
+            </xpath>
+        </template>
+        <!--  404	-->
+        <template id="404">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <div class="oe_structure oe_empty">
+                        <div class="container">
+                            <h1 class="mt32">Page not found!</h1>
+                            <p>Sorry, this Page is not available anymore.</p>
+                            <p><a t-attf-href="/about">Return to the About Us Page.</a></p>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+        <!--	header navigation odoo remove-->
+        <template id="homepage_top_header" inherit_id="website.layout">
+            <xpath expr="//div[@id='wrapwrap']/header/div" position="before"> 
+            </xpath>
+            <xpath expr="//header//div[@class='navbar navbar-default navbar-static-top']" position="attributes">
+                <attribute name='style'>display:none</attribute>
+            </xpath>
+        </template>
+        <template id="custom_layout_website" inherit_id="website.homepage">
+            <xpath expr="//div[@id='wrap']" position="replace">
+            	<body data-spy="scroll" data-target="#myScrollspy" data-offset="400">
+	            	<div class='s0'>
+						<nav class="navbar navbar-default navbar-fixed-top fadeButton" >
+							<div class="container-fluid navbar-container nav-container">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar"></span>
+								        <span class="icon-bar"></span>
+								        <span class="icon-bar"></span>
+									</button>
+								</div>
+								<div class="collapse navbar-collapse navbar-collapse-1" id="myScrollspy">
+									<ul class="nav navbar-nav navbar-left">
+										<li class="text-center upper "><a class='nav-first fadeButton tooltips' href="#s1" title="Our Main Page">HOME</a></li>
+										<li class='text-center upper'><a class='fadeButton tooltips' href="#s2" title="Why Our Site"> WHY US </a></li>
+										<li class='text-center upper'><a class='fadeButton tooltips' href="#s3" title="Few of Our Products"> PRODUCTS </a></li>
+										<li class='text-center upper'><a class='fadeButton tooltips' href="#s6" title="Most Wanted"> OUR TEAM </a></li>
+										<li class='text-center upper'><a class='fadeButton tooltips' href="#s7" title="Opinion About Us"> REVIEWS </a></li>
+										<li class='text-center upper'><a class='fadeButton tooltips' href="#s12" title="Some Our Stats"> STATS </a></li>
+										<li class='text-center upper'><a class='fadeButton tooltips' href="#s13" title="F.A.Q"> F.A.Q </a></li>
+										<li class='text-center upper'><a class='fadeButton tooltips' href="#s15" title="Contact With Us"> CONTACT </a></li>
+									</ul>
+									<ul class="nav navbar-nav navbar-right">
+										<li class='li-tooltips-fb'><a class='right-social tooltips-fb prettySocial' title="Like Us" href='#' data-type="facebook" data-url="http://www.wordica.net/landing/L1/v1/" data-title="DARK RESPONSIVE LANDING PAGE" data-description="DARK RESPONSIVE LANDING PAGE template on wrapbootstrap.com" data-media="../../../SHARED/200x200.html" ><i class='fa fa-facebook fadeButton'></i></a></li>
+										<li class='li-tooltips-tw'><a class='right-social tooltips-tw prettySocial'  data-type="twitter" data-url="http://www.wordica.net/landing/L1/v1/" data-description="DARK RESPONSIVE LANDING PAGE template on wrapbootstrap.com" data-via="sonnyt" title="Follow on Twitter" href='#'><i class='fa fa-twitter fadeButton'></i></a></li>
+										<li class='li-tooltips-gp'><a class='right-social tooltips-gp prettySocial'  data-type="googleplus" data-url="http://www.wordica.net/landing/L1/v1/" data-description="DARK RESPONSIVE LANDING PAGE template on wrapbootstrap.com" title="Add to G+" href='#'><i class='fa fa-google-plus fadeButton'></i></a></li>
+										<li class='li-tooltips-p'><a class='right-social tooltips-p prettySocial' data-type="pinterest" data-url="http://www.wordica.net/landing/L1/v1/" data-description="DARK RESPONSIVE LANDING PAGE template on wrapbootstrap.com" data-media="http://www.wordica.net/SHARED/200x200.png" title="Pin it!"  href='#'><i class='fa fa-pinterest fadeButton'></i></a></li>
+										<li class='search_li'>
+											<form>
+												<a href='#'><i class='fa fa-search'></i></a>
+												<input type="text" class="form-control form-navbar fadeButton" placeholder='search'/>
+											</form>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+					</div>
+					<div class='loader_container'>
+						<div class='loader'>
+							<div class="circle"></div>
+							<div class="circle1"></div>
+						</div>
+					</div> 
+					<!--
+					<div class='s1' id='s1'>
+						<div class='s1-pattern'>
+							<div id='section-1' class='container-fluid'>
+								<div class='row'>
+									<div class='col-md-8 col-md-offset-2 s1-title-container text-center' data-sr="">
+										<img src='/v9_e_wordica_theme/static/src/images/logotypes/logo2.svg' style='display:inline-block;' alt='image'/>
+										<div class='s1-title-big text-center'>
+											<h1>Landing page for softwares
+											<br/>
+											and mobile apps that really works</h1>
+										</div>
+										<div class='row'>
+											<div class='col-md-10 col-md-offset-1 s1-title-small'>
+												Sed eu elit pharetra, tincidunt <span>metus eu</span>, pulvinar lectus. Ut ornare urna et lacus vestibulum bibendum
+											</div>
+										</div>
+										<div class='row'>
+											<div class='col-md-12 s1-buttons-container'>
+												<a href='#'><div class=' btn-1 fadeButton upper'>Get More Informations</div></a>
+												<a href='#'><div class=' btn-2 fadeButton upper'>Check Latest Promotions</div></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class='s1-bottom'>
+								<div class='s1-icon floating'><i class="fa fa-chevron-down"></i></div>			
+							</div>
+						</div>
+					</div>
+					-->
+					<div class='s2 overflow' id='s1'>
+						<div class='s2-pattern'>
+							<div id='section-2' class='container'>
+								<div class='s2-title-container text-center' data-sr="">
+									<div class='section-top-divider upper'></div>
+									<div class='s2-title-big'><h2></h2></div>
+									<div class="i-separator"></div>
+									<div class='row'>
+										<div class='col-md-8 col-md-offset-2 s2-title-small'></div>
+									</div>
+								</div>	
+								<div class='s2-content' data-sr="">
+									<div class='col-md-8 col-md-offset-2 s1-title-container text-center' data-sr="">
+										<img src='/v9_e_wordica_theme/static/src/images/logotypes/logo2.svg' style='display:inline-block;' alt='image'/>
+										<div class='s1-title-big text-center'>
+											<h1>Landing page for softwares
+											<br/>
+											and mobile apps that really works</h1>
+										</div>
+										<div class='row'>
+											<div class='col-md-10 col-md-offset-1 s1-title-small'>
+												Sed eu elit pharetra, tincidunt <span>metus eu</span>, pulvinar lectus. Ut ornare urna et lacus vestibulum bibendum
+											</div>
+										</div>
+										<div class='row'>
+											<div class='col-md-12 s1-buttons-container'>
+												<a href='#'><div class=' btn-1 fadeButton upper'>Get More Informations</div></a>
+												<a href='#'><div class=' btn-2 fadeButton upper'>Check Latest Promotions</div></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>						
+						</div>
+					</div>
+
+
+
+					<div class='s2 overflow' id='s2'>
+						<div class='s2-pattern '>
+							<div id='section-2' class='container'>
+								<div class='s2-title-container text-center' data-sr="">
+									<div class='section-top-divider upper'>Why us</div>
+									<div class='s2-title-big'><h2>What Are Our Main Advantages</h2></div>
+									<div class="i-separator">01</div>
+									<div class='row'>
+										<div class='col-md-8 col-md-offset-2 s2-title-small'>Lorem <span>ipsum dolor</span> sit amet, consectetur adipisicing elit, sed do <span>eiusmod tempor</span> incididunt ut labore et dolore magna aliqua.</div>
+									</div>
+								</div>
+								<div class='s2-content' data-sr="">
+									<div class='s2-left text-right'>
+										<div class='s2-icon-container'>
+											<img src='/v9_e_wordica_theme/static/src/images/svg/colored/chronometer24.svg' alt='image'/>
+											<h4 class=''>Easy to Customizable</h4>
+											<p>Pulvinar lectus. Ut ornare urna et lacus vestibulum bibendum et a risus. Donec dictum sapien</p>
+										</div>
+										<div class='s2-icon-container'>
+											<img src='/v9_e_wordica_theme/static/src/images/svg/colored/circular264.svg' alt='image'/>
+											<h4 class=''>SEO Ready</h4>
+											<p>Pulvinar lectus. Ut ornare urna et lacus vestibulum bibendum et a risus. Donec dictum sapien</p>
+										</div>
+										<div class='s2-icon-container'>
+											<img src='/v9_e_wordica_theme/static/src/images/svg/colored/cloud301.svg' alt='image'/>
+											<h4 class=''>Colors Customization</h4>
+											<p>Pulvinar lectus. Ut ornare urna et lacus vestibulum bibendum et a risus. Donec dictum sapien</p>
+										</div>
+									</div>
+									<div class='s2-center'>
+										<img src='/v9_e_wordica_theme/static/src/images/mockups/iphone_mockup2.png' class='img-responsive' alt='image'/>
+									</div>
+									<div class='s2-right text-left'>
+										<div class='s2-icon-container'>
+											<img src='/v9_e_wordica_theme/static/src/images/svg/colored/actualization.svg' alt='image'/>
+											<h4 class=''>Includes Custom Widgets</h4>
+											<p>Pulvinar lectus. Ut ornare urna et lacus vestibulum bibendum et a risus. Donec dictum sapien</p>
+										</div>
+										<div class='s2-icon-container'>
+											<img src='/v9_e_wordica_theme/static/src/images/svg/colored/disc29.svg' alt='image'/>
+											<h4 class=''>Fast loading speed</h4>
+											<p>Pulvinar lectus. Ut ornare urna et lacus vestibulum bibendum et a risus. Donec dictum sapien</p>
+										</div>
+										<div class='s2-icon-container'>
+											<img src='/v9_e_wordica_theme/static/src/images/svg/colored/download161.svg' alt='image'/>
+											<h4 class=''>Fully Responsive Design</h4>
+											<p>Pulvinar lectus. Ut ornare urna et lacus vestibulum bibendum et a risus. Donec dictum sapien</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class='s3 overflow' id='s3'>
+						<div class='s3-pattern'>
+							<div id='section-3' class='container'>
+								
+								<div class='s3-title-container text-center' data-sr="">
+									<div class='section-top-divider upper'>Products</div>
+									<div class='s3-title-big'><h2>Our Latest Works</h2></div>
+									<div class="i-separator">02</div>
+									<div class='row'>
+										<div class='col-md-8 col-md-offset-2 s3-title-small'>Lorem ipsum dolor sit amet, <span>consectetur</span> adipisicing elit, sed do eiusmod tempor incididunt <span>ut labore</span> et dolore magna aliqua.</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class='s4 overflow' id='s4'>
+						<div class='s4-pattern'>
+							<div id='section-4' class='container-fluid'>
+								<div class='row'>
+									<div class='col-md-12 s4-col-content' data-sr="">
+										<div class='owl-portfolio'>
+											<div class='item'>
+												<div class='row'>
+													<div class='col-xs-12 col-sm-6 col-md-3 s4-col-item text-center'>
+														<a class='button-item colorbox' href='/v9_e_wordica_theme/static/src/images/gallery/product1.jpg'>
+															<img class='img-responsive fadeButton' src='/v9_e_wordica_theme/static/src/images/gallery/product1.jpg' alt='image title'/>
+														</a>
+														<div class='s4-col-description-title text-center'>Wordpress</div>
+														<div class='row'>
+															<div class='col-md-12 s4-col-description-bottom text-center'>
+																<div class='s4-col-description-bottom-item'>WordPress Blog Theme</div>
+															</div>
+														</div>
+														<div class='s4-col-item-content text-center'>
+															Nam auctor iaculis felis posuere finibus. <span>Proin vitae</span> porta augue. Suspendisse malesuada felis congue orci blandit, sit amet rhoncus justo porta. Phasellus eu mauris enim. Morbi pulvinar, nisl at posuere tempus ... <a class='button-item' href="#">read more</a>
+														</div>
+													</div>
+													<div class='col-xs-12 col-sm-6 col-md-3 s4-col-item text-center'>
+														<a class='button-item colorbox' href='/v9_e_wordica_theme/static/src/images/gallery/product3.jpg'>
+															<img class='img-responsive fadeButton' src='/v9_e_wordica_theme/static/src/images/gallery/product3.jpg' alt='image title'/>
+														</a>
+														<div class='s4-col-description-title text-center'>HTML Standard</div>
+														<div class='row'>
+															<div class='col-md-12 s4-col-description-bottom text-center'>
+																<div class='s4-col-description-bottom-item'>Unique Styled HTML Template</div>
+															</div>
+														</div>
+														<div class='s4-col-item-content text-center'>
+															Nam auctor iaculis felis posuere finibus. <span>Proin vitae</span> porta augue. Suspendisse malesuada felis congue orci blandit, sit amet rhoncus justo porta. Phasellus eu mauris enim. Morbi pulvinar, nisl at posuere tempus ... <a class='button-item' href="#">read more</a>
+														</div>
+													</div>
+													<div class='col-xs-12 col-sm-6 col-md-3 s4-col-item text-center'>
+														<a class='button-item colorbox' href='/v9_e_wordica_theme/static/src/images/gallery/product2.jpg'>
+															<img class='img-responsive fadeButton' src='/v9_e_wordica_theme/static/src/images/gallery/product2.jpg' alt='image title'/>
+														</a>
+														<div class='s4-col-description-title text-center'>HTML &amp; jQuery</div>
+														<div class='row'>
+															<div class='col-md-12 s4-col-description-bottom text-center'>
+																<div class='s4-col-description-bottom-item'>Multipurpose Landing Page</div>
+															</div>
+														</div>
+														<div class='s4-col-item-content text-center'>
+															Nam auctor iaculis felis posuere finibus. Proin vitae porta augue. <span>Suspendisse malesuada</span> felis congue orci blandit, sit amet rhoncus justo porta. Phasellus eu mauris enim. Morbi pulvinar, nisl at posuere tempus ... <a class='button-item' href="#">read more</a>
+														</div>
+												</div>
+													<div class='col-xs-12 col-sm-6 col-md-3 s4-col-item text-center'>
+														<a class='button-item colorbox' href='/v9_e_wordica_theme/static/src/images/gallery/product4.jpg'>
+															<img class='img-responsive fadeButton' src='/v9_e_wordica_theme/static/src/images/gallery/product4.jpg' alt='image title'/>
+														</a>
+														<div class='s4-col-description-title text-center'>Full Futured Site</div>
+														<div class='row'>
+															<div class='col-md-12 s4-col-description-bottom text-center'>
+																<div class='s4-col-description-bottom-item'>Ruby on Rails Social Network</div>
+															</div>
+														</div>
+														<div class='s4-col-item-content text-center'>
+															Nam auctor iaculis felis posuere finibus. <span>Proin vitae</span> porta augue. Suspendisse malesuada felis congue orci blandit, sit amet rhoncus justo porta. Phasellus eu mauris enim. Morbi pulvinar, nisl at posuere tempus ... <a class='button-item' href="#">read more</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class='item'>
+												<div class='row'>
+													<div class='col-xs-12 col-sm-6 col-md-3 s4-col-item text-center'>
+														<a class='button-item colorbox' href='/v9_e_wordica_theme/static/src/images/gallery/product1.jpg'>
+															<img class='img-responsive fadeButton' src='/v9_e_wordica_theme/static/src/images/gallery/product1.jpg' alt='image title'/>
+															<!--<div class='featured upper'>Featured</div>-->
+														</a>
+														<div class='s4-col-description-title text-center'>Wordpress</div>
+														<div class='row'>
+															<div class='col-md-12 s4-col-description-bottom text-center'>
+																<div class='s4-col-description-bottom-item'>WordPress Blog Theme</div>
+															</div>
+														</div>
+														<div class='s4-col-item-content text-center'>
+															Nam auctor iaculis felis posuere finibus. <span>Proin vitae</span> porta augue. Suspendisse malesuada felis congue orci blandit, sit amet rhoncus justo porta. Phasellus eu mauris enim. Morbi pulvinar, nisl at posuere tempus ... <a class='button-item' href="#">read more</a>
+														</div>
+												</div>
+													<div class='col-xs-12 col-sm-6 col-md-3 s4-col-item text-center'>
+														<a class='button-item colorbox' href='/v9_e_wordica_theme/static/src/images/gallery/product3.jpg'>
+															<img class='img-responsive fadeButton' src='/v9_e_wordica_theme/static/src/images/gallery/product3.jpg' alt='image title'/>
+														</a>
+														<div class='s4-col-description-title text-center'>HTML Standard</div>
+														<div class='row'>
+															<div class='col-md-12 s4-col-description-bottom text-center'>
+																<div class='s4-col-description-bottom-item'>Unique Styled HTML Template</div>
+															</div>
+														</div>
+														<div class='s4-col-item-content text-center'>
+															Nam auctor iaculis felis posuere finibus. <span>Proin vitae</span> porta augue. Suspendisse malesuada felis congue orci blandit, sit amet rhoncus justo porta. Phasellus eu mauris enim. Morbi pulvinar, nisl at posuere tempus ... <a class='button-item' href="#">read more</a>
+														</div>
+													</div>
+													<div class='col-xs-12 col-sm-6 col-md-3 s4-col-item text-center'>
+														<a class='button-item colorbox' href='/v9_e_wordica_theme/static/src/images/gallery/product2.jpg'>
+															<img class='img-responsive fadeButton' src='/v9_e_wordica_theme/static/src/images/gallery/product2.jpg' alt='image title'/>
+														</a>
+														<div class='s4-col-description-title text-center'>HTML &amp; jQuery</div>
+														<div class='row'>
+															<div class='col-md-12 s4-col-description-bottom text-center'>
+																<div class='s4-col-description-bottom-item'>Multipurpose Landing Page</div>
+															</div>
+														</div>
+														<div class='s4-col-item-content text-center'>
+															Nam auctor iaculis felis posuere finibus. Proin vitae porta augue. <span>Suspendisse malesuada</span> felis congue orci blandit, sit amet rhoncus justo porta. Phasellus eu mauris enim. Morbi pulvinar, nisl at posuere tempus ... <a class='button-item' href="#">read more</a>
+														</div>
+													</div>
+													<div class='col-xs-12 col-sm-6 col-md-3 s4-col-item text-center'>
+														<a class='button-item colorbox' href='/v9_e_wordica_theme/static/src/images/gallery/product4.jpg'>
+															<img class='img-responsive fadeButton' src='/v9_e_wordica_theme/static/src/images/gallery/product4.jpg' alt='image title'/>
+														</a>
+														<div class='s4-col-description-title text-center'>Full Futured Site</div>
+														<div class='row'>
+															<div class='col-md-12 s4-col-description-bottom text-center'>
+																<div class='s4-col-description-bottom-item'>Ruby on Rails Social Network</div>
+															</div>
+														</div>
+														<div class='s4-col-item-content text-center'>
+															Nam auctor iaculis felis posuere finibus. <span>Proin vitae</span> porta augue. Suspendisse malesuada felis congue orci blandit, sit amet rhoncus justo porta. Phasellus eu mauris enim. Morbi pulvinar, nisl at posuere tempus ... <a class='button-item' href="#">read more</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class='s1-bottom-2' id='s1-2'>
+						<div class='s1-bottom-pattern-2'>
+							<div id='section-1-bottom-2' class='container-fluid nopadding'  data-sr='wait 0.2s then over 1.3s'>
+								<div class='row'>
+									<div class='col-md-12 s1-col-bottom-2 text-center'>
+										<div class='s1-col-bottom-span-2'>
+											<p>Quomodo is a design oriented and <span>UX focused theme</span> consectetur adipiscing elit design oriented</p>
+											<a href='#' class='btn btn-s2-2 fadeButton upper'>OK, BUY IT NOW</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class='s6 overflow' id='s6'>
+						<div class='s6-pattern'>
+							<div id='section-6' class='container'>
+								<div class='s6-title-container text-center' data-sr="">
+									<div class='section-top-divider upper'>team</div>
+									<div class='s6-title-big'><h2>Who Make This Cool Products</h2></div>
+									<div class="i-separator">03</div>
+									<div class='row'>
+										<div class='col-md-8 col-md-offset-2 s6-title-small'>Lorem ipsum dolor sit amet, <span>consectetur</span> adipisicing elit, sed do eiusmod tempor incididunt <span>ut labore</span> et dolore magna aliqua.</div>
+									</div>
+								</div>
+								<div class='row'>
+									<div class='col-md-12 s6-content-1' data-sr="">
+										<div class='row'>
+											<div class='col-xs-6 col-md-3 s6-person first'>
+												<div class='s6-person-row'>
+													<div class='s6-person-opacity fadeButton'>
+														<div class='s6-social-container text-center'>
+															<a href='#fb' class='person-fb-icon'><div class='s6-item-social fadeButton'><i class='fa fa-facebook fadeButton'></i></div></a>
+															<a href='#tw' class='person-tw-icon'><div class='s6-item-social fadeButton'><i class='fa fa-twitter fadeButton'></i></div></a>
+															<a href='#ln' class='person-in-icon'><div class='s6-item-social fadeButton'><i class='fa fa-linkedin fadeButton'></i></div></a>
+														</div>
+													</div>
+													<img src='/v9_e_wordica_theme/static/src/images/persons/person1.jpg' class='img-responsive person-img' alt='image'/>
+												</div>
+												<div class='nopadding text-center'>
+													<div class='s6-person-name'>John Smith</div>
+													<div class='s6-person-job'>Marketing Manager</div>
+												</div>
+											</div>
+											<div class='col-xs-6 col-md-3 s6-person first_tablet'>
+												<div class='s6-person-row'>
+													<div class='s6-person-opacity fadeButton'>
+														<div class='s6-social-container text-center'>
+															<a href='#fb' class='person-fb-icon'><div class='s6-item-social fadeButton'><i class='fa fa-facebook fadeButton'></i></div></a>
+															<a href='#tw' class='person-tw-icon'><div class='s6-item-social fadeButton'><i class='fa fa-twitter fadeButton'></i></div></a>
+															<a href='#ln' class='person-in-icon'><div class='s6-item-social fadeButton'><i class='fa fa-linkedin fadeButton'></i></div></a>
+														</div>
+													</div>
+													<img src='/v9_e_wordica_theme/static/src/images/persons/person2.jpg' class='img-responsive person-img' alt='image'/>
+												</div>
+												<div class='nopadding text-center'>
+													<div class='s6-person-name'>Evo Moris</div>
+													<div class='s6-person-job'>Consulting</div>
+												</div>
+											</div>
+											<div class='col-xs-6 col-md-3 s6-person'>
+												<div class='s6-person-row'>
+													<div class='s6-person-opacity fadeButton'>
+														<div class='s6-social-container text-center'>
+															<a href='#fb' class='person-fb-icon'><div class='s6-item-social fadeButton'><i class='fa fa-facebook fadeButton'></i></div></a>
+															<a href='#tw' class='person-tw-icon'><div class='s6-item-social fadeButton'><i class='fa fa-twitter fadeButton'></i></div></a>
+															<a href='#ln' class='person-in-icon'><div class='s6-item-social fadeButton'><i class='fa fa-linkedin fadeButton'></i></div></a>
+														</div>
+													</div>
+													<img src='/v9_e_wordica_theme/static/src/images/persons/person3.jpg' class='img-responsive person-img' alt='image'/>
+												</div>
+												<div class='nopadding text-center'>
+													<div class='s6-person-name'>William John</div>
+													<div class='s6-person-job'>jQuery Developer</div>
+												</div>
+											</div>
+											<div class='col-xs-6 col-md-3 s6-person'>
+												<div class='s6-person-row'>
+													<div class='s6-person-opacity fadeButton'>
+														<div class='s6-social-container text-center'>
+															<a href='#fb' class='person-fb-icon'><div class='s6-item-social fadeButton'><i class='fa fa-facebook fadeButton'></i></div></a>
+															<a href='#tw' class='person-tw-icon'><div class='s6-item-social fadeButton'><i class='fa fa-twitter fadeButton'></i></div></a>
+															<a href='#ln' class='person-in-icon'><div class='s6-item-social fadeButton'><i class='fa fa-linkedin fadeButton'></i></div></a>
+														</div>
+													</div>
+													<img src='/v9_e_wordica_theme/static/src/images/persons/person1.jpg' class='img-responsive person-img' alt='image'/>
+												</div>
+												<div class='nopadding text-center'>
+													<div class='s6-person-name'>Anna Merst</div>
+													<div class='s6-person-job'>Account Manager</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+									
+								<div class='row'>
+									<!-- second column with 4 items -->
+									<div class='col-md-12 s6-content-2'  >
+										<div class='row'>
+											<div class='col-xs-6 col-md-3 s6-person'>
+												<div class='s6-person-row'>
+													<div class='s6-person-opacity fadeButton'>
+														<div class='s6-social-container text-center'>
+															<a href='#fb' class='person-fb-icon'><div class='s6-item-social fadeButton'><i class='fa fa-facebook fadeButton'></i></div></a>
+															<a href='#tw' class='person-tw-icon'><div class='s6-item-social fadeButton'><i class='fa fa-twitter fadeButton'></i></div></a>
+															<a href='#ln' class='person-in-icon'><div class='s6-item-social fadeButton'><i class='fa fa-linkedin fadeButton'></i></div></a>
+														</div>
+													</div>
+													<img src='/v9_e_wordica_theme/static/src/images/persons/person2.jpg' class='img-responsive person-img' alt='image'/>
+												</div>
+												<div class='nopadding text-center'>
+													<div class='s6-person-name'>Kate Willis</div>
+													<div class='s6-person-job'>HTML Developer</div>
+												</div>
+											</div>
+											<div class='col-xs-6 col-md-3 s6-person'>
+												<div class='s6-person-row'>
+													<div class='s6-person-opacity fadeButton'>
+														<div class='s6-social-container text-center'>
+															<a href='#fb' class='person-fb-icon'><div class='s6-item-social fadeButton'><i class='fa fa-facebook fadeButton'></i></div></a>
+															<a href='#tw' class='person-tw-icon'><div class='s6-item-social fadeButton'><i class='fa fa-twitter fadeButton'></i></div></a>
+															<a href='#ln' class='person-in-icon'><div class='s6-item-social fadeButton'><i class='fa fa-linkedin fadeButton'></i></div></a>
+														</div>
+													</div>
+													<img src='/v9_e_wordica_theme/static/src/images/persons/person3.jpg' class='img-responsive person-img' alt='image'/>
+												</div>
+												<div class='nopadding text-center'>
+													<div class='s6-person-name'>John Orwell</div>
+													<div class='s6-person-job'>RoR Programmer</div>
+												</div>
+											</div>
+											<div class='col-xs-6 col-md-3 s6-person'>
+												<div class='s6-person-row'>
+													<div class='s6-person-opacity fadeButton'>
+														<div class='s6-social-container text-center'>
+															<a href='#fb' class='person-fb-icon'><div class='s6-item-social fadeButton'><i class='fa fa-facebook fadeButton'></i></div></a>
+															<a href='#tw' class='person-tw-icon'><div class='s6-item-social fadeButton'><i class='fa fa-twitter fadeButton'></i></div></a>
+															<a href='#ln' class='person-in-icon'><div class='s6-item-social fadeButton'><i class='fa fa-linkedin fadeButton'></i></div></a>
+														</div>
+													</div>
+													<img src='/v9_e_wordica_theme/static/src/images/persons/person1.jpg' class='img-responsive person-img' alt='image'/>
+												</div>
+												<div class='nopadding text-center'>
+													<div class='s6-person-name'>John Smith</div>
+													<div class='s6-person-job'>Customer Services</div>
+												</div>
+											</div>
+											<div class='col-xs-6 col-md-3 s6-person'>
+												<div class='s6-person-row'>
+													<div class='s6-person-opacity fadeButton'>
+														<div class='s6-social-container text-center'>
+															<a href='#fb' class='person-fb-icon'><div class='s6-item-social fadeButton'><i class='fa fa-facebook fadeButton'></i></div></a>
+															<a href='#tw' class='person-tw-icon'><div class='s6-item-social fadeButton'><i class='fa fa-twitter fadeButton'></i></div></a>
+															<a href='#ln' class='person-in-icon'><div class='s6-item-social fadeButton'><i class='fa fa-linkedin fadeButton'></i></div></a>
+														</div>
+													</div>
+													<img src='/v9_e_wordica_theme/static/src/images/persons/person2.jpg' class='img-responsive person-img' alt='image'/>
+												</div>
+												<div class='nopadding text-center'>
+													<div class='s6-person-name'>Morris Jackson</div>
+													<div class='s6-person-job'>Marketing</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class='s7 overflow' id='s7'>
+						<div class='s7-pattern '>
+							<div id='section-7' class='container'>
+								<div class='s7-title-container text-center' data-sr="">
+									<div class='section-top-divider upper'>reviews</div>
+									<div class='s7-title-big'><h2>Yes, Peoples Talk About Us</h2></div>
+									<div class="i-separator">04</div>
+									<div class='row'>
+										<div class='col-md-8 col-md-offset-2 s7-title-small'>Lorem <span>ipsum dolor</span> sit amet, consectetur adipisicing elit, sed do <span>eiusmod tempor</span> incididunt ut labore et dolore magna aliqua.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>		
+					<div class='s8 overflow' id='s8'>
+						<div class='s8-pattern '>
+							<div id='section-8' class='container'>
+								<div class='row'>
+									<div class='col-md-12 text-center' data-sr="">
+										<div class='owl-reviews'>
+											<div class='item'>
+												<div class='row'>
+													<div class='col-md-6 s8-item-middle'>
+														<div class='row'>
+															<div class='col-md-12 s8-item-content'>
+																<div class='arrow-down'></div>
+																<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur <b>tristique lectus ex</b>, ac eleifend purus convallis ac. Sed fermentum sed ante sed malesuada.</p>
+															</div>
+														</div>
+														<div class='row'>
+															<div class='col-md-12 s8-person'>
+																<img src='/v9_e_wordica_theme/static/src/images/persons/person2.jpg' alt='image'/>
+																<p>
+																	<span class='person-name'>JOHN SMITH</span>
+																	<span class='person-title'>Company Manager</span>
+																</p>
+															</div>
+														</div>
+													</div>
+													<div class='col-md-6 s8-item-right'>
+														<div class='row'>
+															<div class='col-md-12 s8-item-content'>
+																<div class='arrow-down'></div>
+																<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur <b>tristique lectus ex</b>, ac eleifend purus convallis ac. Sed fermentum sed ante sed malesuada.</p>
+															</div>
+														</div>
+														<div class='row'>
+															<div class='col-md-12 s8-person'>
+																<img src='/v9_e_wordica_theme/static/src/images/persons/person1.jpg' alt='image'/>
+																<p>
+																	<span class='person-name'>JOHN SMITH</span>
+																	<span class='person-title'>Marketing Specialist</span>
+																</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class='item'>
+												<div class='row'>
+													<div class='col-md-6 s8-item-middle'  >
+														<div class='row'>
+															<div class='col-md-12 s8-item-content'>
+																<div class='arrow-down'></div>
+																<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur <b>tristique lectus ex</b>, ac eleifend purus convallis ac. Sed fermentum sed ante sed malesuada.</p>
+															</div>
+														</div>
+														<div class='row'>
+															<div class='col-md-12 s8-person'>
+																<img src='/v9_e_wordica_theme/static/src/images/persons/person2.jpg' alt='image'/>
+																<p>
+																	<span class='person-name'>JOHN SMITH</span>
+																	<span class='person-title'>Company Manager</span>
+																</p>
+															</div>
+														</div>
+													</div>
+													<div class='col-md-6 s8-item-right'  >
+														<div class='row'>
+															<div class='col-md-12 s8-item-content'>
+																<div class='arrow-down'></div>
+																<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur <b>tristique lectus ex</b>, ac eleifend purus convallis ac. Sed fermentum sed ante sed malesuada.</p>
+															</div>
+														</div>
+														<div class='row'>
+															<div class='col-md-12 s8-person'>
+																<img src='/v9_e_wordica_theme/static/src/images/persons/person1.jpg' alt='image'/>
+																<p>
+																	<span class='person-name'>JOHN SMITH</span>
+																	<span class='person-title'>Marketing Specialist</span>
+																</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>		
+					<div class='s9 overflow' id='s9'>
+						<div class='s9-pattern'>
+							<div id='section-9' class='container'>
+								<div class='s9-title-container text-center' data-sr="">
+									<div class='section-top-divider upper'>clients</div>
+									<div class='s9-title-big'><h2>We Work For The Best</h2></div>
+									<div class="i-separator">05</div>
+									<div class='row'>
+										<div class='col-md-8 col-md-offset-2 s9-title-small'>Lorem ipsum dolor sit amet, <span>consectetur</span> adipisicing elit, sed do eiusmod tempor incididunt <span>ut labore</span> et dolore magna aliqua.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class='s10 overflow' id='s10'>
+						<div class='s10-pattern'>
+							<div id='section-10' class='container'>
+								<div class='row'>
+									<div class='col-md-12 text-center' data-sr="">
+										<div class='owl-logotypes'>
+											<div class='item tooltips-img' title='Client about information' >	
+												<img src='/v9_e_wordica_theme/static/src/images/logotypes/logotypes2.png' alt='image'/>
+											</div>
+											<div class='item tooltips-img' title='Client about information' >	
+												<img src='/v9_e_wordica_theme/static/src/images/logotypes/logotypes3.png' alt='image'/>
+											</div>
+											<div class='item tooltips-img' title='Client about information' >	
+												<img src='/v9_e_wordica_theme/static/src/images/logotypes/logotypes4.png' alt='image'/>
+											</div>
+											<div class='item tooltips-img' title='Client about information' >	
+												<img src='/v9_e_wordica_theme/static/src/images/logotypes/logotypes5.png' alt='image'/>
+											</div>
+											<div class='item tooltips-img' title='Client about information' >	
+												<img src='/v9_e_wordica_theme/static/src/images/logotypes/logotypes10.png' alt='image'/>
+											</div>
+											<div class='item tooltips-img' title='Client about information' >	
+												<img src='/v9_e_wordica_theme/static/src/images/logotypes/logotypes7.png' alt='image'/>
+											</div>
+											<div class='item tooltips-img' title='Client about information' >	
+												<img src='/v9_e_wordica_theme/static/src/images/logotypes/logotypes8.png' alt='image'/>
+											</div>
+											<div class='item tooltips-img' title='Client about information' >	
+												<img src='/v9_e_wordica_theme/static/src/images/logotypes/logotypes2.png' alt='image'/>
+											</div>
+											<div class='item tooltips-img' title='Client about information' >	
+												<img src='/v9_e_wordica_theme/static/src/images/logotypes/logotypes3.png' alt='image'/>
+											</div>
+											<div class='item tooltips-img' title='Client about information' >	
+												<img src='/v9_e_wordica_theme/static/src/images/logotypes/logotypes4.png' alt='image'/>
+											</div>
+											<div class='item tooltips-img' title='Client about information' >	
+												<img src='/v9_e_wordica_theme/static/src/images/logotypes/logotypes5.png' alt='image'/>
+											</div>
+											<div class='item tooltips-img' title='Client about information' >	
+												<img src='/v9_e_wordica_theme/static/src/images/logotypes/logotypes10.png' alt='image'/>
+											</div>
+											<div class='item tooltips-img' title='Client about information' >	
+												<img src='/v9_e_wordica_theme/static/src/images/logotypes/logotypes7.png' alt='image'/>
+											</div>
+											<div class='item tooltips-img' title='Client about information' >	
+												<img src='/v9_e_wordica_theme/static/src/images/logotypes/logotypes8.png' alt='image'/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class='s1-bottom-2' id='s1-3'>
+						<div class='s1-bottom-pattern-2'>
+							<div id='section-1-bottom-3' class='container-fluid nopadding'  data-sr='wait 0.2s then over 1.3s'>
+								<div class='row'>
+									<div class='col-md-12 s1-col-bottom-2 text-center'>
+										<div class='s1-col-bottom-span-2'>
+											<p>Quomodo is a design oriented and <span>UX focused theme</span> consectetur adipiscing elit design oriented</p>
+											<a href='#' class='btn btn-s2-2 fadeButton upper'>OK, BUY IT NOW</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class='s12 overflow' id='s12'>
+							<div class='s12-pattern'>
+								<div id='section-12' class='container'>
+									<div class='s12-title-container text-center' data-sr="">
+										<div class='section-top-divider upper'>statistics</div>
+										<div class='s12-title-big'><h2>Our Works in Numbers</h2></div>
+										<div class="i-separator">06</div>
+										<div class='row'>
+											<div class='col-md-8 col-md-offset-2 s12-title-small'>Lorem ipsum dolor sit amet, <span>consectetur</span> adipisicing elit, sed do eiusmod tempor incididunt <span>ut labore</span> et dolore magna aliqua.</div>
+										</div>
+									</div>
+									<div class='row'>
+										<div class='col-md-12 text-center' data-sr="">
+											<!-- canvas generated in main.js from jQ plugin -->
+											<canvas id="canvas" height="150" width="600"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+					</div>	
+					<div class='s13 overflow' id='s13'>
+						<div class='s13-pattern'>
+							<div id='section-13' class='container'>
+								<div class='s13-title-container text-center' data-sr="">
+									<div class='section-top-divider upper'>f.a.q</div>
+									<div class='s13-title-big'><h2>Frequently Asked Questions</h2></div>
+									<div class="i-separator">07</div>
+									<div class='row'>
+										<div class='col-md-8 col-md-offset-2 s13-title-small'>Lorem ipsum dolor sit amet, <span>consectetur</span> adipisicing elit, sed do eiusmod tempor incididunt <span>ut labore</span> et dolore magna aliqua.</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class='s14 overflow' id='s14'>
+						<div class='s14-pattern'>
+							<div id='section-14' class='container'>
+								<div class='row'>
+									<div class='col-md-12 s14-container text-center' data-sr="">
+										<div class='row'>
+											<div class='col-md-6'>
+												<div class="panel-group" id="accordion">
+												  <div class="panel panel-default">
+												    <div class="panel-heading">
+												      <h4 class="panel-title">
+												        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+												          Why I should buy it
+												        </a>
+												      </h4>
+												    </div>
+												    <div id="collapseOne" class="panel-collapse collapse ">
+												      <div class="panel-body">
+												        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+												      </div>
+												    </div>
+												  </div>
+												  <div class="panel panel-default">
+												    <div class="panel-heading">
+												      <h4 class="panel-title">
+												        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+												          Is this premium item?
+												        </a>
+												      </h4>
+												    </div>
+												    <div id="collapseTwo" class="panel-collapse collapse">
+												      <div class="panel-body">
+												        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+												      </div>
+												    </div>
+												  </div>
+												  <div class="panel panel-default">
+												    <div class="panel-heading">
+												      <h4 class="panel-title">
+												        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+												          How well documentation is?
+												        </a>
+												      </h4>
+												    </div>
+												    <div id="collapseThree" class="panel-collapse collapse">
+												      <div class="panel-body">
+												        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+												      </div>
+												    </div>
+												  </div>
+												</div>
+											</div>	
+											<div class='col-md-6'>
+												<div class="panel-group" id="accordion-2">
+													  <div class="panel panel-default">
+													    <div class="panel-heading">
+													      <h4 class="panel-title">
+													        <a data-toggle="collapse" data-parent="#accordion-2" href="#collapseOne-2">
+													          Why I should buy account on Your site
+													        </a>
+													      </h4>
+													    </div>
+													    <div id="collapseOne-2" class="panel-collapse collapse ">
+													      <div class="panel-body">
+													        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+													      </div>
+													    </div>
+													  </div>
+													  <div class="panel panel-default">
+													    <div class="panel-heading">
+													      <h4 class="panel-title">
+													        <a data-toggle="collapse" data-parent="#accordion-2" href="#collapseTwo-2">
+													          Dark Landing Page for My?
+													        </a>
+													      </h4>
+													    </div>
+													    <div id="collapseTwo-2" class="panel-collapse collapse">
+													      <div class="panel-body">
+													        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+													      </div>
+													    </div>
+													  </div>
+													  <div class="panel panel-default">
+													    <div class="panel-heading">
+													      <h4 class="panel-title">
+													        <a data-toggle="collapse" data-parent="#accordion-2" href="#collapseThree-3">
+													          Full Responsive or not?
+													        </a>
+													      </h4>
+													    </div>
+													    <div id="collapseThree-3" class="panel-collapse collapse">
+													      <div class="panel-body">
+													        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+													      </div>
+													    </div>
+													  </div>
+													</div>
+												</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class='s15 overflow' id='s15'>
+						<div class='s15-pattern'>
+							<div id='section-15' class='container'>
+								<div class='s15-title-container text-center' data-sr="">
+									<div class='section-top-divider upper'>contact</div>
+									<div class='s15-title-big'><h2>Interested ... Just Contact With Us</h2></div>
+									<div class="i-separator">08</div>
+									<div class='row'>
+										<div class='col-md-8 col-md-offset-2 s15-title-small'>Lorem ipsum dolor sit amet, <span>consectetur</span> adipisicing elit, sed do eiusmod tempor incididunt <span>ut labore</span> et dolore magna aliqua.</div>
+									</div>
+								</div>
+								<div class='row'>
+									<div class='col-md-12 s15-col-contact' data-sr="">
+										<form class='validate-contact'>	
+											<div class='row'>
+												<div class='col-md-12 nopadding'>
+													<div class='row'>
+														<div class='col-md-6 s15-col-md-left'>
+															<div class="form-group">
+																<input type="text" name='sender' class="required form-control contact-sender input-lg fadeButton" placeholder="Enter Your Name"/>
+																<span class="help-block">*A block of help text that breaks onto a new line</span>
+															</div>
+														</div>
+														<div class='col-md-6 s15-col-md-right'>
+															<div class="form-group">
+																<input type="text" name='email' class="required form-control contact-email input-lg fadeButton" placeholder="Enter Your Email"/>
+																<span class="help-block">*A block of help </span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class='row'>
+												<div class='col-md-12 nopadding text-center'>
+													<div class="form-group">
+														<textarea class="required form-control contact-content fadeButton" name='content' rows="6" placeholder="Enter message here"></textarea>
+													</div>
+													<button type='submit' class='btn btn-submit btn-lg fadeButton upper'>SEND MESSAGE</button>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class='row'>
+									<div class='col-md-12 s15-footer text-center'>2016 © Wordica.net All Rights Reserved</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</body>            
+            </xpath>
+        </template>
+    </data>
+</openerp>

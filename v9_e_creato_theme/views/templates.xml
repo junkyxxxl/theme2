@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <template id="clean_script_footer" inherit_id="website.layout" name="Clean scripts">
+            <xpath expr="//footer[last()]" position="after">
+				<link href="/v9_e_creato_theme/static/src/css/animate.css" rel="stylesheet"/>
+             	<link href="/v9_e_creato_theme/static/src/css/style.css" rel="stylesheet"/>
+             	<link href="/v9_e_creato_theme/static/src/css/etline.css" rel="stylesheet"/>
+             	<link href="/v9_e_creato_theme/static/src/css/owl.carousel.css" rel="stylesheet"/>
+             	<link href="/v9_e_creato_theme/static/src/css/responsive.css" rel="stylesheet"/>
+             	<link href="/v9_e_creato_theme/static/src/css/venobox.css" rel="stylesheet"/>
+             	<script type="text/javascript"  src="/v9_e_creato_theme/static/src/js/isotope.pkgd.min.js"></script>
+             	<script type="text/javascript"  src="/v9_e_creato_theme/static/src/js/jquery.sticky.js"></script>
+             	<script type="text/javascript"  src="/v9_e_creato_theme/static/src/js/main.js"></script>
+             	<script type="text/javascript"  src="/v9_e_creato_theme/static/src/js/owl.carousel.min.js"></script>
+             	<script type="text/javascript"  src="/v9_e_creato_theme/static/src/js/venobox.min.js"></script>
+             	<script type="text/javascript"  src="/v9_e_creato_theme/static/src/js/wow.js"></script>
+            </xpath>
+        </template>
+        <!--  footer added	-->
+        <template id="theme_lauout_footer_copyright" inherit_id="website.layout_footer_copyright" name="footer">
+            <xpath expr="//*[@id='footer']" position="replace">
+            </xpath>
+        </template>
+        <!--  user navigation	-->
+        <template id="header_top_main_menu_navbar" name="Header top hide" inherit_id="website.user_navbar">
+            <xpath expr="//nav[@id='oe_main_menu_navbar']" position="replace">
+            </xpath>
+        </template>
+        <!--  404	-->
+        <template id="404">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <div class="oe_structure oe_empty">
+                        <div class="container">
+                            <h1 class="mt32">Page not found!</h1>
+                            <p>Sorry, this Page is not available anymore.</p>
+                            <p><a t-attf-href="/about">Return to the About Us Page.</a></p>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+        <!--	header navigation odoo remove-->
+        <template id="homepage_top_header" inherit_id="website.layout">
+            <xpath expr="//div[@id='wrapwrap']/header/div" position="before"> 
+            </xpath>
+            <xpath expr="//header//div[@class='navbar navbar-default navbar-static-top']" position="attributes">
+                <attribute name='style'>display:none</attribute>
+            </xpath>
+        </template>
+        <template id="custom_layout_website" inherit_id="website.homepage">
+            <xpath expr="//div[@id='wrap']" position="replace">
+				<body id="home_one">
+					<div id="preload">
+			            <div id="preload-content">
+			                <div class="preload-spinner">
+			                    <span class="bounce1"></span>
+			                    <span class="bounce2"></span>
+			                    <span class="bounce3"></span>
+			                </div>
+			                <div class="preload-text"><span>Creato</span></div>
+			            </div>
+			        </div> 
+					<div class="body-wrapper" id="welcome">
+						<header>
+			                <div class="header-area">
+			                    <div class="container">
+			                        <div class="row">
+			                            <div class="col-md-3 col-sm-2">
+			                                <div class="logo wow fadeInLeft" data-wow-duration="3s" data-wow-delay="2s">
+			                                    <a href="#"><img src="/v9_e_creato_theme/static/src/images/creato-logo.png" alt="img"/></a>
+			                                    <div class="navbar-header">
+			                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			                                            <span class="sr-only">Toggle navigation</span>
+			                                            <span class="icon-bar"></span>
+			                                            <span class="icon-bar"></span>
+			                                            <span class="icon-bar"></span>
+			                                        </button>
+			                                    </div>                             
+			                                </div>
+			                            </div>
+			                            <div class="col-md-9 col-sm-10">
+			                                <nav class="mainmenu wow fadeInRight" data-wow-duration="3s" data-wow-delay="2s">
+			                                    <div class="navbar-collapse collapse"> 
+			                                        <ul class="nav navbar-nav navbar-right">
+			                                            <li class="active"><a href="#welcome">welcome</a>
+			                                           </li>
+			                                            <li><a href="#about">about</a></li>
+			                                            <li><a href="#service">services</a></li>
+			                                            <li><a href="#works">portfolio</a></li>
+			                                            <li><a href="#speech">testimonial</a></li>
+			                                            <li><a href="#contact">contact</a></li>
+			                                        </ul>                                                     
+			                                    </div>
+			                                </nav>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </header>
+			            <div class="creative-area" id="creative"><!-- Start Creative -->
+			                <div class="container">
+			                    <div class="row">
+			                        <div class="col-md-5 col-sm-6">
+			                        <div class="creative-video wow fadeInLeft" data-wow-duration="2s" data-wow-delay="3s">
+			                            <img src="/v9_e_creato_theme/static/src/images/video.jpg" alt="img"/>
+			                            <div class="video_play_btn wow fadeInUp" data-wow-duration="3s">
+			                                <a class="vide_area_venobox" data-type="youtube" data-title="Awesome Video" data-gall="gall1" href="https://youtu.be/ScMzIvxBSi4">
+			                                    <img src="/v9_e_creato_theme/static/src/images/video-btn.png" alt="img"/>
+			                                </a>
+			                            </div>
+			                        </div>
+			                        </div>
+			                        <div class="col-md-7 col-sm-6">
+			                        <div class="creative-content wow fadeInRight" data-wow-duration="3s" data-wow-delay="3s">
+			                            <h1>Creativity <span>comes first</span></h1>
+			                            <p>Thinking about overseas adventure travel? Have you put any thought into the best places to go when it comes.</p>
+			                           <div class="creative-link">
+			                               <a href="#">Discover More <i class="fa fa-long-arrow-right"></i></a>
+			                           </div>
+			                        </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+
+						<div class="about-area" id="about">
+			                <div class="container">
+			                    <div class="about-content wow fadeInRight" data-wow-duration="2s">
+			                      <div class="about-content-overlay"></div>
+			                       <div class="row">
+			                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			                               <div class="about">
+			                                    <div class="about-title">
+			                                        <h1>about</h1>
+			                                    </div>
+			                                    <div class="about-desc wow fadeInLeft" data-wow-duration="2s" data-wow-delay="1s">
+			                                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+			        consequat, vel illum dolore eu feugiat nulla facilisis at vero eros etet iusto odio dignissim quiblandit praesent luptatum zzril delenit duis dolore te feugait nulla facilisi.</p>
+			                                   
+			                                    <div class="creative-link">
+			                                       <a href="#">Discover More <i class="fa fa-long-arrow-right"></i></a>
+			                                   </div>
+			                                    </div>
+			                               </div>
+			                            </div>
+			                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			                                <div class="about-person wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
+			                                    <img src="/v9_e_creato_theme/static/src/images/about-man.jpg" alt="img"/>
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			 			
+						<div class="services-area" id="service">
+			                <div class="container">
+			                    <div class="row">
+			                        <div class="service-title">
+			                            <h1>Services</h1>
+			                        </div>
+			                        <div class="service-desc">
+			                          <div class="col-md-4 col-sm-4">
+			                              <div class="single-service wow fadeInLeft" data-wow-duration="3s">
+			                                    <h2><span class="icon-focus"></span> Creative</h2>
+			                                    <p>Mirum est notare quam littera gothica
+			nunc putamus parum claram.</p>
+			                                    <div class="creative-link">
+			                                       <a href="#">Discover More <i class="fa fa-long-arrow-right"></i></a>
+			                                    </div>
+			                              </div>
+			                          </div>
+			                          <div class="col-md-4 col-sm-4">
+			                              <div class="single-service wow fadeInLeft" data-wow-duration="3s">
+			                                    <h2><span class="icon-camera"></span> Professional</h2>
+			                                    <p>Mirum est notare quam littera gothica
+			nunc putamus parum claram.</p>
+			                                    <div class="creative-link">
+			                                       <a href="#">Discover More <i class="fa fa-long-arrow-right"></i></a>
+			                                    </div>
+			                              </div>
+			                          </div>
+			                          <div class="col-md-4 col-sm-4">
+			                              <div class="single-service wow fadeInLeft" data-wow-duration="3s">
+			                                    <h2><span class="icon-wallet"></span> Money Saving</h2>
+			                                    <p>Mirum est notare quam littera gothica
+			nunc putamus parum claram.</p>
+			                                    <div class="creative-link">
+			                                       <a href="#">Discover More <i class="fa fa-long-arrow-right"></i></a>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>  
+			                    </div>
+			                </div>
+			            </div>
+						
+						<div class="works-area" id="works">
+			                <div class="work-title">
+			                    <h1>Works</h1>
+			                </div>
+			                <div class="works-items">
+			                   <div class="container">
+			                       <div class="row">
+			                           <div class="col-md-12">
+			                                <ul id="filter" class="filter-menu">
+			                                   <li class="active" data-filter="*">All</li>          
+			                                   <li  data-filter=".abstract">Abstract</li>          
+			                                   <li  data-filter=".weds">Weeding</li>          
+			                                   <li  data-filter=".product">Product</li>          
+			                                   <li  data-filter=".landscape">Landscape</li>    
+			                                </ul>                               
+			                           </div>
+			                       </div>
+			                   </div>
+			                   
+			                   <div class="portfolio-items wow fadeIn" data-wow-duration="3s">
+			                        <div class="p-items weds">
+			                           <a href="/v9_e_creato_theme/static/src/images/portfolio-1.jpg" class="lightbox" data-gall="gall-work"><img src="/v9_e_creato_theme/static/src/images/portfolio-1.jpg" alt=""/>
+			                           <div class="p-items-overlay"></div>
+			                           </a>
+			                        </div>
+			                        <div class="p-items abstract">
+			                           <a href="/v9_e_creato_theme/static/src/images/portfolio-2.jpg" class="lightbox" data-gall="gall-work"><img src="/v9_e_creato_theme/static/src/images/portfolio-2.jpg" alt=""/>
+			                           <div class="p-items-overlay"></div>
+			                           </a>
+			                        </div>
+			                       <div class="p-items p-max-items landscape">
+			                           <a href="/v9_e_creato_theme/static/src/images/portfolio-3.jpg" class="lightbox" data-gall="gall-work"><img src="/v9_e_creato_theme/static/src/images/portfolio-3.jpg" alt=""/>
+			                           <div class="p-items-overlay"></div>
+			                           </a>
+			                       </div>
+			                       <div class="p-items product">
+			                           <a href="/v9_e_creato_theme/static/src/images/portfolio-4.jpg" class="lightbox" data-gall="gall-work"><img src="/v9_e_creato_theme/static/src/images/portfolio-4.jpg" alt=""/>
+			                           <div class="p-items-overlay"></div>
+			                           </a>
+			                           
+			                       </div>
+			                       <div class="p-items p-max-items landscape abstract">
+			                           <a href="/v9_e_creato_theme/static/src/images/portfolio-5.jpg" class="lightbox" data-gall="gall-work"><img src="/v9_e_creato_theme/static/src/images/portfolio-5.jpg" alt=""/>
+			                           <div class="p-items-overlay"></div>
+			                           </a>
+			                       </div>
+			                       <div class="p-items product weds">
+			                           <a href="/v9_e_creato_theme/static/src/images/portfolio-6.jpg" class="lightbox" data-gall="gall-work"><img src="/v9_e_creato_theme/static/src/images/portfolio-6.jpg" alt=""/>
+			                           <div class="p-items-overlay"></div>
+			                           </a>
+			                       </div>
+			                   </div>
+			               </div>
+			            </div>
+						
+						<div class="speech-area" id="speech">
+			                <div class="container">
+			                    <div class="row">
+			                        <div class="col-md-12">
+			                           <div class="speech-title">
+			                                <h1>Speeches</h1>
+			                            </div>
+			                            <div class="speech-background wow fadeInLeft" data-wow-duration="3s">
+			                               <div class="speech-slider">
+			                                    <div class="single-speech">
+			                                        <div class="speech-man wow fadeInDown" data-wow-duration="3s" data-wow-delay="1s">
+			                                            <img src="/v9_e_creato_theme/static/src/images/tesm-1.jpg" alt="img"/>
+			                                        </div>
+			                                        <div class="speech">
+			                                            <div class="Speech-quotes">
+			                                                <i class="fa fa-quote-left"></i>
+			                                            </div>
+			                                            <div class="speech-para wow fadeInRight" data-wow-duration="3s" data-wow-delay="1s">
+			                                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+			                                                <h3>David Ramon</h3>
+			                                            </div>
+			                                        </div>
+			                                    </div>
+			                                    <div class="single-speech">
+			                                        <div class="speech-man wow fadeInDown" data-wow-duration="3s" data-wow-delay="1s">
+			                                            <img src="/v9_e_creato_theme/static/src/images/tesm-1.jpg" alt="img"/>
+			                                        </div>
+			                                        <div class="speech">
+			                                            <div class="Speech-quotes">
+			                                                <i class="fa fa-quote-left"></i>
+			                                            </div>
+			                                            <div class="speech-para wow fadeInRight" data-wow-duration="3s" data-wow-delay="1s">
+			                                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+			                                                <h3>David Ramon</h3>
+			                                            </div>
+			                                        </div>
+			                                    </div>
+			                                    <div class="single-speech">
+			                                        <div class="speech-man wow fadeInDown" data-wow-duration="3s" data-wow-delay="1s">
+			                                            <img src="/v9_e_creato_theme/static/src/images/tesm-1.jpg" alt="img"/>
+			                                        </div>
+			                                        <div class="speech">
+			                                            <div class="Speech-quotes">
+			                                                <i class="fa fa-quote-left"></i>
+			                                            </div>
+			                                            <div class="speech-para wow fadeInRight" data-wow-duration="3s" data-wow-delay="1s">
+			                                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+			                                                <h3>David Ramon</h3>
+			                                            </div>
+			                                        </div>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+						
+						<div class="branding-area" id="brand"><!-- Start Branding -->
+			                <div class="container">
+			                    <div class="row">
+			                        <div class="col-md-12">
+			                            <div class="branding-slider">
+			                                <div class="single-brand wow fadeILeft" data-wow-duration="3s">
+			                                    <a href="#"><img src="/v9_e_creato_theme/static/src/images/client-one.png" alt="img"/></a>
+			                                </div>
+			                                <div class="single-brand wow fadeInLeft" data-wow-duration="3s">
+			                                    <a href="#"><img src="/v9_e_creato_theme/static/src/images/client-two.png" alt="img"/></a>
+			                                </div>
+			                                <div class="single-brand wow fadeInLeft" data-wow-duration="3s">
+			                                    <a href="#"><img src="/v9_e_creato_theme/static/src/images/client-one.png" alt="img"/></a>
+			                                </div>
+			                                <div class="single-brand wow fadeInLeft" data-wow-duration="3s">
+			                                    <a href="#"><img src="/v9_e_creato_theme/static/src/images/client-two.png" alt="img"/></a>
+			                                </div>
+			                                <div class="single-brand wow fadeInLeft" data-wow-duration="3s">
+			                                    <a href="#"><img src="/v9_e_creato_theme/static/src/images/client-one.png" alt="img"/></a>
+			                                </div>
+			                                <div class="single-brand wow fadeInLeft" data-wow-duration="3s">
+			                                    <a href="#"><img src="/v9_e_creato_theme/static/src/images/client-two.png" alt="img"/></a>
+			                                </div>
+			                                <div class="single-brand wow fadeInLeft" data-wow-duration="3s">
+			                                    <a href="#"><img src="/v9_e_creato_theme/static/src/images/client-one.png" alt="img"/></a>
+			                                </div>
+			                                <div class="single-brand wow fadeInLeft" data-wow-duration="3s">
+			                                    <a href="#"><img src="/v9_e_creato_theme/static/src/images/client-two.png" alt="img"/></a>
+			                                </div>
+			                                <div class="single-brand wow fadeInLeft" data-wow-duration="3s">
+			                                    <a href="#"><img src="/v9_e_creato_theme/static/src/images/client-one.png" alt="img"/></a>
+			                                </div>
+			                                <div class="single-brand wow fadeInLeft" data-wow-duration="3s">
+			                                    <a href="#"><img src="/v9_e_creato_theme/static/src/images/client-two.png" alt="img"/></a>
+			                                </div>
+			                                <div class="single-brand wow fadeInLeft" data-wow-duration="3s">
+			                                    <a href="#"><img src="/v9_e_creato_theme/static/src/images/client-one.png" alt="img"/></a>
+			                                </div>
+			                                <div class="single-brand wow fadeInLeft" data-wow-duration="3s">
+			                                    <a href="#"><img src="/v9_e_creato_theme/static/src/images/client-two.png" alt="img"/></a>
+			                                </div>
+			                                <div class="single-brand wow fadeInLeft" data-wow-duration="8s">
+			                                    <a href="#"><img src="/v9_e_creato_theme/static/src/images/client-one.png" alt="img"/></a>
+			                                </div>
+			                                <div class="single-brand wow fadeInLeft" data-wow-duration="3s">
+			                                    <a href="#"><img src="/v9_e_creato_theme/static/src/images/client-two.png" alt="img"/></a>
+			                                </div>
+			                                <div class="single-brand wow fadeInLeft" data-wow-duration="3s">
+			                                    <a href="#"><img src="/v9_e_creato_theme/static/src/images/client-one.png" alt="img"/></a>
+			                                </div>
+			                                <div class="single-brand wow fadeInLeft" data-wow-duration="3s">
+			                                    <a href="#"><img src="/v9_e_creato_theme/static/src/images/client-two.png" alt="img"/></a>
+			                                </div>
+			                                <div class="single-brand wow fadeInLeft" data-wow-duration="3s">
+			                                    <a href="#"><img src="/v9_e_creato_theme/static/src/images/client-one.png" alt="img"/></a>
+			                                </div>
+			                                <div class="single-brand wow fadeInLeft" data-wow-duration="3s">
+			                                    <a href="#"><img src="/v9_e_creato_theme/static/src/images/client-two.png" alt="img"/></a>
+			                                </div>
+			                                <div class="single-brand wow fadeInLeft" data-wow-duration="3s">
+			                                    <a href="#"><img src="/v9_e_creato_theme/static/src/images/client-one.png" alt="img"/></a>
+			                                </div>
+			                                <div class="single-brand wow fadeInLeft" data-wow-duration="3s">
+			                                    <a href="#"><img src="/v9_e_creato_theme/static/src/images/client-two.png" alt="img"/></a>
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			            
+						<div class="contact-area" id="contact">
+			               <div class="container">
+			                   <div class="row">
+			                       <div class="contact-content">
+			                           <div class="col-md-5 col-sm-6 no-padding">
+			                               <div class="contact-adress wow fadeInLeft" data-wow-duration="3s">
+			                                  <div class="contact-address-overlay"></div>
+			                                   <ul class="add">
+			                                       <li>
+			                                           <h6>Email</h6>
+			                                           <p>username@mail.com</p>
+			                                       </li>
+			                                       <li>
+			                                           <h6>Phone</h6>
+			                                           <p>+000-111-2222<span>+000-112-2322</span></p>
+			                                       </li>
+			                                       <li>
+			                                           <h6>Address</h6>
+			                                           <p>27, Red view street,<span>NY, USA</span></p>
+			                                       </li>
+			                                   </ul>
+			                               </div>
+			                           </div>
+			                           <div class="col-md-7 col-sm-6 no-padding">
+			                               <div class="contact-form wow fadeInRight" data-wow-duration="3s">
+			                                   <h3>Get In Touch</h3>
+			                                   <form action="http://bootstrapcafe.net/demos/creato/html-preview/mail.php" method="post">
+			                                        <input name="username" type="text" class="same-width" placeholder="Name"/>
+			                                        <input  name="email_address" type="email" class="same-width" placeholder="Email"/>
+			                                        <textarea name="messages" placeholder="Message" class="same-width"></textarea>
+			                                        <button name="submit" type="submit">Discover More <i class="fa fa-long-arrow-right"></i></button>
+			                                    </form>
+			                               </div>
+			                           </div>
+			                       </div>
+			                   </div>
+			               </div>
+			            </div>
+	            
+						<footer>
+			                <div class="footer-area">
+			                    <div class="container">
+			                        <div class="row">
+			                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			                                <div class="footer-copyright wow fadeInLeft">
+			                                    <p><a href="#"><img src="/v9_e_creato_theme/static/src/images/footer-logo.png" alt=""/></a> Copyright 2016, All Rights Reserved <a href="#">BootstrapCafe</a></p>
+			                                </div>
+			                            </div>
+			                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			                                <div class="footer-icon wow fadeInRight">
+			                                    <a href="#"><i class="fa fa-facebook"></i></a>
+			                                    <a href="#"><i class="fa fa-twitter"></i></a>
+			                                    <a href="#"><i class="fa fa-behance"></i></a>
+			                                    <a href="#"><i class="fa fa-flickr"></i></a>
+			                                    <a href="#"><i class="fa fa-dribbble"></i></a>
+			                                    <a href="#"><i class="fa fa-camera-retro"></i></a>
+			                                    <a href="#"><i class="fa fa-pinterest-p"></i></a>
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </footer>				
+					</div>
+					
+				</body>            
+            </xpath>
+        </template>
+    </data>
+</openerp>

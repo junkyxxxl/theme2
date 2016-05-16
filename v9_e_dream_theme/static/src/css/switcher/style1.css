@@ -1,0 +1,69 @@
+#style-switcher h2 a { background: #15191C none repeat scroll 0 0 }
+
+
+/*End Menu*/
+.btn-light-bg:before {background: #1cbac8;}
+
+.icon_wrap:before {background-color: #1cbac8;}
+.icon_wrap:after {background-color: #1cbac8;}
+.icon_wrap i {color: #1cbac8;}
+
+.single_welcome h3 {color: #1cbac8;}
+
+.single_feature:hover {background:#1cbac8;}
+
+ul.tab-buttons li.selected {background: #1cbac8;border: 1px solid #1cbac8;}
+.tab-buttons li a {color: #1cbac8;}
+.tab-buttons li a i {color: #1cbac8;}
+.single_why i {color: #1cbac8;}
+.single_why h4 {color: #1cbac8;}
+
+
+.counter_overlay {background: rgba(28, 186, 200, 0.8) none repeat scroll 0 0;}
+
+.service:hover {border-color: #1cbac8;background: #1cbac8;}
+.progress-bar > span {background: #1cbac8 none repeat scroll 0 0;}
+
+.team_text p {color: #1cbac8;}
+
+.our_work_menu ul li:hover,
+.our_work_menu ul li.active {border-color: #1cbac8;background: #1cbac8;}
+
+.sing_work_text_link {background: rgba(28, 186, 200, 0.8) none repeat scroll 0 0;}
+
+.section-top-title ol li a:hover { color: #1CBAC8!important }
+
+.about_project_details ul li {border-left: 3px solid #1cbac8;}
+.about_project_details ul li i {color: #1cbac8;}
+.about_project_details ul li a {color: #1cbac8;}
+
+.pricing-content:hover { background: #1cbac8 }
+.pricing-content-bg { background: #1cbac8 none repeat scroll 0 0 }
+.pricing-title h3 {background: #1cbac8 none repeat scroll 0 0;}
+
+.buy_now {background: #1cbac8;}
+
+.post-date {background: #1cbac8 none repeat scroll 0 0;}
+.single_blog_dsc h3 a:hover { color: #1cbac8 }
+
+.post-info li a:hover { color: #1cbac8 }
+.single_blog_dsc a {color: #1cbac8;}
+
+.single-address i {background: #1cbac8 none repeat scroll 0 0; border: 1px solid #1cbac8;}
+
+.subscribe_input button {background: #1cbac8 none repeat scroll 0 0;border: 1px solid #1cbac8;}
+
+.form-control:hover,
+.form-control:focus {border: 1px solid #1cbac8;}
+
+.footer_copyright a {color: #1cbac8;}
+
+
+
+
+
+
+
+
+
+

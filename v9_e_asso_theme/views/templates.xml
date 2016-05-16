@@ -1,0 +1,1348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!--  css and js filed added	-->
+        <template id="clean_script_footer" inherit_id="website.layout" name="Clean scripts">
+            <xpath expr="//footer[last()]" position="after">
+            	<link href='http://fonts.googleapis.com/css?family=Roboto+Mono:400,300,500,700' rel='stylesheet' type='text/css'/> 
+				<link href='http://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'/> 
+				<link rel="stylesheet" href="/v9_e_asso_theme/static/src/vendor/animate.min.css"/> 
+				<link rel="stylesheet" href="/v9_e_asso_theme/static/src/vendor/font-awesome/css/font-awesome.min.css"/> 
+				<link rel="stylesheet" href="/v9_e_asso_theme/static/src/vendor/ytplayer/css/jquery.mb.YTPlayer.min.css"/>
+				<link rel="stylesheet" href="/v9_e_asso_theme/static/src/vendor/owl-carousel/css/owl.carousel.css"/> 
+				<link rel="stylesheet" href="/v9_e_asso_theme/static/src/vendor/owl-carousel/css/owl.carousel.plugins.css"/> 
+				<link rel="stylesheet" href="/v9_e_asso_theme/static/src/vendor/owl-carousel/css/owl.theme.default.css"/> 
+				<link rel="stylesheet" href="/v9_e_asso_theme/static/src/vendor/magnific-popup/css/magnific-popup.css"/> 
+				<link rel="stylesheet" href="/v9_e_asso_theme/static/src/css/helper.css"/>
+				<link rel="stylesheet" href="/v9_e_asso_theme/static/src/css/theme.css"/>
+				<link rel="alternate stylesheet" media="screen" title="blue-theme" href="/v9_e_asso_theme/static/src/css/styles/blue.css"/>
+				<link rel="alternate stylesheet" media="screen" title="brown-theme" href="/v9_e_asso_theme/static/src/css/styles/brown.css"/>
+				<link rel="alternate stylesheet" media="screen" title="green-theme" href="/v9_e_asso_theme/static/src/css/styles/green.css"/>
+				<link rel="alternate stylesheet" media="screen" title="purple-theme" href="/v9_e_asso_theme/static/src/css/styles/purple.css"/>
+				<link rel="alternate stylesheet" media="screen" title="yellow-theme" href="/v9_e_asso_theme/static/src/css/styles/yellow.css"/>
+				<link rel="stylesheet" href="/v9_e_asso_theme/static/src/css/custom.css"/>
+				<script src="/v9_e_asso_theme/static/src/vendor/ytplayer/js/jquery.mb.YTPlayer.min.js"></script> 
+				<script src="/v9_e_asso_theme/static/src/vendor/wow.min.js"></script> 
+				<script src="/v9_e_asso_theme/static/src/vendor/owl-carousel/js/owl.carousel.js"></script> 
+				<script src="/v9_e_asso_theme/static/src/vendor/owl-carousel/js/owl.carousel.plugins.js"></script> 
+				<script src="/v9_e_asso_theme/static/src/vendor/magnific-popup/js/jquery.magnific-popup.min.js"></script> 
+				<script src="/v9_e_asso_theme/static/src/vendor/isotope.pkgd.min.js"></script> 
+				<script src="/v9_e_asso_theme/static/src/vendor/imagesloaded.pkgd.min.js"></script> 
+				<script src="/v9_e_asso_theme/static/src/vendor/jquery.easing.min.js"></script> 
+				<script src="/v9_e_asso_theme/static/src/js/theme.js"></script>
+				<script src="/v9_e_asso_theme/static/src/js/custom.js"></script>        
+				<script src="/v9_e_asso_theme/static/src/vendor/styleswitch.js"></script>    
+            </xpath>
+        </template>
+        <!--  footer added	-->
+        <template id="theme_lauout_footer_copyright" inherit_id="website.layout_footer_copyright" name="footer">
+            <xpath expr="//*[@id='footer']" position="replace">
+            </xpath>
+        </template>
+        <!--  user navigation	-->
+        <template id="header_top_main_menu_navbar" name="Header top hide" inherit_id="website.user_navbar">
+            <xpath expr="//nav[@id='oe_main_menu_navbar']" position="replace">
+            </xpath>
+        </template>
+        <!--  404	-->
+        <template id="404">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <div class="oe_structure oe_empty">
+                        <div class="container">
+                            <h1 class="mt32">Page not found!</h1>
+                            <p>Sorry, this Page is not available anymore.</p>
+                            <p><a t-attf-href="/about">Return to the About Us Page.</a></p>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+        <!--	header navigation odoo remove-->
+        <template id="homepage_top_header" inherit_id="website.layout">
+            <xpath expr="//div[@id='wrapwrap']/header/div" position="before"> 
+            </xpath>
+            <xpath expr="//header//div[@class='navbar navbar-default navbar-static-top']" position="attributes">
+                <attribute name='style'>display:none</attribute>
+            </xpath>
+        </template>
+        <template id="custom_layout_website" inherit_id="website.homepage">
+            <xpath expr="//div[@id='wrap']" position="replace">
+				<body data-spy="scroll" data-target="#scrollspy">
+					<div id="preloader">
+						<div class="pulse"></div>
+					</div>
+					<div id="body-content">
+						<section id="top-slidingbar-wrapper" class="slidingbar-fixed">
+							<div id="top-slidingbar">
+								<div class="container">
+									<div class="row">
+										<div class="col col-md-4">
+											<h4 class="top-slidingbar-heading text-gray-2">Information</h4>
+											<hr class="hr-width-1 hr-double margin-top-15"/>
+											<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+											tempor incididunt uteralis labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+										</div> 
+										<div class="col col-md-4">
+											<h4 class="top-slidingbar-heading text-gray-2">Contact</h4>
+											<hr class="hr-width-1 hr-double margin-top-15"/>
+											<ul class="list-unstyled small">
+												<li><i class="fa fa-home"></i> 121 King Street, Melbourne, Australia</li>
+												<li><i class="fa fa-phone"></i> (+548) 12-345-6789</li>
+												<li><i class="fa fa-envelope-o"></i> <a href="mailto:support@mail.com">support@mail.com</a></li>
+											</ul>
+										</div> 
+										<div class="col col-md-4">
+											<h4 class="top-slidingbar-heading text-gray-2">Our Instagram</h4>
+											<hr class="hr-width-1 hr-double margin-top-15"/>
+											<ul class="thumb-list col-5 gutter-3">
+												<li><a target="_blank" href="https://www.instagram.com/" class="thumb-list-item bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/misc/small/img-1.jpg);"></a></li>
+												<li><a target="_blank" href="https://www.instagram.com/" class="thumb-list-item bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/misc/small/img-2.jpg);"></a></li>
+												<li><a target="_blank" href="https://www.instagram.com/" class="thumb-list-item bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/misc/small/img-3.jpg);"></a></li>
+												<li><a target="_blank" href="https://www.instagram.com/" class="thumb-list-item bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/misc/small/img-4.jpg);"></a></li>
+												<li><a target="_blank" href="https://www.instagram.com/" class="thumb-list-item bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/misc/small/img-5.jpg);"></a></li>
+												<li><a target="_blank" href="https://www.instagram.com/" class="thumb-list-item bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/misc/small/img-6.jpg);"></a></li>
+												<li><a target="_blank" href="https://www.instagram.com/" class="thumb-list-item bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/misc/small/img-7.jpg);"></a></li>
+												<li><a target="_blank" href="https://www.instagram.com/" class="thumb-list-item bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/misc/small/img-8.jpg);"></a></li>
+												<li><a target="_blank" href="https://www.instagram.com/" class="thumb-list-item bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/misc/small/img-9.jpg);"></a></li>
+												<li><a target="_blank" href="https://www.instagram.com/" class="thumb-list-item bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/misc/small/img-11.jpg);"></a></li>
+											</ul>
+										</div>
+									</div> 
+								</div> 
+							</div> 
+							<div class="top-slidingbar-trigger-wrapper"><span class="top-slidingbar-trigger">+</span></div>
+						</section>
+						<header id="header-wrap">
+							<div id="header" class="header-md fixed-top header-dark transparent">
+								<div id="scrollspy" class="container header-container">
+									<div class="logo font-alter-1">
+										<a href="/"><h1>As/so</h1></a>
+									</div>
+									<nav class="navbar pull-right">
+										<div class="navbar-header">
+											<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-main" aria-expanded="false">
+											  <span class="sr-only">Toggle navigation</span>
+											  <span class="icon-bar"></span>
+											  <span class="icon-bar"></span>
+											  <span class="icon-bar"></span>
+											</button>
+										</div>
+										<div id="nav-main" class="collapse navbar-collapse mob-navbar-collapse-dark">
+											<ul class="nav navbar-nav navbar-right nav-pills pills-rounded">
+												<li class="active"><a class="mlc sm-scroll" href="#intro">Home</a></li>
+												<li><span class="nav-link-separator">/</span></li>
+												<li class="dropdown dropdown-menu-dark dropdown-hover">
+													<a href="#0" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+														About<span class="caret-2"><i class="fa fa-angle-down"></i></span>
+													</a>
+													<ul class="dropdown-menu">
+														<li><a class="mlc sm-scroll" href="#section-1">About Us</a></li>
+														<li><a class="mlc sm-scroll" href="#section-5">Our Team</a></li>
+														<li><a class="mlc sm-scroll" href="#section-9">Video Promo</a></li>
+														<li><a class="mlc sm-scroll" href="#section-7">Testimonials</a></li>
+														<li><a class="mlc sm-scroll" href="#section-10">Our Clients</a></li>
+			
+														<li class="dropdown dropdown-menu-dark dropdown-submenu dropdown-hover">
+															<a href="#0" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+																Submenu<span class="caret-2 margin-left-10"><i class="fa fa-angle-right"></i></span>
+															</a>
+															<ul class="dropdown-menu">
+																<li><a class="mlc" href="#">Submenu Link 1</a></li>
+																<li><a class="mlc" href="#">Submenu Link 2</a></li>
+																<li><a class="mlc" href="#">Submenu Link 3</a></li>
+																<li><a class="mlc" href="#">Submenu Link 4</a></li>
+																<li><a class="mlc" href="#">Submenu Link 5</a></li>
+			
+																<li class="dropdown dropdown-menu-dark dropdown-submenu dropdown-hover">
+																	<a href="#0" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+																		3 Level Submenu<span class="caret-2 margin-left-10"><i class="fa fa-angle-right"></i></span>
+																	</a>
+																	<ul class="dropdown-menu">
+																		<li><a class="mlc" href="#">Submenu Link 1</a></li>
+																		<li><a class="mlc" href="#">Submenu Link 2</a></li>
+																		<li><a class="mlc" href="#">Submenu Link 3</a></li>
+																		<li><a class="mlc" href="#">Submenu Link 4</a></li>
+																		<li><a class="mlc" href="#">Submenu Link 5</a></li>
+																	</ul> 
+																</li>
+															</ul> 
+														</li>
+													</ul> 
+												</li>
+												<li><span class="nav-link-separator">/</span></li>
+												<li><a class="mlc sm-scroll" href="#section-2">Services</a></li>
+												<li><span class="nav-link-separator">/</span></li>
+												<li><a class="mlc sm-scroll" href="#section-3">Portfolio</a></li>
+												<li><span class="nav-link-separator">/</span></li>
+												<li><a class="mlc sm-scroll" href="#section-4">Pricing</a></li>
+												<li><span class="nav-link-separator">/</span></li>
+												<li><a class="mlc sm-scroll" href="#section-6">Articles</a></li>
+												<li><span class="nav-link-separator">/</span></li>
+												<li><a class="mlc sm-scroll" href="#section-8">Contact</a></li>
+											</ul>
+										</div>
+									</nav>
+								</div>
+							</div>
+						</header>
+						<section id="intro" class="full-height bg-image-parallax" style="background-image: url(/v9_e_asso_theme/static/src/images/intro/intro-bg.jpg);">
+							<div class="intro-inner">
+								<span class="cover bg-transparent-2-dark bg-transparent-gradient-2"></span>
+								<div class="intro-caption vertical-align-center text-center text-white">
+									<h2 class="intro-title font-alter-1">
+										<span class="wow fadeInDown" data-wow-delay="0.4s" data-wow-duration="0.5s">A</span>
+										<span class="wow fadeInDown" data-wow-delay="0.6s" data-wow-duration="0.5s">s</span>
+										<span class="wow bounceIn" data-wow-delay="1.6s">/</span>
+										<span class="wow fadeInDown" data-wow-delay="0.8s" data-wow-duration="0.5s">s</span>
+										<span class="wow fadeInDown" data-wow-delay="1s" data-wow-duration="0.5s">o</span>
+									</h2>
+									<p class="intro-description wow fadeIn" data-wow-delay="2.2s">Creative Agency Since 2006</p>
+									<div class="margin-top-30">
+										<a href="#section-2" class="btn btn-white-bordered btn-rounded sm-scroll wow bounceIn" data-wow-delay="0.8s">Our Services</a> 
+										<a href="#section-8" class="btn btn-primary btn-rounded sm-scroll margin-top-10 wow bounceIn" data-wow-delay="1s">Hire Us Now!</a>
+									</div>
+								</div>
+								<div class="made-with-love hidden-xs">
+									<p class="text-gray">Made with <span class="text-main"><i class="fa fa-heart-o"></i></span></p>
+								</div>
+								<a class="scroll-down-arrow sm-scroll text-center text-white" href="#section-1"><span><i class="fa fa-chevron-down"></i></span></a>
+							</div>
+						</section>
+						<section class="call-to-action-section angle-left-bottom bg-dark bg-pattern" style="background-image: url(/v9_e_asso_theme/static/src/images/patterns/ptn-2.png);">
+							<span class="cover bg-transparent-4-5-dark"></span>
+							<div class="container">	
+								<div class="row wow fadeIn">
+									<div class="col-md-8 padding-right-40">
+										<h2 class="call-to-action-title text-gray-2">Pellentesque Dignissim Risus Ante</h2>
+										<p class="lead call-to-action-text text-gray">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+											sed do eiusmod tempor incididunt ut labore.
+										</p>
+										<p class="call-to-action-text lead text-gray margin-top-30"><strong>Cool / Innovative / Creative</strong></p>
+									</div> 
+									<div class="col-md-4 text-center">
+										<a href="https://shapebootstrap.net/profile/Themetorium/items" target="_blank" class="btn btn-primary-bordered btn-xlg btn-block"><i class="fa fa-shopping-cart"></i> Buy This Template</a>
+										<br/>
+										<a href="#" class="small text-gray">Or Learn More.. <i class="fa fa-graduation-cap"></i></a>
+									</div> 
+								</div>
+							</div> 
+						</section>
+						<section id="section-1" class="about-section">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="heading heading-lg heading-hover wow fadeIn">
+											<span class="heading-title-ghost">About Us</span>
+											<h2 class="heading-title">About Us</h2>
+											<hr class="hr-width-1 hr-5x border-main"/>
+											<p class="heading-tescription lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+												tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+												quis nostrud exercitation ullamco laboris nisi ut aliquip consequat. Tempor incididunt ut labore et 
+												dolore magna aliquapta. <a href="#">Read More...</a>
+											</p>
+										</div>
+									</div> 
+								</div> 
+							</div> 
+							<div class="container margin-top-20">
+								<div class="row wow fadeIn" data-wow-delay="0.3s">
+									<div class="col-sm-6 col-md-3">
+										<div class="info-box info-box-1">
+											<span class="info-box-icon"><i class="fa fa-clone"></i></span>
+											<div class="info-box-info">
+												<h4 class="info-box-title">Fully Responsive</h4>
+												<p class="info-box-text">
+													Lorem ipsum dolor sit amet, consect adipis elit minim veniam ettis inkeras.
+												</p>
+											</div>
+										</div>
+									</div> 
+									<div class="col-sm-6 col-md-3">
+										<div class="info-box info-box-1">
+											<span class="info-box-icon"><i class="fa fa-diamond"></i></span>
+											<div class="info-box-info">
+												<h4 class="info-box-title">Clean Code</h4>
+												<p class="info-box-text">
+													Lorem ipsum dolor sit amet, consect adipis elit minim veniam ettis inkeras.
+												</p>
+											</div>
+										</div>
+									</div> 
+									<div class="col-sm-6 col-md-3">
+										<div class="info-box info-box-1">
+											<span class="info-box-icon"><i class="fa fa-television"></i></span>
+											<div class="info-box-info">
+												<h4 class="info-box-title">One Page</h4>
+												<p class="info-box-text">
+													Lorem ipsum dolor sit amet, consect adipis elit minim veniam ettis inkeras.
+												</p>
+											</div>
+										</div>
+									</div> 
+									<div class="col-sm-6 col-md-3">
+										<div class="info-box info-box-1">
+											<span class="info-box-icon"><i class="fa fa-bicycle"></i></span>
+											<div class="info-box-info">
+												<h4 class="info-box-title">Awesome Icons</h4>
+												<p class="info-box-text">
+													Lorem ipsum dolor sit amet, consect adipis elit minim veniam ettis inkeras.
+												</p>
+											</div>
+										</div>
+									</div> 
+								</div>
+							</div> 
+						</section>
+						<section id="section-2" class="services-section bg-dark angle-right-top angle-left-bottom bg-image-parallax" style="background-image: url(/v9_e_asso_theme/static/src/images/misc/bg-4.jpg);">
+							<span class="cover bg-transparent-9-dark"></span>
+							<div class="container">	
+								<div class="row">
+									<div class="col-md-6">
+										<div class="heading heading-lg text-white heading-hover wow fadeIn" data-wow-delay="0.2s">
+											<span class="heading-title-ghost">Services</span>
+											<h2 class="heading-title">Services</h2>
+											<hr class="hr-width-1 hr-5x border-main"/>
+											<p class="heading-tescription lead text-gray-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquapta. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquipter consequat adipisicing sedari.
+											</p>
+											<br/>
+											<a href="#" target="_blank" class="btn btn-white-bordered btn-rounded"><i class="fa fa-external-link"></i> Read More!</a>
+										</div>
+									</div> 
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="info-box info-box-4 info-box-white wow fadeIn">
+													<span class="info-box-icon rounded-icon bg-main text-white"><i class="fa fa-paint-brush"></i></span>
+													<div class="info-box-info">
+														<h4 class="info-box-title">Designing</h4>
+														<p class="info-box-text text-gray-2">
+															Lorem ipsum dolor sit amet, consectetur adipisicing elit minim veniam ut enim.
+														</p>
+													</div>
+												</div>
+											</div> 
+											<div class="col-md-12">
+												<div class="info-box info-box-4 info-box-white wow fadeIn" data-wow-delay="0.2s">
+													<span class="info-box-icon rounded-icon bg-main text-white"><i class="fa fa-code"></i></span>
+													<div class="info-box-info">
+														<h4 class="info-box-title">Developing</h4>
+														<p class="info-box-text text-gray-2">
+															Lorem ipsum dolor sit amet, consectetur adipisicing elit minim veniam ut enim.
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="info-box info-box-4 info-box-white wow fadeIn" data-wow-delay="0.4s">
+													<span class="info-box-icon rounded-icon bg-main text-white"><i class="fa fa-globe"></i></span>
+													<div class="info-box-info">
+														<h4 class="info-box-title">Branding</h4>
+														<p class="info-box-text text-gray-2">
+															Lorem ipsum dolor sit amet, consectetur adipisicing elit minim veniam ut enim.
+														</p>
+													</div>
+												</div>
+											</div> 
+										</div>
+									</div> 
+								</div>
+							</div> 
+						</section>
+						<section id="section-3" class="portfolio-section">
+							<div class="container">
+								<div class="row wow fadeIn">
+									<div class="col-md-6">
+										<div class="heading heading-lg heading-hover">
+											<span class="heading-title-ghost">Portfolio</span>
+											<h2 class="heading-title">Portfolio</h2>
+											<hr class="hr-width-1 hr-5x border-main"/>
+										</div>
+									</div> 
+									<div class="col-md-6">
+										<p class="lead">
+											<strong>Lorem ipsum dolor</strong> sit amet, consectetur adipisicing elit, sed do eiusmod
+											tempor incididunt ut labore et dolore magna aliqua. <a href="#">Read More..</a>
+										</p>
+									</div> 
+								</div> 
+							</div> 
+							<div class="container">
+								<div class="isotope popup-gallery gutter-2 col-3">
+									<div class="isotope-filter">
+										<div class="navbar-header">
+											<button type="button" class="navbar-toggle collapsed filter-toggle-btn" data-toggle="collapse" data-target="#isotope-filter-collapse">
+												<span class="text-center">Filter <i class="fa fa-chevron-down"></i></span>
+											</button>
+										</div>
+										<div class="isotope-filter-links collapse navbar-collapse no-padding wow fadeIn" id="isotope-filter-collapse">
+											<a class="active" href="#" data-filter="*">All</a>
+											<a href="#" data-filter=".photography">Photography</a>
+											<a href="#" data-filter=".web-design">Web Design</a>
+											<a href="#" data-filter=".graphics">Graphics</a>
+											<a href="#" data-filter=".branding, .web-design">Mockups</a>
+										</div>
+									</div>
+									<div class="isotope-items-wrap">
+										<div class="grid-sizer"></div>
+										<div class="isotope-item photography wow fadeInUp">
+											<div class="portfolio-item-wrap">
+												<div class="portfolio-item">
+													<a class="item-link inline-popup-trigger" href="#portfolio-1">
+														<span class="cover bg-transparent-9-main"></span>
+														<img class="item-img" src="/v9_e_asso_theme/static/src/images/portfolio/masonry/portfolio-img-1.jpg" alt="image"/>
+														<div class="item-info text-white">
+															<h3 class="item-info-title">Hardcover Book</h3>
+															<p class="item-info-text">Photography</p>
+														</div>
+													</a>
+												</div>
+												<div id="portfolio-1" class="inline-popup mfp-hide">
+													<div class="inline-popup-inner">
+														<div class="inline-popup-image bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/portfolio/big/portfolio-img-1.jpg); background-position: 50% 50%;"></div>
+														<div class="row margin-top-40">
+															<div class="col-md-8 margin-bottom-20">
+																<h2 class="no-margin-top">Portfolio Single Item 1</h2>
+																<p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show.</p> 
+			
+																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquapta. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquipter consequat adipisicing sedari.</p>
+															</div>
+															<div class="col-md-4 margin-bottom-20 padding-left-40">
+																<ul class="list-unstyled">
+																	<li>Client: <strong><a href="#" target="_blank">MockCo INC</a></strong></li>
+																	<li>Date: <strong><a href="#" target="_blank">01 jan, 2016</a></strong></li>
+																	<li>Category <strong><a href="#" target="_blank">Photography</a></strong></li>
+																	<li>Copyright ©2016, All Rights Reserved</li>
+																</ul>
+																<a href="#" target="_blank" class="btn btn-primary btn-rounded btn-lg margin-top-20">Launch Project</a>
+															</div>
+														</div> 
+													</div>
+													<a class="inline-popup-close" href="#"><i class="fa fa-times"></i></a>
+												</div>
+											</div>
+										</div>
+										<div class="isotope-item branding wow fadeInUp">
+											<div class="portfolio-item-wrap">
+												<div class="portfolio-item">
+													<a class="item-link inline-popup-trigger" href="#portfolio-2">
+														<span class="cover bg-transparent-9-main"></span>
+														<img class="item-img" src="/v9_e_asso_theme/static/src/images/portfolio/masonry/portfolio-img-2.jpg" alt="image"/>
+														<div class="item-info text-white">
+															<h3 class="item-info-title">Identity MockUp Vol.1</h3>
+															<p class="item-info-text">Branding</p>
+														</div>
+													</a>
+												</div>
+												<div id="portfolio-2" class="inline-popup mfp-hide">
+													<div class="inline-popup-inner">
+														<div class="inline-popup-image bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/portfolio/big/portfolio-img-2.jpg); background-position: 50% 50%;"></div>
+														<div class="row margin-top-40">
+															<div class="col-md-8 margin-bottom-20">
+																<h2 class="no-margin-top">Portfolio Single Item 2</h2>
+																<p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show.</p> 
+																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquapta. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquipter consequat adipisicing sedari.</p>
+															</div>
+															<div class="col-md-4 margin-bottom-20 padding-left-40">
+																<ul class="list-unstyled">
+																	<li>Client: <strong><a href="#" target="_blank">MockCo INC</a></strong></li>
+																	<li>Date: <strong><a href="#" target="_blank">03 jan, 2016</a></strong></li>
+																	<li>Category <strong><a href="#" target="_blank">Photography</a></strong></li>
+																	<li>Copyright ©2016, All Rights Reserved</li>
+																</ul>
+																<a href="#" target="_blank" class="btn btn-primary btn-rounded btn-lg margin-top-20">Launch Project</a>
+															</div>
+														</div> 
+													</div> 
+													<a class="inline-popup-close" href="#"><i class="fa fa-times"></i></a>
+												</div>
+											</div>
+										</div>
+										<div class="isotope-item web-design wow fadeInUp">
+											<div class="portfolio-item-wrap">
+												<div class="portfolio-item">
+													<a class="item-link inline-popup-trigger" href="#portfolio-3">
+														<span class="cover bg-transparent-9-main"></span>
+														<img class="item-img" src="/v9_e_asso_theme/static/src/images/portfolio/masonry/portfolio-img-3.jpg" alt="image"/>
+														<div class="item-info text-white">
+															<h3 class="item-info-title">Brown Paper Bag</h3>
+															<p class="item-info-text">Web Design</p>
+														</div>
+													</a>
+												</div>
+												<div id="portfolio-3" class="inline-popup mfp-hide">
+													<div class="inline-popup-inner">
+														<div class="owl-carousel portfolio-single-carousel dots-outside" data-items="1" data-nav="true">
+															<div class="cc-item">
+																<div class="inline-popup-image bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/portfolio/big/portfolio-img-3.jpg); background-position: 50% 50%;"></div>
+															</div>
+															<div class="cc-item">
+																<div class="inline-popup-image bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/portfolio/big/portfolio-img-4.jpg); background-position: 50% 50%;"></div>
+															</div>
+															<div class="cc-item">
+																<div class="inline-popup-image bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/portfolio/big/portfolio-img-5.jpg); background-position: 50% 50%;"></div>
+															</div>
+														</div>
+														<div class="row margin-top-80">
+															<div class="col-md-8 margin-bottom-20">
+																<h2 class="no-margin-top">Portfolio Single Item 3</h2>
+																<p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show.</p> 
+																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquapta. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquipter consequat adipisicing sedari.</p>
+															</div>
+															<div class="col-md-4 margin-bottom-20 padding-left-40">
+																<ul class="list-unstyled">
+																	<li>Client: <strong><a href="#" target="_blank">MockCo INC</a></strong></li>
+																	<li>Date: <strong><a href="#" target="_blank">04 jan, 2016</a></strong></li>
+																	<li>Category <strong><a href="#" target="_blank">Photography</a></strong></li>
+																	<li>Copyright ©2016, All Rights Reserved</li>
+																</ul>
+																<a href="#" target="_blank" class="btn btn-primary btn-rounded btn-lg margin-top-20">Launch Project</a>
+															</div>
+														</div> 
+													</div> 
+													<a class="inline-popup-close" href="#"><i class="fa fa-times"></i></a>
+												</div>
+											</div>
+										</div>
+										<div class="isotope-item graphics wow fadeInUp">
+											<div class="portfolio-item-wrap">
+												<div class="portfolio-item">
+													<a class="item-link inline-popup-trigger" href="#portfolio-4">
+														<span class="cover bg-transparent-9-main"></span>
+														<img class="item-img" src="/v9_e_asso_theme/static/src/images/portfolio/masonry/portfolio-img-4.jpg" alt="image"/>
+														<div class="item-info text-white">
+															<h3 class="item-info-title">Canvas Tote Bag</h3>
+															<p class="item-info-text">Graphics</p>
+														</div>
+													</a>
+												</div>
+												<div id="portfolio-4" class="inline-popup mfp-hide">
+													<div class="inline-popup-inner">
+														<div class="inline-popup-image bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/portfolio/big/portfolio-img-4.jpg); background-position: 50% 50%;"></div>
+														<div class="row margin-top-40">
+															<div class="col-md-8 margin-bottom-20">
+																<h2 class="no-margin-top">Portfolio Single Item 4</h2>
+																<p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show.</p> 
+																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquapta. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquipter consequat adipisicing sedari.</p>
+															</div>
+															<div class="col-md-4 margin-bottom-20 padding-left-40">
+																<ul class="list-unstyled">
+																	<li>Client: <strong><a href="#" target="_blank">MockCo INC</a></strong></li>
+																	<li>Date: <strong><a href="#" target="_blank">05 jan, 2016</a></strong></li>
+																	<li>Category <strong><a href="#" target="_blank">Graphics</a></strong></li>
+																	<li>Copyright ©2016, All Rights Reserved</li>
+																</ul>
+																<a href="#" target="_blank" class="btn btn-primary btn-rounded btn-lg margin-top-20">Launch Project</a>
+															</div>
+														</div> 
+													</div> 
+													<a class="inline-popup-close" href="#"><i class="fa fa-times"></i></a>
+												</div>
+											</div>
+										</div>
+										<div class="isotope-item photography wow fadeInUp">
+											<div class="portfolio-item-wrap">
+												<div class="portfolio-item">
+													<a class="item-link inline-popup-trigger" href="#portfolio-5">
+														<span class="cover bg-transparent-9-main"></span>
+														<img class="item-img" src="/v9_e_asso_theme/static/src/images/portfolio/masonry/portfolio-img-5.jpg" alt="image"/>
+														<div class="item-info text-white">
+															<h3 class="item-info-title">Rubber Stamp</h3>
+															<p class="item-info-text">Photography</p>
+														</div>
+													</a>
+												</div>
+												<div id="portfolio-5" class="inline-popup mfp-hide">
+													<div class="inline-popup-inner">
+														<div class="embed-responsive embed-responsive-16by9">
+															<iframe data-src="https://www.youtube.com/embed/9UWo5RdXc1o" src="https://player.vimeo.com/video/60616160?"></iframe>
+														</div>
+														<div class="row margin-top-40">
+															<div class="col-md-8 margin-bottom-20">
+																<h2 class="no-margin-top">Portfolio Single Item 5</h2>
+																<p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show.</p> 
+			
+																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquapta. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquipter consequat adipisicing sedari.</p>
+															</div>
+															<div class="col-md-4 margin-bottom-20 padding-left-40">
+																<ul class="list-unstyled">
+																	<li>Client: <strong><a href="#" target="_blank">MockCo INC</a></strong></li>
+																	<li>Date: <strong><a href="#" target="_blank">07 jan, 2016</a></strong></li>
+																	<li>Category <strong><a href="#" target="_blank">Photography</a></strong></li>
+																	<li>Copyright ©2016, All Rights Reserved</li>
+																</ul>
+																<a href="#" target="_blank" class="btn btn-primary btn-rounded btn-lg margin-top-20">Launch Project</a>
+															</div>
+														</div> 
+													</div> 
+													<a class="inline-popup-close" href="#"><i class="fa fa-times"></i></a>
+												</div>
+											</div>
+										</div>
+										<div class="isotope-item branding wow fadeInUp">
+											<div class="portfolio-item-wrap">
+												<div class="portfolio-item">
+													<a class="item-link inline-popup-trigger" href="#portfolio-6">
+														<span class="cover bg-transparent-9-main"></span>
+														<img class="item-img" src="/v9_e_asso_theme/static/src/images/portfolio/masonry/portfolio-img-6.jpg" alt="image"/>
+														<div class="item-info text-white">
+															<h3 class="item-info-title">Vintage Logo MockUp</h3>
+															<p class="item-info-text">Branding</p>
+														</div>
+													</a>
+												</div>
+												<div id="portfolio-6" class="inline-popup mfp-hide">
+													<div class="inline-popup-inner">
+														<div class="embed-responsive embed-responsive-16by9">
+															<iframe data-src="https://player.vimeo.com/video/79298633?" src="https://player.vimeo.com/video/60616160?"></iframe>
+														</div>
+														<div class="row margin-top-40">
+															<div class="col-md-8 margin-bottom-20">
+																<h2 class="no-margin-top">Portfolio Single Item 6</h2>
+																<p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show.</p> 
+																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquapta. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquipter consequat adipisicing sedari.</p>
+															</div>
+															<div class="col-md-4 margin-bottom-20 padding-left-40">
+																<ul class="list-unstyled">
+																	<li>Client: <strong><a href="#" target="_blank">MockCo INC</a></strong></li>
+																	<li>Date: <strong><a href="#" target="_blank">08 jan, 2016</a></strong></li>
+																	<li>Category <strong><a href="#" target="_blank">Branding</a></strong></li>
+																	<li>Copyright ©2016, All Rights Reserved</li>
+																</ul>
+																<a href="#" target="_blank" class="btn btn-primary btn-rounded btn-lg margin-top-20">Launch Project</a>
+															</div>
+														</div> 
+													</div> 
+													<a class="inline-popup-close" href="#"><i class="fa fa-times"></i></a>
+												</div>
+											</div>
+										</div>
+										<div class="isotope-item web-design wow fadeInUp">
+											<div class="portfolio-item-wrap">
+												<div class="portfolio-item">
+													<a class="item-link inline-popup-trigger" href="#portfolio-7">
+														<span class="cover bg-transparent-9-main"></span>
+														<img class="item-img" src="/v9_e_asso_theme/static/src/images/portfolio/masonry/portfolio-img-7.jpg" alt="image"/>
+														<div class="item-info text-white">
+															<h3 class="item-info-title">Identity MockUp vol.2</h3>
+															<p class="item-info-text">Web Design</p>
+														</div>
+													</a>
+												</div>
+												<div id="portfolio-7" class="inline-popup mfp-hide">
+													<div class="inline-popup-inner">
+														<div class="inline-popup-image bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/portfolio/big/portfolio-img-7.jpg); background-position: 50% 50%;"></div>
+														<div class="row margin-top-40">
+															<div class="col-md-8 margin-bottom-20">
+																<h2 class="no-margin-top">Portfolio Single Item 7</h2>
+																<p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show.</p> 
+			
+																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquapta. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquipter consequat adipisicing sedari.</p>
+															</div>
+															<div class="col-md-4 margin-bottom-20 padding-left-40">
+																<ul class="list-unstyled">
+																	<li>Client: <strong><a href="#" target="_blank">MockCo INC</a></strong></li>
+																	<li>Date: <strong><a href="#" target="_blank">11 jan, 2016</a></strong></li>
+																	<li>Category <strong><a href="#" target="_blank">Web Design</a></strong></li>
+																	<li>Copyright ©2016, All Rights Reserved</li>
+																</ul>
+																<a href="#" target="_blank" class="btn btn-primary btn-rounded btn-lg margin-top-20">Launch Project</a>
+															</div>
+														</div> 
+													</div> 
+													<a class="inline-popup-close" href="#"><i class="fa fa-times"></i></a>
+												</div>
+											</div>
+										</div>
+										<div class="isotope-item graphics wow fadeInUp">
+											<div class="portfolio-item-wrap">
+												<div class="portfolio-item">
+													<a class="item-link inline-popup-trigger" href="#portfolio-8">
+														<span class="cover bg-transparent-9-main"></span>
+														<img class="item-img" src="/v9_e_asso_theme/static/src/images/portfolio/masonry/portfolio-img-8.jpg" alt="image"/>
+														<div class="item-info text-white">
+															<h3 class="item-info-title">Identity MockUp vol.3</h3>
+															<p class="item-info-text">Graphics</p>
+														</div>
+													</a>
+												</div>
+												<div id="portfolio-8" class="inline-popup mfp-hide">
+													<div class="inline-popup-inner">
+														<div class="inline-popup-image bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/portfolio/big/portfolio-img-8.jpg); background-position: 50% 50%;"></div>
+														<div class="row margin-top-40">
+															<div class="col-md-8 margin-bottom-20">
+																<h2 class="no-margin-top">Portfolio Single Item 8</h2>
+																<p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show.</p> 
+			
+																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquapta. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquipter consequat adipisicing sedari.</p>
+															</div>
+															<div class="col-md-4 margin-bottom-20 padding-left-40">
+																<ul class="list-unstyled">
+																	<li>Client: <strong><a href="#" target="_blank">MockCo INC</a></strong></li>
+																	<li>Date: <strong><a href="#" target="_blank">16 jan, 2016</a></strong></li>
+																	<li>Category <strong><a href="#" target="_blank">Graphics</a></strong></li>
+																	<li>Copyright ©2016, All Rights Reserved</li>
+																</ul>
+																<a href="#" target="_blank" class="btn btn-primary btn-rounded btn-lg margin-top-20">Launch Project</a>
+															</div>
+														</div> 
+													</div> 
+													<a class="inline-popup-close" href="#"><i class="fa fa-times"></i></a>
+												</div>
+											</div>
+										</div>
+										<div class="isotope-item branding wow fadeInUp">
+											<div class="portfolio-item-wrap">
+												<div class="portfolio-item">
+													<a class="item-link inline-popup-trigger" href="#portfolio-9">
+														<span class="cover bg-transparent-9-main"></span>
+														<img class="item-img" src="/v9_e_asso_theme/static/src/images/portfolio/masonry/portfolio-img-9.jpg" alt="image"/>
+														<div class="item-info text-white">
+															<h3 class="item-info-title">Vinyl Record</h3>
+															<p class="item-info-text">Branding</p>
+														</div>
+													</a>
+												</div>
+												<div id="portfolio-9" class="inline-popup mfp-hide">
+													<div class="inline-popup-inner">
+														<div class="inline-popup-image bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/portfolio/big/portfolio-img-9.jpg); background-position: 50% 50%;"></div>
+														<div class="row margin-top-40">
+															<div class="col-md-8 margin-bottom-20">
+																<h2 class="no-margin-top">Portfolio Single Item 9</h2>
+																<p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show.</p> 
+			
+																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquapta. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquipter consequat adipisicing sedari.</p>
+															</div>
+															<div class="col-md-4 margin-bottom-20 padding-left-40">
+																<ul class="list-unstyled">
+																	<li>Client: <strong><a href="#" target="_blank">MockCo INC</a></strong></li>
+																	<li>Date: <strong><a href="#" target="_blank">18 jan, 2016</a></strong></li>
+																	<li>Category <strong><a href="#" target="_blank">Branding</a></strong></li>
+																	<li>Copyright ©2016, All Rights Reserved</li>
+																</ul>
+																<a href="#" target="_blank" class="btn btn-primary btn-rounded btn-lg margin-top-20">Launch Project</a>
+															</div>
+														</div> 
+													</div> 
+													<a class="inline-popup-close" href="#"><i class="fa fa-times"></i></a>
+												</div>
+											</div>
+										</div>
+										<div class="isotope-item web-design wow fadeInUp">
+											<div class="portfolio-item-wrap">
+												<div class="portfolio-item">
+													<a class="item-link inline-popup-trigger" href="#portfolio-10">
+														<span class="cover bg-transparent-9-main"></span>
+														<img class="item-img" src="/v9_e_asso_theme/static/src/images/portfolio/masonry/portfolio-img-10.jpg" alt="image"/>
+														<div class="item-info text-white">
+															<h3 class="item-info-title">Shopping Bag</h3>
+															<p class="item-info-text">Web Design</p>
+														</div>
+													</a>
+												</div>
+												<div id="portfolio-10" class="inline-popup mfp-hide">
+													<div class="inline-popup-inner">
+														<div class="inline-popup-image bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/portfolio/big/portfolio-img-10.jpg); background-position: 50% 50%;"></div>
+														<div class="row margin-top-40">
+															<div class="col-md-8 margin-bottom-20">
+																<h2 class="no-margin-top">Portfolio Single Item 10</h2>
+																<p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show.</p> 
+																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquapta. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquipter consequat adipisicing sedari.</p>
+															</div>
+															<div class="col-md-4 margin-bottom-20 padding-left-40">
+																<ul class="list-unstyled">
+																	<li>Client: <strong><a href="#" target="_blank">MockCo INC</a></strong></li>
+																	<li>Date: <strong><a href="#" target="_blank">29 jan, 2016</a></strong></li>
+																	<li>Category <strong><a href="#" target="_blank">Web Design</a></strong></li>
+																	<li>Copyright ©2016, All Rights Reserved</li>
+																</ul>
+																<a href="#" target="_blank" class="btn btn-primary btn-rounded btn-lg margin-top-20">Launch Project</a>
+															</div>
+														</div>
+													</div>
+													<a class="inline-popup-close" href="#"><i class="fa fa-times"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="text-center wow fadeIn" data-wow-delay="0.4s">
+									<a href="#" target="_blank" class="btn btn-default btn-xlg btn-block margin-top-40">View All Portfolio</a>
+								</div>
+							</div> 
+						</section>
+						<section id="section-4" class="prices-section bg-dark angle-right-top angle-left-bottom bg-image-parallax" style="background-image: url(/v9_e_asso_theme/static/src/images/misc/bg-3.jpg);">
+							<span class="cover bg-transparent-9-5-dark"></span>
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="heading heading-lg text-white heading-hover wow fadeIn">
+											<span class="heading-title-ghost">Pricing</span>
+											<h2 class="heading-title">Pricing</h2>
+											<hr class="hr-width-1 hr-5x border-main"/>
+										</div>
+									</div> 
+								</div> 
+							</div> 
+							<div class="container wow fadeIn">
+								<div class="row">
+									<div class="col-md-4">
+										<div class="info-box info-box-4 info-box-white wow fadeIn">
+											<span class="info-box-icon rounded-icon bg-main text-white"><i class="fa fa-usd"></i></span>
+											<div class="info-box-info">
+												<h4 class="info-box-title">Consectetur Adipis</h4>
+												<p class="info-box-text text-gray-2">
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit minim veniam ut enim.
+												</p>
+											</div>
+										</div>
+									</div> 
+									<div class="col-md-4">
+										<div class="info-box info-box-4 info-box-white wow fadeIn" data-wow-delay="0.2s">
+											<span class="info-box-icon rounded-icon bg-main text-white"><i class="fa fa-bar-chart"></i></span>
+											<div class="info-box-info">
+												<h4 class="info-box-title">Excepteur Sint</h4>
+												<p class="info-box-text text-gray-2">
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit minim veniam ut enim.
+												</p>
+											</div>
+										</div>
+									</div> 
+									<div class="col-md-4">
+										<div class="info-box info-box-4 info-box-white wow fadeIn" data-wow-delay="0.4s">
+											<span class="info-box-icon rounded-icon bg-main text-white"><i class="fa fa-balance-scale"></i></span>
+											<div class="info-box-info">
+												<h4 class="info-box-title">Cillum Dolore</h4>
+												<p class="info-box-text text-gray-2">
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit minim veniam ut enim.
+												</p>
+											</div>
+										</div>
+									</div> 
+								</div> 
+							</div> 
+							<div class="prices wow fadeIn" data-wow-delay="0.6s">
+								<div class="container">
+									<div class="owl-carousel prices-carousel dots-outside nav-outside-top" data-items="4" data-margin="15" data-nav="true" data-tablet-landscape="3" data-tablet-portrait="3" data-mobile-landscape="2" data-mobile-portrait="1">
+										<div class="price-box price-box-dark">
+											<div class="pr-box price-heading">
+												<i class="fa fa-plug"></i>
+												<h3 class="price-title">Light</h3>
+												<div class="price-heading-text">Light Membership</div>
+											</div>
+											<div class="pr-box price-box-price">
+												<div class="price"><span class="price-currency">$</span>69</div>
+												<div class="price-tenure">Per Month</div>
+											</div>
+											<div class="pr-box price-features">
+												<ul class="list-unstyled">
+													<li>Personal Use</li>
+													<li>5 Projects</li>
+													<li>1 Month License</li>
+													<li>27/7 Support</li>
+												</ul>
+											</div>
+											<div class="pr-box price-footer">
+												<a href="#" class="btn btn-white-bordered btn-rounded">Order Now</a>
+											</div>
+										</div>
+										<div class="price-box price-box-dark">
+											<div class="pr-box price-heading">
+												<i class="fa fa-gavel fa-2x"></i>
+												<h3 class="price-title">Basic</h3>
+												<div class="price-heading-text">Basic Membership</div>
+											</div>
+											<div class="pr-box price-box-price">
+												<div class="price"><span class="price-currency">$</span>99</div>
+												<div class="price-tenure">Per Month</div>
+											</div>
+											<div class="pr-box price-features">
+												<ul class="list-unstyled">
+													<li>Personal Use</li>
+													<li>10 Projects</li>
+													<li>1 Month License</li>
+													<li>27/7 Support</li>
+												</ul>
+											</div>
+											<div class="pr-box price-footer">
+												<a href="#" class="btn btn-white-bordered btn-rounded">Order Now</a>
+											</div>
+										</div>
+										<div class="price-box price-box-dark price-box-featured">
+											<div class="price-box-ribbon">Popular</div>
+											<div class="pr-box price-heading">
+												<i class="fa fa-magic"></i>
+												<h3 class="price-title">Premium</h3>
+												<div class="price-heading-text">Premium Membership</div>
+											</div>
+											<div class="pr-box price-box-price">
+												<div class="price"><span class="price-currency">$</span>149</div>
+												<div class="price-tenure">Per Month</div>
+											</div>
+											<div class="pr-box price-features">
+												<ul class="list-unstyled">
+													<li>Multi Use</li>
+													<li>20 Projects</li>
+													<li>1 Month License</li>
+													<li>27/7 Support</li>
+												</ul>
+											</div>
+											<div class="pr-box price-footer">
+												<a href="#" class="btn btn-primary btn-rounded">Order Now</a>
+											</div>
+										</div>
+										<div class="price-box price-box-dark">
+											<div class="pr-box price-heading">
+												<i class="fa fa-plus"></i>
+												<h3 class="price-title">Premium Plus</h3>
+												<div class="price-heading-text">Plus Membership</div>
+											</div>
+											<div class="pr-box price-box-price">
+												<div class="price"><span class="price-currency">$</span>199</div>
+												<div class="price-tenure">Per Month</div>
+											</div>
+											<div class="pr-box price-features">
+												<ul class="list-unstyled">
+													<li>Multi Use</li>
+													<li>Unlimited Projects</li>
+													<li>1 Month License</li>
+													<li>27/7 Support</li>
+												</ul>
+											</div>
+											<div class="pr-box price-footer">
+												<a href="#" class="btn btn-white-bordered btn-rounded">Order Now</a>
+											</div>
+										</div>
+									</div>
+								</div> 
+							</div>
+						</section>
+						<section id="section-5" class="team-section">
+							<div class="container">
+								<div class="row wow fadeIn">
+									<div class="col-md-6">
+										<div class="heading heading-lg heading-hover">
+											<span class="heading-title-ghost">The Team</span>
+											<h2 class="heading-title">The Team</h2>
+											<hr class="hr-width-1 hr-5x border-main"/>
+										</div>
+									</div> 
+									<div class="col-md-6">
+										<p class="lead">
+											Aliquam id viverra dolor. Duis vel ligula non neque.Lorem ipsum dolor sit amet, 
+											consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. Suckamik saneta isromet.
+										</p>
+									</div> 
+								</div> 
+							</div> 
+							<div class="team wow fadeIn" data-wow-delay="0.3s">
+								<div class="container">
+									<div class="owl-carousel team-carousel dots-outside" data-items="4" data-margin="20" data-tablet-landscape="3" data-tablet-portrait="2" data-mobile-landscape="2" data-mobile-portrait="1">
+										<div class="team-box team-box-hover team-box-rounded">
+											<div class="team-image">
+												<img src="/v9_e_asso_theme/static/src/images/team/staff-1.jpg" alt="John Doe"/>
+											</div>
+											<div class="team-info text-center">
+												<h4 class="team-info-title">John Doe</h4>
+												<p class="team-info-text">General Manager</p>
+												<ul class="social-icons">
+													<li><a class="btn btn-social-min btn-default btn-rounded-full btn-sm" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+													<li><a class="btn btn-social-min btn-default btn-rounded-full btn-sm" href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+													<li><a class="btn btn-social-min btn-default btn-rounded-full btn-sm" href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+													<li><a class="btn btn-social-min btn-default btn-rounded-full btn-sm" href="#" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="team-box team-box-hover team-box-rounded">
+											<div class="team-image">
+												<img src="/v9_e_asso_theme/static/src/images/team/staff-2.jpg" alt="Joseph Reeves"/>
+											</div>
+											<div class="team-info text-center">
+												<h4 class="team-info-title">Joseph Reeves</h4>
+												<p class="team-info-text">Developer</p>
+												<ul class="social-icons">
+													<li><a class="btn btn-social-min btn-default btn-rounded-full btn-sm" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+													<li><a class="btn btn-social-min btn-default btn-rounded-full btn-sm" href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+													<li><a class="btn btn-social-min btn-default btn-rounded-full btn-sm" href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+													<li><a class="btn btn-social-min btn-default btn-rounded-full btn-sm" href="#" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="team-box team-box-hover team-box-rounded">
+											<div class="team-image">
+												<img src="/v9_e_asso_theme/static/src/images/team/staff-3.jpg" alt="Henry Harrison"/>
+											</div>
+											<div class="team-info text-center">
+												<h4 class="team-info-title">Miranda Harrison</h4>
+												<p class="team-info-text">Designer</p>
+												<ul class="social-icons">
+													<li><a class="btn btn-social-min btn-default btn-rounded-full btn-sm" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+													<li><a class="btn btn-social-min btn-default btn-rounded-full btn-sm" href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+													<li><a class="btn btn-social-min btn-default btn-rounded-full btn-sm" href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+													<li><a class="btn btn-social-min btn-default btn-rounded-full btn-sm" href="#" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="team-box team-box-hover team-box-rounded">
+											<div class="team-image">
+												<img src="/v9_e_asso_theme/static/src/images/team/staff-4.jpg" alt="Henry Harrison"/>
+											</div>
+											<div class="team-info text-center">
+												<h4 class="team-info-title">Anna Daniel</h4>
+												<p class="team-info-text">Marketing</p>
+												<ul class="social-icons">
+													<li><a class="btn btn-social-min btn-default btn-rounded-full btn-sm" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+													<li><a class="btn btn-social-min btn-default btn-rounded-full btn-sm" href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+													<li><a class="btn btn-social-min btn-default btn-rounded-full btn-sm" href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+													<li><a class="btn btn-social-min btn-default btn-rounded-full btn-sm" href="#" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="team-box team-box-hover team-box-rounded">
+											<div class="team-image">
+												<a href="#" target="_blank"><img src="/v9_e_asso_theme/static/src/images/team/staff-5.jpg" alt="Henry Harrison"/></a>
+											</div>
+											<div class="team-info text-center">
+												<h4 class="team-info-title">Join Us</h4>
+												<p class="team-info-text">Designer Wanted</p>
+												<a href="#" class="btn btn-primary btn-rounded btn-sm">Read More!</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section id="section-9" class="video-section youtube-bg text-white angle-right-top angle-left-bottom" 
+							style="background-image: url(/v9_e_asso_theme/static/src/images/video-bg/promo-video-bg.jpg); background-position: 50% 50%;"
+							data-property="{
+						      videoURL: 'https://youtu.be/O7JwGfdMsCw',
+						      containment: 'self',
+						      startAt: 0, 
+						      stopAt: 0,
+						      autoPlay: true,
+						      loop: true,
+						      mute: true,  
+						      showControls: false, 
+						      showYTLogo: false,
+						      realfullscreen: true,
+						      addRaster: false, 
+						      optimizeDisplay: true,
+						      stopMovieOnBlur: true
+							}">
+							<span class="cover bg-transparent-8-dark"></span>
+							<div class="video-section-caption vertical-align-center">
+								<div class="heading heading-lg heading-center heading-hover wow fadeIn">
+									<span class="heading-title-ghost">Video Promo</span>
+									<h2 class="heading-title">Video Promo</h2>
+									<a class="video-btn bg-main" href="https://www.youtube.com/user/HQMEDIA/videos" target="_blank"><i class="fa fa-play"></i></a>
+									<p class="heading-tescription lead text-gray-2">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt sumbire itkum.
+									</p>
+								</div>
+							</div> 
+						</section>
+						<section id="section-6" class="blog-section">
+							<div class="container">
+								<div class="row wow fadeIn">
+									<div class="col-md-6">
+										<div class="heading heading-lg heading-hover">
+											<span class="heading-title-ghost">Articles</span>
+											<h2 class="heading-title">Articles</h2>
+											<hr class="hr-width-1 hr-5x border-main"/>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<p class="lead">
+											<strong>Lorem ipsum dolor</strong> sit amet, consectetur adipisicing elit, sed do eiusmod
+											tempor incididunt ut labore et dolore magna aliqua. Ullamco laboris nisi vaimera suttis.
+										</p>
+									</div> 
+								</div> 
+							</div> 
+							<div class="container">
+								<div class="blog-list margin-top-80">
+									<div class="blog-wrap">
+										<div class="blog-list-item row wow fadeInUp">
+											<div class="col col-md-6 no-padding">
+												<a href="#" class="bco blog-list-image bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/blog/blog-1.jpg); background-position: 50% 50%;"></a>
+											</div> 
+											<div class="col col-md-6 no-padding">
+												<div class="bco blog-list-info">
+													<h2 class="blog-list-title"><a href="#" title="Aenean Odio Metus">Aenean Odio Metus</a></h2>
+													<div class="blog-list-meta">
+														<a href="#" class="article-time">29 jan 2016</a> - in
+														<a href="#" class="article-category">#web design</a>
+													</div>
+													<p class="blog-list-desc">
+														Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+														laboris nisi ut aliquip ex ea commodo consequat...
+													</p>
+												</div>
+											</div> 
+										</div> 
+										<div class="blog-list-item row wow fadeInUp">
+											<div class="col col-md-6 col-md-push-6 no-padding">
+												<a href="#" class="bco blog-list-image bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/blog/blog-2.jpg); background-position: 50% 50%;"></a>
+											</div> 
+											<div class="col col-md-6 col-md-pull-6 no-padding">
+												<div class="bco blog-list-info">
+													<h2 class="blog-list-title"><a href="#" title="Curabitur a Sodales">Curabitur a Sodales</a></h2>
+													<div class="blog-list-meta">
+														<a href="#" class="article-time">12 jan 2016</a> -in
+														<a href="#" class="article-category">#development</a>
+													</div>
+													<p class="blog-list-desc">
+														Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+														laboris nisi ut aliquip ex ea commodo consequat...
+													</p>
+												</div>
+											</div>
+										</div> 
+										<div class="blog-list-item row wow fadeInUp">
+											<div class="col col-md-6 no-padding">
+												<div class="owl-carousel dots-right" data-items="1" data-nav="true">
+													<div class="cc-item">
+														<a href="#" class="bco blog-list-image bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/blog/blog-3.jpg); background-position: 50% 50%;"></a>
+													</div>
+													<div class="cc-item">
+														<a href="#" class="bco blog-list-image bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/blog/blog-5.jpg); background-position: 50% 50%;"></a>
+													</div>
+													<div class="cc-item">
+														<a href="#" class="bco blog-list-image bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/blog/blog-6.jpg); background-position: 50% 50%;"></a>
+													</div>
+												</div>
+											</div> 
+											<div class="col col-md-6 no-padding">
+												<div class="bco blog-list-info">
+													<h2 class="blog-list-title"><a href="#" title="Sed Quis Vestibulum">Sed Quis Vestibulum</a></h2>
+													<div class="blog-list-meta">
+														<a href="#" class="article-time">06 jan 2016</a> - in
+														<a href="#" class="article-category">#development</a>
+													</div>
+													<p class="blog-list-desc">
+														Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+														laboris nisi ut aliquip ex ea commodo consequat...
+													</p>
+												</div>
+											</div>
+										</div> 
+										<div class="blog-list-item row wow fadeInUp">
+											<div class="col col-md-6 col-md-push-6 no-padding">
+												<a href="#" class="bco blog-list-image bg-image" style="background-image: url(/v9_e_asso_theme/static/src/images/blog/blog-4.jpg); background-position: 50% 50%;"></a>
+											</div> 
+											<div class="col col-md-6 col-md-pull-6 no-padding">
+												<div class="bco blog-list-info">
+													<h2 class="blog-list-title"><a href="#" title="Proin Ex Dolor">Proin Ex Dolor</a></h2>
+													<div class="blog-list-meta">
+														<a href="#" class="article-time">03 jan 2016</a> -in
+														<a href="#" class="article-category">#web design</a>
+													</div>
+													<p class="blog-list-desc">
+														Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+														laboris nisi ut aliquip ex ea commodo consequat...
+													</p>
+												</div>
+											</div> 
+										</div> 
+									</div> 
+								</div>
+								<div class="text-center wow fadeIn" data-wow-delay="0.4s">
+									<a href="#" target="_blank" class="btn btn-default btn-xlg btn-block margin-top-60">View All Articles</a>
+								</div>
+							</div> 
+						</section>
+						<section id="section-7" class="testimonials-section bg-dark angle-right-top angle-left-bottom bg-image-parallax" style="background-image: url(/v9_e_asso_theme/static/src/images/misc/bg-2.jpg);">
+							<span class="cover bg-transparent-9-5-dark"></span>
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="heading heading-lg heading-hover text-white wow fadeIn">
+											<span class="heading-title-ghost">Testimonials</span>
+											<h2 class="heading-title">Testimonials</h2>
+											<hr class="hr-width-1 hr-5x border-main"/>
+										</div>
+									</div> 
+								</div> 
+							</div> 
+							<div class="container">
+								<div class="row wow fadeIn" data-wow-delay="0.3s">
+									<div class="col-md-12">
+										<div class="testimonial-wrap">
+											<div class="owl-carousel testimonial-carousel dots-outside text-white" data-items="1" data-loop="true">
+												<div class="testimonial-item text-gray-2">
+													<img src="/v9_e_asso_theme/static/src/images/testimonial/client-1.png" alt="image"/>
+													<blockquote>
+														<p>"Duis vel ligula non neque varius eleifend quis id elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse lacus dui, pellentesque ut porta et, consequat sit amet suscipit lacus."</p>
+														<small>Anna Clarkson</small>
+													</blockquote>
+												</div>
+												<div class="testimonial-item text-gray-2">
+													<img src="/v9_e_asso_theme/static/src/images/testimonial/client-2.png" alt="image"/>
+													<blockquote>
+														<p>"Maecenas sit amet diam iaculis, lobortis tortor sed, bibendum quam. Nam mauris odio, sodales interdum facilisis in, dignissim et massa. In suscipit quam nisi."</p>
+														<small>John Smith</small>
+													</blockquote>
+												</div>
+												<div class="testimonial-item text-gray-2">
+													<img src="/v9_e_asso_theme/static/src/images/testimonial/client-3.png" alt="image"/>
+													<blockquote>
+														<p>"Proin at tincidunt leo. Morbi ut metus sit amet purus molestie sollicitudin. Maecenas convallis est vitae neque feugiat, in accumsan odio vestibulum. Pellentesque sodales fermentum porttitor."</p>
+														<small>Jack Paterson</small>
+													</blockquote>
+												</div>
+											</div>
+										</div>
+									</div> 
+								</div> 
+							</div> 
+						</section>
+						<section id="section-10" class="clients-section">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="heading heading-lg heading-center heading-hover wow fadeIn">
+											<span class="heading-title-ghost">Our Clients</span>
+											<h2 class="heading-title">Our Clients</h2>
+											<hr class="hr-width-1 hr-5x border-main"/>
+											<p class="heading-tescription lead max-width-800 margin-auto">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+											</p>
+										</div>
+									</div> 
+									<div class="col-md-12 margin-top-60 wow fadeIn" data-wow-delay="0.3s">
+										<div class="owl-carousel clients-carousel dots-outside" data-items="5" data-margin="40" data-tablet-landscape="4" data-tablet-portrait="3" data-mobile-landscape="2" data-mobile-portrait="1">
+											<div class="cc-item">
+												<a target="_blank" href="#" class="client"><img src="/v9_e_asso_theme/static/src/images/clients/client-1.png" alt="image"/></a>
+											</div>
+											<div class="cc-item">
+												<a target="_blank" href="#" class="client"><img src="/v9_e_asso_theme/static/src/images/clients/client-2.png" alt="image"/></a>
+											</div>
+											<div class="cc-item">
+												<a target="_blank" href="#" class="client"><img src="/v9_e_asso_theme/static/src/images/clients/client-3.png" alt="image"/></a>
+											</div>
+											<div class="cc-item">
+												<a target="_blank" href="#" class="client"><img src="/v9_e_asso_theme/static/src/images/clients/client-4.png" alt="image"/></a>
+											</div>
+											<div class="cc-item">
+												<a target="_blank" href="#" class="client"><img src="/v9_e_asso_theme/static/src/images/clients/client-5.png" alt="image"/></a>
+											</div>
+											<div class="cc-item">
+												<a target="_blank" href="#" class="client"><img src="/v9_e_asso_theme/static/src/images/clients/client-6.png" alt="image"/></a>
+											</div>
+											<div class="cc-item">
+												<a target="_blank" href="#" class="client"><img src="/v9_e_asso_theme/static/src/images/clients/client-7.png" alt="image"/></a>
+											</div>
+										</div>
+									</div> 
+								</div> 
+							</div> 
+						</section>
+						<section id="section-8" class="contact-section bg-dark angle-right-top bg-image-parallax" style="background-image: url(/v9_e_asso_theme/static/src/images/misc/bg-1.jpg);">
+							<span class="cover bg-transparent-9-dark bg-transparent-gradient-1"></span>
+							<div class="container">
+								<div class="row wow fadeIn">
+									<div class="col-md-7">
+										<div class="heading heading-lg heading-hover">
+											<span class="heading-title-ghost">Contact Us</span>
+											<h2 class="heading-title text-white">Contact Us</h2>
+											<hr class="hr-width-1 hr-5x border-main"/>
+											<p class="heading-tescription lead text-gray-2">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+												tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+											</p>
+										</div>
+									</div> 
+									<div class="col-md-5 text-gray-2 padding-left-40">
+										<div class="contact-info">
+											<p><i class="fa fa-home"></i> 121 King Street, Melbourne, Australia</p>
+											<p><i class="fa fa-phone"></i> phone: +123 456 789 00</p>
+											<p><i class="fa fa-envelope"></i> <a href="mailto:company.email@info.com" target="_blank">company.email@info.com</a></p>
+										</div>
+										<h5 class="margin-top-40 margin-bottom-20">Follow Us:</h5>
+										<ul class="social-icons margin-bottom-20">
+											<li><a class="btn btn-social-min btn-white-bordered btn-rounded-full btn-lg" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+											<li><a class="btn btn-social-min btn-white-bordered btn-rounded-full btn-lg" href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+											<li><a class="btn btn-social-min btn-white-bordered btn-rounded-full btn-lg" href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+											<li><a class="btn btn-social-min btn-white-bordered btn-rounded-full btn-lg" href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+											<li><a class="btn btn-social-min btn-white-bordered btn-rounded-full btn-lg" href="#" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+										</ul>
+									</div> 
+								</div> 
+								<div class="row">
+									<div class="col-md-12">
+										<form id="contact-form" class="margin-top-80 text-white wow fadeIn" data-wow-delay="0.3s">
+											<input type="hidden" name="project_name" value="yourwebsiteaddress.com"/> 
+											<input type="hidden" name="admin_email" value="your@email.com"/> 
+											<input type="hidden" name="form_subject" value="Message from yourwebsiteaddress.com"/> 
+											<div class="row">
+												<div class="col-lg-4">
+													<div class="form-group">
+														<input type="text" class="form-control" name="Name:" placeholder="Your Name" required=""/>
+													</div>
+												</div>
+												<div class="col-lg-4">
+													<div class="form-group">
+														<input type="email" class="form-control" name="Email:" placeholder="Your Email" required=""/>
+													</div>
+												</div>
+												<div class="col-lg-4">
+													<div class="form-group">
+														<input type="text" class="form-control" name="Subject:" placeholder="Subject" required=""/>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-12">
+													<div class="form-group">
+														<textarea class="form-control" name="Message:" rows="8" placeholder="Your Message (text only)" required=""></textarea>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-12">
+													<button type="submit" class="btn btn-primary btn-rounded btn-block btn-lg">Send Message</button>
+												</div>
+											</div>
+										</form>
+									</div> 
+								</div> 
+							</div> 
+						</section>
+						<footer id="footer" class="bg-dark text-white">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="copyright small">
+											<a href="#">Asso - One Page HTML5 Template</a>
+											<p>Copyright 2016 / All rights reserved</p>
+										</div>
+									</div> 
+								</div> 
+							</div> 
+						</footer>
+						<a href="#body-content" class="scrolltotop sm-scroll bg-main"><i class="fa fa-chevron-up"></i></a>
+			
+					</div>
+					<div class="switcher-wrapper">
+						<div class="switcher">
+							<div class="color-box-list">
+								<ul>
+									<li><a class="switcher-color-box default" href="javascript:chooseStyle('none', 60)"></a></li>
+									<li><a class="switcher-color-box blue" href="javascript:chooseStyle('blue-theme', 60)"></a></li>
+									<li><a class="switcher-color-box brown" href="javascript:chooseStyle('brown-theme', 60)"></a></li>
+									<li><a class="switcher-color-box green" href="javascript:chooseStyle('green-theme', 60)"></a></li>
+									<li><a class="switcher-color-box purple" href="javascript:chooseStyle('purple-theme', 60)"></a></li>
+									<li><a class="switcher-color-box yellow" href="javascript:chooseStyle('yellow-theme', 60)"></a></li>
+								</ul>
+							</div>
+							<hr class="no-margin-top"/>
+						</div>
+						<div class="switcher-btn pull-right"><i class="fa fa-cog fa-spin fa-fw"></i></div>
+					</div>
+				</body>                        
+
+            </xpath>
+        </template>
+    </data>
+</openerp>

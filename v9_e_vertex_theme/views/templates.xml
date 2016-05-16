@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!--  css and js filed added	-->
+        <template id="clean_script_footer" inherit_id="website.layout" name="Clean scripts">
+            <xpath expr="//footer[last()]" position="after">
+				<link type="text/css" rel="stylesheet" href="/v9_e_vertex_theme/static/src/css/font-awesome.min.css"/>
+		        <link type="text/css" rel="stylesheet" href="/v9_e_vertex_theme/static/src/css/magnific-popup.css"/>
+		        <link type="text/css" rel="stylesheet" href="/v9_e_vertex_theme/static/src/css/ionicons.min.css"/>
+		        <link type="text/css" rel="stylesheet" href="/v9_e_vertex_theme/static/src/css/owl.carousel.css"/>
+		        <link type="text/css" rel="stylesheet" href="/v9_e_vertex_theme/static/src/css/animate.css"/>
+		        <link type="text/css" rel="stylesheet" href="/v9_e_vertex_theme/static/src/css/main.css"/>
+		        <link type="text/css" rel="stylesheet" href="/v9_e_vertex_theme/static/src/css/media-queries.css"/>                        
+			
+				<script src="/v9_e_vertex_theme/static/src/js/common.js"></script>
+		        <script src="/v9_e_vertex_theme/static/src/js/jquery.sticky.js"></script>
+		        <script src="/v9_e_vertex_theme/static/src/js/retina.js"></script>
+		        <script src="/v9_e_vertex_theme/static/src/js/singlepagenav.js"></script>
+		        <script src="/v9_e_vertex_theme/static/src/js/owl.carousel.min.js"></script>
+		        <script src="/v9_e_vertex_theme/static/src/js/jquery.parallax-1.1.3.js"></script>
+		        <script src="/v9_e_vertex_theme/static/src/js/isotope.pkgd.min.js"></script>
+		        <script src="/v9_e_vertex_theme/static/src/js/jquery.magnific-popup.min.js"></script>
+		        <script src="/v9_e_vertex_theme/static/src/js/wow.min.js"></script>
+		        <script src="/v9_e_vertex_theme/static/src/js/jquery.easing-1.3.pack.js"></script>
+		        <script src="/v9_e_vertex_theme/static/src/js/jquery.appear.js"></script>
+		        <script src="/v9_e_vertex_theme/static/src/js/jquery.countTo.js"></script>
+		        <script src="/v9_e_vertex_theme/static/src/js/jquery.form.min.js"></script>
+		        <script src="/v9_e_vertex_theme/static/src/js/jquery.validate.min.js"></script>
+		        <script src="/v9_e_vertex_theme/static/src/js/jflickrfeed.min.js"></script>
+		        <script src="/v9_e_vertex_theme/static/src/js/tweetie.min.js"></script>
+		        <script src="/v9_e_vertex_theme/static/src/js/main.js"></script>
+		        <!--
+										<script src="/v9_e_vertex_theme/static/src/js/map.js"></script>
+		        <script src="/v9_e_vertex_theme/static/src/js/marker.js"></script>
+		        <script src="/v9_e_vertex_theme/static/src/js/stats.js"></script>
+		        <script src="/v9_e_vertex_theme/static/src/js/util.js"></scrip
+										-->t>
+
+            </xpath>
+        </template>
+        <!--  footer added	-->
+        <template id="theme_lauout_footer_copyright" inherit_id="website.layout_footer_copyright" name="footer">
+            <xpath expr="//*[@id='footer']" position="replace">
+            </xpath>
+        </template>
+        <!--  user navigation	-->
+        <template id="header_top_main_menu_navbar" name="Header top hide" inherit_id="website.user_navbar">
+            <xpath expr="//nav[@id='oe_main_menu_navbar']" position="replace">
+            </xpath>
+        </template>
+        <!--  404	-->
+        <template id="404">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <div class="oe_structure oe_empty">
+                        <div class="container">
+                            <h1 class="mt32">Page not found!</h1>
+                            <p>Sorry, this Page is not available anymore.</p>
+                            <p><a t-attf-href="/about">Return to the About Us Page.</a></p>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+        <!--	header navigation odoo remove-->
+        <template id="homepage_top_header" inherit_id="website.layout">
+            <xpath expr="//div[@id='wrapwrap']/header/div" position="before"> 
+            </xpath>
+            <xpath expr="//header//div[@class='navbar navbar-default navbar-static-top']" position="attributes">
+                <attribute name='style'>display:none</attribute>
+            </xpath>
+        </template>
+        <template id="custom_layout_website" inherit_id="website.homepage">
+            <xpath expr="//div[@id='wrap']" position="replace">
+             	<body> 
+					<div id="preloader">
+			            <ul class="loader">
+			                <li>
+			                    <div class="circle"></div>
+			                    <div class="ball"></div>
+			                </li>
+			                <li>
+			                    <div class="circle"></div>
+			                    <div class="ball"></div>
+			                </li>
+			                <li>
+			                    <div class="circle"></div>
+			                    <div class="ball"></div>
+			                </li>
+			                <li>
+			                    <div class="circle"></div>
+			                    <div class="ball"></div>
+			                </li>
+			                <li>
+			                    <div class="circle"></div>
+			                    <div class="ball"></div>
+			                </li>
+			            </ul>
+			        </div>
+			        	
+					<div id="wrapper" class="main-wrapper">
+						<header id="masthead" class="site-header navigation navbar-default">
+							<div class="header-top">
+								<div class="container">
+									<div class="row">
+										<div class="col-sm-6 col-md-6">
+											<nav class="top-nav">
+												<ul class="inline">
+													<li><a href="http://prothemes.co/cdn-cgi/l/email-protection#40333530302f3234003029253428252d256e232f2d"><i class="fa fa-envelope-o"></i> <span class="__cf_email__" data-cfemail="41323431312e3335013128243529242c246f222e2c">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a></li>
+													<li><a href="#"><i class="fa fa-phone"></i> +1-445213654</a></li>
+												</ul>
+											</nav>
+										</div>
+										<div class="col-sm-6 col-md-6">
+											<nav class="top-nav">
+												<ul class="inline text-right">
+													<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+													<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+													<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+													<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+													<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+													<li><a href="#"><i class="fa fa-rss"></i></a></li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="header-bottom">
+								<div class="container">
+									<div class="navbar-header">
+										<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation" aria-expanded="false">
+											<span class="sr-only">Toggle navigation</span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+										</button>
+										<!-- site logo -->
+										<a class="navbar-brand" href="#">
+											<img src="/v9_e_vertex_theme/static/src/images/icons/logo2.png" alt=""/>
+										</a>
+									</div>
+			
+									<nav class="collapse navbar-collapse navbar-right main-nav" id="navigation">
+										<ul class="nav navbar-nav">
+											<li><a href="#start">Home</a></li>
+											<li><a href="#about">About</a></li>
+											<li><a href="#service">Service</a></li>
+											<li><a href="#portfolio">Portfolio</a></li>
+											<li><a href="#team">Team</a></li>
+											<li><a href="#pricing">Pricing</a></li>
+											<li><a href="#blog">Blog</a></li>
+											<li><a href="#contact">Contact</a></li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</header>
+						
+						<section id="start">
+			                <div class="home-slider">
+			                    <div class="slide-item" style="background-image: url(/v9_e_vertex_theme/static/src/images/slider/slide5.jpg)">
+			                        <div class="slide-content container">
+			                            <div class="inner-content text-">
+			                                <h2>Welcome to Vertex</h2>
+			                                <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br class="hidden-xs"/> Molestias adipisci, voluptatem maiores soluta odio, <br class="hidden-xs"/> deserunt suscipit.</h4>
+			                                <div class="btn-set">
+			                                    <span class="btn1">
+			                                        <a href="#" class="btn btn-shadow btn-main shutter-both">Learn More</a>
+			                                    </span>
+			                                    <span class="btn2">
+			                                        <a href="#" class="btn btn-shadow btn-dark shutter-both">Buy Bow</a>
+			                                    </span>
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                    <div class="slide-item item2" style="background-image: url(/v9_e_vertex_theme/static/src/images/slider/slide6.jpg)">
+			                        <div class="slide-content container">
+			                            <div class="inner-content">
+			                                <h2>Responsive html5 template</h2>
+			                                <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br class="hidden-xs"/> Totam laudantium doloremque veniam nam, magni quia similique.</h4>
+			                                <div class="btn-set">
+			                                    <span class="btn1">
+			                                        <a href="#" class="btn btn-shadow btn-main shutter-both">Learn More</a>
+			                                    </span>
+			                                    <span class="btn2">
+			                                        <a href="#" class="btn btn-shadow btn-dark shutter-both">Buy Bow</a>
+			                                    </span>
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </section> 
+
+						<section id="about" class="section">
+			                <div class="container">
+			                    <div class="row">
+			                        <div class="col-sm-12 col-md-12">
+			                            <div class="sec-head text-left wow fadeIn">
+			                                <h2>About Us</h2>
+			                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta eligendi officiis<br class="hidden-xs"/> rerum voluptas impedit  ducimus nesciunt,  nam beatae mollitia, <br class="hidden-xs"/>sint culpa deserunt voluptate enim. Reiciendis nulla </p>
+			                            </div>
+			                        </div>
+			                        <div class="col-xs-12 col-sm-4 wow fadeInLeft">
+			                            <div class="about-block">
+			                                <div class="icon-block">
+			                                    <i class="ion-ios-bolt-outline"></i>
+			                                </div>
+			                                <h4>We're Creative</h4>
+			                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed neque porro quisquam est, qui dolorem ipsum quia dolor sit amet do eiusmod tempor incididunt.</p>
+			                            </div>
+			                        </div>
+			                        <div class="col-xs-12 col-sm-4 wow fadeInLeft" data-wow-delay="0.3s">
+			                            <div class="about-block">
+			                                <div class="icon-block">
+			                                    <i class="ion-ios-lightbulb-outline"></i>
+			                                </div>
+			                                <h4>We're Creative</h4>
+			                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed neque porro quisquam est, qui dolorem ipsum quia dolor sit amet do eiusmod tempor incididunt.</p>
+			                            </div>
+			                        </div>
+			                        <div class="col-xs-12 col-sm-4 wow fadeInLeft" data-wow-delay="0.6s">
+			                            <div class="about-block hiring">
+			                                <div class="icon-block">
+			                                    <i class="ion-ios-personadd-outline"></i>
+			                                </div>
+			                                <h4>We're Hiring</h4>
+			                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+			                                <a href="#" class="btn btn-border-white shutter-both">Contact Us</a>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </section>
+			            
+						<section id="service" class="section bg-one">
+			                <div class="container">
+			                    <div class="row">
+			                        <div class="col-sm-12 col-md-12">
+			                            <div class="sec-head text-left wow pulse">
+			                                <h2>Our Services</h2>
+			                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta eligendi officiis<br class="hidden-xs"/> rerum voluptas impedit  ducimus nesciunt,  nam beatae mollitia, <br class="hidden-xs"/>sint culpa deserunt voluptate enim. Reiciendis nulla </p>
+			                            </div>
+			                        </div>
+			                        <div class="col-sm-6 col-md-3 text-center wow fadeInUp">
+			                            <div class="service-item">                            
+			                                <div class="icon-box">
+			                                    <i class="ion-ios-bolt-outline"></i>
+			                                </div>                  
+			                                <div class="service-text text-center">
+			                                    <h4>Branding</h4>                   
+			                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati odio quidem nostrum sit? Quidem, accusantium.</p>
+			                                </div>
+			                            </div>
+			                        </div> 
+			                        <div class="col-sm-6 col-md-3 text-center wow fadeInUp" data-wow-delay="0.3s">
+			                            <div class="service-item">
+			                                <div class="icon-box">
+			                                    <i class="ion-ios-cart-outline"></i>
+			                                </div>
+			                                <div class="service-text text-center">
+			                                    <h4>Ecommerce</h4>
+			                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quaerat, nulla, ea amet quasi necessitatibus!</p>
+			                                </div>
+			                            </div>
+			                        </div> 
+			                        <div class="col-sm-6 col-md-3 text-center wow fadeInUp" data-wow-delay="0.6s">
+			                            <div class="service-item">
+			                                <div class="icon-box">
+			                                    <i class="ion-iphone"></i>
+			                                </div>
+			                                <div class="service-text text-center">
+			                                    <h4>Mobile App</h4>
+			                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quaerat, nulla, ea amet quasi necessitatibus!</p>
+			                                </div>
+			                            </div>
+			                        </div> 
+			                        <div class="col-sm-6 col-md-3 text-center wow fadeInUp" data-wow-delay="0.9s">
+			                            <div class="service-item">
+			                                <div class="icon-box">
+			                                    <i class="ion-ios-infinite-outline"></i>
+			                                </div>
+			                                <div class="service-text text-center">
+			                                    <h4>Lifetime Support</h4>
+			                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quaerat, nulla, ea amet quasi necessitatibus!</p>
+			                                </div>
+			                            </div>
+			                        </div> 
+			                    </div>      
+			                </div>      
+			            </section>
+			            
+						<section id="portfolio" class="section">
+			                <div class="container">
+			                    <div class="row">
+			                        <div class="col-sm-12 col-md-12">
+			                            <div class="sec-head text-left wow fadeInDown">
+			                                <h2>Our Portfolio</h2>
+			                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta eligendi officiis<br class="hidden-xs"/> rerum voluptas impedit  ducimus nesciunt,  nam beatae mollitia, <br class="hidden-xs"/>sint culpa deserunt voluptate enim. Reiciendis nulla </p>
+			                            </div>
+			                        </div>
+			                        <div class="col-sm-12 col-md-12">
+			                            <nav class="work-filter">
+			                                <ul>
+			                                    <li><a class="active" href="#" data-filter="*">All</a></li>
+			                                    <li><a href="#" data-filter=".photography">Photography</a></li>
+			                                    <li><a href="#" data-filter=".photoshop">Photoshop</a></li>
+			                                    <li><a href="#" data-filter=".web-design">Web Design</a></li>
+			                                    <li><a href="#" data-filter=".branding">Branding</a></li>
+			                                </ul>
+			                            </nav>
+			                        </div>
+			                    </div>
+			                </div>
+			
+			                <div class="container-fluid wow fadeIn">
+			                    <div class="row project-wrapper">
+			                        <div class="col-xs-12 col-sm-6 col-md-3 photography">
+			                            <div class="portfolio-item">
+			                                <img src="/v9_e_vertex_theme/static/src/images/portfolio/portfolio1.jpg" alt=""/>
+			                                <div class="portfolio-content">
+			                                    <div class="portfolio-inner">
+			                                        <span class="btn1">
+			                                            <a href="/v9_e_vertex_theme/static/src/images/portfolio/portfolio1.jpg" class="img-popup" data-effect="mfp-3d-unfold">
+			                                                <i class="ion-ios-plus-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <span class="btn2">
+			                                            <a href="portfolio-single.html" class="ajax-popup" data-effect="mfp-zoom-in">
+			                                                <i class="ion-ios-redo-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <h4>Egg in Busket</h4>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="col-xs-12 col-sm-6 col-md-3 photoshop">
+			                            <div class="portfolio-item">
+			                                <img src="/v9_e_vertex_theme/static/src/images/portfolio/portfolio2.jpg" alt=""/>
+			                                <div class="portfolio-content">
+			                                    <div class="portfolio-inner">
+			                                        <span class="btn1">
+			                                            <a href="/v9_e_vertex_theme/static/src/images/portfolio/portfolio2.jpg" class="img-popup" data-effect="mfp-3d-unfold">
+			                                                <i class="ion-ios-plus-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <span class="btn2">
+			                                            <a href="portfolio-single.html" class="ajax-popup" data-effect="mfp-zoom-in">
+			                                                <i class="ion-ios-redo-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <h4>Cassette Player</h4>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="col-xs-12 col-sm-6 col-md-3 web-design">
+			                            <div class="portfolio-item">
+			                                <img src="/v9_e_vertex_theme/static/src/images/portfolio/portfolio10.jpg" alt=""/>
+			                                <div class="portfolio-content">
+			                                    <div class="portfolio-inner">
+			                                        <span class="btn1">
+			                                            <a href="/v9_e_vertex_theme/static/src/images/portfolio/portfolio10.jpg" class="img-popup" data-effect="mfp-3d-unfold">
+			                                                <i class="ion-ios-plus-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <span class="btn2">
+			                                            <a href="portfolio-single.html" class="ajax-popup" data-effect="mfp-zoom-in">
+			                                                <i class="ion-ios-redo-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <h4>Master Lock</h4>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="col-xs-12 col-sm-6 col-md-3 branding">
+			                            <div class="portfolio-item">
+			                                <img src="/v9_e_vertex_theme/static/src/images/portfolio/portfolio3.jpg" alt=""/>
+			                                <div class="portfolio-content">
+			                                    <div class="portfolio-inner">
+			                                        <span class="btn1">
+			                                            <a href="/v9_e_vertex_theme/static/src/images/portfolio/portfolio3.jpg" class="img-popup" data-effect="mfp-3d-unfold">
+			                                                <i class="ion-ios-plus-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <span class="btn2">
+			                                            <a href="portfolio-single.html" class="ajax-popup" data-effect="mfp-zoom-in">
+			                                                <i class="ion-ios-redo-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <h4>Old Camera</h4>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="col-xs-12 col-sm-6 col-md-3 photography">
+			                            <div class="portfolio-item">
+			                                <img src="/v9_e_vertex_theme/static/src/images/portfolio/portfolio4.jpg" alt=""/>
+			                                <div class="portfolio-content">
+			                                    <div class="portfolio-inner">
+			                                        <span class="btn1">
+			                                            <a href="/v9_e_vertex_theme/static/src/images/portfolio/portfolio4.jpg" class="img-popup" data-effect="mfp-3d-unfold">
+			                                                <i class="ion-ios-plus-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <span class="btn2">
+			                                            <a href="portfolio-single.html" class="ajax-popup" data-effect="mfp-zoom-in">
+			                                                <i class="ion-ios-redo-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <h4>Parked Bikes</h4>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="col-xs-12 col-sm-6 col-md-3 photoshop photography">
+			                            <div class="portfolio-item">
+			                                <img src="/v9_e_vertex_theme/static/src/images/portfolio/portfolio5.jpg" alt=""/>
+			                                <div class="portfolio-content">
+			                                    <div class="portfolio-inner">
+			                                        <span class="btn1">
+			                                            <a href="/v9_e_vertex_theme/static/src/images/portfolio/portfolio5.jpg" class="img-popup" data-effect="mfp-3d-unfold">
+			                                                <i class="ion-ios-plus-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <span class="btn2">
+			                                            <a href="portfolio-single.html" class="ajax-popup" data-effect="mfp-zoom-in">
+			                                                <i class="ion-ios-redo-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <h4>Laundry Clips</h4>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="col-xs-12 col-sm-6 col-md-3 web-design">
+			                            <div class="portfolio-item">
+			                                <img src="/v9_e_vertex_theme/static/src/images/portfolio/portfolio11.jpg" alt=""/>
+			                                <div class="portfolio-content">
+			                                    <div class="portfolio-inner">
+			                                        <span class="btn1">
+			                                            <a href="/v9_e_vertex_theme/static/src/images/portfolio/portfolio11.jpg" class="img-popup" data-effect="mfp-3d-unfold">
+			                                                <i class="ion-ios-plus-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <span class="btn2">
+			                                            <a href="portfolio-single.html" class="ajax-popup" data-effect="mfp-zoom-in">
+			                                                <i class="ion-ios-redo-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <h4>Wodden Pineapple</h4>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="col-xs-12 col-sm-6 col-md-3 branding">
+			                            <div class="portfolio-item">
+			                                <img src="/v9_e_vertex_theme/static/src/images/portfolio/portfolio6.jpg" alt=""/>
+			                                <div class="portfolio-content">
+			                                    <div class="portfolio-inner">
+			                                        <span class="btn1">
+			                                            <a href="/v9_e_vertex_theme/static/src/images/portfolio/portfolio6.jpg" class="img-popup" data-effect="mfp-3d-unfold">
+			                                                <i class="ion-ios-plus-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <span class="btn2">
+			                                            <a href="portfolio-single.html" class="ajax-popup" data-effect="mfp-zoom-in">
+			                                                <i class="ion-ios-redo-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <h4>Coffee with iPhone</h4>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="col-xs-12 col-sm-6 col-md-3 photography">
+			                            <div class="portfolio-item">
+			                                <img src="/v9_e_vertex_theme/static/src/images/portfolio/portfolio7.jpg" alt=""/>
+			                                <div class="portfolio-content">
+			                                    <div class="portfolio-inner">
+			                                        <span class="btn1">
+			                                            <a href="/v9_e_vertex_theme/static/src/images/portfolio/portfolio7.jpg" class="img-popup" data-effect="mfp-3d-unfold">
+			                                                <i class="ion-ios-plus-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <span class="btn2">
+			                                            <a href="portfolio-single.html" class="ajax-popup" data-effect="mfp-zoom-in">
+			                                                <i class="ion-ios-redo-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <h4>Cocacola</h4>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="col-xs-12 col-sm-6 col-md-3 photoshop photography">
+			                            <div class="portfolio-item">
+			                                <img src="/v9_e_vertex_theme/static/src/images/portfolio/portfolio12.jpg" alt=""/>
+			                                <div class="portfolio-content">
+			                                    <div class="portfolio-inner">
+			                                        <span class="btn1">
+			                                            <a href="/v9_e_vertex_theme/static/src/images/portfolio/portfolio12.jpg" class="img-popup" data-effect="mfp-3d-unfold">
+			                                                <i class="ion-ios-plus-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <span class="btn2">
+			                                            <a href="portfolio-single.html" class="ajax-popup" data-effect="mfp-zoom-in">
+			                                                <i class="ion-ios-redo-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <h4>Coffee Mug</h4>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="col-xs-12 col-sm-6 col-md-3 web-design">
+			                            <div class="portfolio-item">
+			                                <img src="/v9_e_vertex_theme/static/src/images/portfolio/portfolio8.jpg" alt=""/>
+			                                <div class="portfolio-content">
+			                                    <div class="portfolio-inner">
+			                                        <span class="btn1">
+			                                            <a href="/v9_e_vertex_theme/static/src/images/portfolio/portfolio8.jpg" class="img-popup" data-effect="mfp-3d-unfold">
+			                                                <i class="ion-ios-plus-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <span class="btn2">
+			                                            <a href="portfolio-single.html" class="ajax-popup" data-effect="mfp-zoom-in">
+			                                                <i class="ion-ios-redo-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <h4>Cappuccino Art</h4>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="col-xs-12 col-sm-6 col-md-3 branding photography">
+			                            <div class="portfolio-item">
+			                                <img src="/v9_e_vertex_theme/static/src/images/portfolio/portfolio9.jpg" alt=""/>
+			                                <div class="portfolio-content">
+			                                    <div class="portfolio-inner">
+			                                        <span class="btn1">
+			                                            <a href="/v9_e_vertex_theme/static/src/images/portfolio/portfolio9.jpg" class="img-popup" data-effect="mfp-3d-unfold">
+			                                                <i class="ion-ios-plus-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <span class="btn2">
+			                                            <a href="portfolio-single.html" class="ajax-popup" data-effect="mfp-zoom-in">
+			                                                <i class="ion-ios-redo-outline"></i>
+			                                            </a>
+			                                        </span>
+			                                        <h4>Coffee Grinding</h4>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </section>
+						<section id="counter" class="section parallax parallax1">
+			                <div class="overlay"></div>
+			                <div class="container">
+			                    <div class="row">
+			                        <div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInLeft">
+			                            <div class="counter-item">
+			                                <div class="counter-icon">
+			                                    <i class="ion-ios-clock-outline"></i>
+			                                </div>
+			                                <h3 data-to="3200">0</h3>
+			                                <p>Hours of Work</p>
+			                            </div>
+			                        </div>
+			
+			                        <div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInLeft" data-wow-delay="300ms">
+			                            <div class="counter-item">
+			                                <div class="counter-icon">
+			                                    <i class="ion-ios-people-outline"></i>
+			                                </div>
+			                                <h3 data-to="120">0</h3>
+			                                <p>Satisfied Clients</p>
+			                            </div>
+			                        </div>
+			                        <div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInLeft" data-wow-delay="600ms">
+			                            <div class="counter-item">
+			                                <div class="counter-icon">
+			                                    <i class="ion-ios-briefcase-outline"></i>
+			                                </div>
+			                                <h3 data-to="360">0</h3>
+			                                <p> Projects Delivered </p>
+			                            </div>
+			                        </div>
+			                        <div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInLeft" data-wow-delay="900ms">
+			                            <div class="counter-item">
+			                                <div class="counter-icon">
+			                                    <i class="ion-trophy"></i>
+			                                </div>
+			                                <h3 data-to="6454">0</h3>
+			                                <p>Awards Won</p>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </section>
+														<section id="team" class="section">
+			                <div class="container">
+			                    <div class="row">
+			                        <div class="col-sm-12 col-md-12">
+			                            <div class="sec-head text-left wow bunce" >
+			                                <h2>Meet the Team</h2>
+			                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta eligendi officiis<br class="hidden-xs"/> rerum voluptas impedit  ducimus nesciunt,  nam beatae mollitia, <br class="hidden-xs"/>sint culpa deserunt voluptate enim. Reiciendis nulla </p>
+			                            </div>
+			                        </div>
+			                        <div class="col-sm-6 col-md-3 wow fadeInUp">
+			                            <div class="team-mate">
+			                                <figure class="member-photo">
+			                                    <img alt="" src="/v9_e_vertex_theme/static/src/images/team/team1.jpg" class="img-responsive"/>
+			                                    <div class="hover">
+			                                        <div class="hover-inner">
+			                                            <div class="member-info">
+			                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.</p>
+			                                            </div>
+			                                            <ul class="list-inline text-center">
+			                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			                                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+			                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			                                            </ul>
+			                                        </div>
+			                                    </div>
+			                                </figure>
+			                                <div class="member-title">
+			                                    <h4>Donald Dunn</h4>
+			                                    <span>CEO/Founder</span>
+			                                </div>
+			                           </div>
+			                        </div>
+			                        <div class="col-sm-6 col-md-3 wow fadeInUp" data-wow-delay="0.3s">
+			                            <div class="team-mate">
+			                                <figure class="member-photo">
+			                                    <img alt="" src="/v9_e_vertex_theme/static/src/images/team/team2.png" class="img-responsive"/>
+			                                    <div class="hover">
+			                                        <div class="hover-inner">
+			                                            <div class="member-info">
+			                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.</p>
+			                                            </div>
+			                                            <ul class="list-inline text-center">
+			                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			                                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+			                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			                                            </ul>
+			                                        </div>
+			                                    </div>
+			                                </figure>
+			                                <div class="member-title">
+			                                    <h4>Donald Dunn</h4>
+			                                    <span>CEO/Founder</span>
+			                                </div>
+			                           </div>
+			                        </div>
+			                        <div class="col-sm-6 col-md-3 wow fadeInUp" data-wow-delay="0.6s">
+			                            <div class="team-mate">
+			                                <figure class="member-photo">
+			                                    <img alt="" src="/v9_e_vertex_theme/static/src/images/team/team3.png" class="img-responsive"/>
+			                                    <div class="hover">
+			                                        <div class="hover-inner">
+			                                            <div class="member-info">
+			                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.</p>
+			                                            </div>
+			                                            <ul class="list-inline text-center">
+			                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			                                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+			                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			                                            </ul>
+			                                        </div>
+			                                    </div>
+			                                </figure>
+			                                <div class="member-title">
+			                                    <h4>Donald Dunn</h4>
+			                                    <span>CEO/Founder</span>
+			                                </div>
+			                           </div>
+			                        </div>
+			                        <div class="col-sm-6 col-md-3 wow fadeInUp" data-wow-delay="0.9s">
+			                            <div class="team-mate">
+			                                <figure class="member-photo">
+			                                    <img alt="" src="/v9_e_vertex_theme/static/src/images/team/team4.jpg" class="img-responsive"/>
+			                                    <div class="hover">
+			                                        <div class="hover-inner">
+			                                            <div class="member-info">
+			                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.</p>
+			                                            </div>
+			                                            <ul class="list-inline text-center">
+			                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			                                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+			                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			                                            </ul>
+			                                        </div>
+			                                    </div>
+			                                </figure>
+			                                <div class="member-title">
+			                                    <h4>Donald Dunn</h4>
+			                                    <span>CEO/Founder</span>
+			                                </div>
+			                           </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </section>
+							
+													  <section id="pricing" class="section bg-one">
+			                <div class="container">
+			                    <div class="row text-center">
+			                        <div class="col-sm-12 col-md-12">
+			                            <div class="sec-head text-left wow fadeInDown" >
+			                                <h2>Pricing</h2>
+			                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta eligendi officiis<br class="hidden-xs"/> rerum voluptas impedit  ducimus nesciunt,  nam beatae mollitia, <br class="hidden-xs"/>sint culpa deserunt voluptate enim. Reiciendis nulla </p>
+			                            </div>
+			                        </div>
+			                        <div class="col-md-3 col-sm-6 wow fadeInRight">
+			                            <div class="price-table">
+			                                <header class="pricing-head">
+			                                    <h4>Personal</h4>
+			                                    <div class="price">
+			                                        <div class="price-in">
+			                                            <div class="inner-in">
+			                                                <h4>$9</h4>
+			                                                <span>Month</span>
+			                                            </div>
+			                                        </div>
+			                                    </div>
+			                                </header>
+			                                <div class="price-details">
+			                                    <ul>
+			                                        <li>Unlimited Photos</li>
+			                                        <li>Secure Online Transfer</li>
+			                                        <li>Up to 1000 Users</li>
+			                                        <li>24/7 Customer Service</li>
+			                                    </ul>
+			                                </div>
+			                                <footer class="pricing-footer">
+			                                    <a class="btn btn-main shutter-both" href="#">
+			                                        <i class="fa fa-shopping-cart"></i> Sign up Now
+			                                    </a>
+			                                </footer>
+			                            </div>
+			                        </div>
+			                        <div class="col-md-3 col-sm-6 wow fadeInRight" data-wow-delay="0.3s">
+			                            <div class="price-table">
+			                                <header class="pricing-head">
+			                                    <h4>Business</h4>
+			                                    <div class="price">
+			                                        <div class="price-in">
+			                                            <div class="inner-in">
+			                                                <h4>$29</h4>
+			                                                <span>Month</span>
+			                                            </div>
+			                                        </div>
+			                                    </div>
+			                                </header>
+			                                <div class="price-details">
+			                                    <ul>
+			                                        <li>Unlimited Photos</li>
+			                                        <li>Secure Online Transfer</li>
+			                                        <li>Up to 1000 Users</li>
+			                                        <li>24/7 Customer Service</li>
+			                                    </ul>
+			                                </div>
+			                                <footer class="pricing-footer">
+			                                    <a class="btn btn-main shutter-both" href="#">
+			                                        <i class="fa fa-shopping-cart"></i> Sign up Now
+			                                    </a>
+			                                </footer>
+			                            </div>
+			                        </div>
+			                        <div class="col-md-3 col-sm-6 wow fadeInRight" data-wow-delay="0.6s">
+			                            <div class="price-table">
+			                                <header class="pricing-head">
+			                                    <h4>Premium</h4>
+			                                    <div class="price">
+			                                        <div class="price-in">
+			                                            <div class="inner-in">
+			                                                <h4>$39</h4>
+			                                                <span>Month</span>
+			                                            </div>
+			                                        </div>
+			                                    </div>
+			                                </header>
+			                                <div class="price-details">
+			                                    <ul>
+			                                        <li>Unlimited Photos</li>
+			                                        <li>Secure Online Transfer</li>
+			                                        <li>Up to 1000 Users</li>
+			                                        <li>24/7 Customer Service</li>
+			                                    </ul>
+			                                </div>
+			                                <footer class="pricing-footer">
+			                                    <a class="btn btn-main shutter-both" href="#">
+			                                        <i class="fa fa-shopping-cart"></i> Sign up Now
+			                                    </a>
+			                                </footer>
+			                            </div>
+			                        </div>
+			                        <div class="col-md-3 col-sm-6 wow fadeInRight" data-wow-delay="0.9s">
+			                            <div class="price-table">
+			                                <header class="pricing-head">
+			                                    <h4>Ultimate</h4>
+			                                    <div class="price">
+			                                        <div class="price-in">
+			                                            <div class="inner-in">
+			                                                <h4>$69</h4>
+			                                                <span>Month</span>
+			                                            </div>
+			                                        </div>
+			                                    </div>
+			                                </header>
+			                                <div class="price-details">
+			                                    <ul>
+			                                        <li>Unlimited Photos</li>
+			                                        <li>Secure Online Transfer</li>
+			                                        <li>Up to 1000 Users</li>
+			                                        <li>24/7 Customer Service</li>
+			                                    </ul>
+			                                </div>
+			                                <footer class="pricing-footer">
+			                                    <a class="btn btn-main shutter-both" href="#">
+			                                        <i class="fa fa-shopping-cart"></i> Sign up Now
+			                                    </a>
+			                                </footer>
+			                            </div>
+			                        </div>
+			                    </div>     
+			                </div>      
+			            </section>
+															<section id="blog" class="section">
+			                <div class="container">
+			                    <div class="row grid-blog">
+			                        <div class="col-sm-12 col-md-12">
+			                            <div class="sec-head text-left wow bounce" >
+			                                <h2>Recent Posts</h2>
+			                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta eligendi officiis<br class="hidden-xs"/> rerum voluptas impedit  ducimus nesciunt,  nam beatae mollitia, <br class="hidden-xs"/>sint culpa deserunt voluptate enim. Reiciendis nulla </p>
+			                            </div>
+			                        </div>
+			                        <div class="col-xs-12 col-md-6 wow fadeInLeft">
+			                            <div class="row inner-grid">
+			                                <div class="col-xs-12 col-sm-6">
+			                                    <div class="post-thumb">
+			                                        <a href="#">
+			                                            <img src="/v9_e_vertex_theme/static/src/images/blog/news.jpg" alt=""/>
+			                                        </a>
+			                                    </div>
+			                                </div>
+			                                <div class="col-xs-12 col-sm-6 post-entry">
+			                                    <h4><a href="#">Standard Post</a></h4>
+			                                    <div class="post-hover">
+			                                        <p>This is the place to come to escape day to day life, sit back, have a cuppa or refreshing mineral.</p>
+			                                    </div>
+			                                    <div class="post-metas text-right">
+			                                        <span class="post-author">Paul Walker</span>
+			                                        <span class="post-date">Apr 27, 2015</span>
+			                                        <span class="post-cat">Image </span>
+			                                    </div>
+			                                    <div class="post-hover meta-icons">
+			                                        <a href="#" class="post-share"><i class="ion-android-share-alt"></i></a>
+			                                        <a href="#" class="post-view"><i class="ion-ios-chatbubble-outline"></i></a>
+			                                        <a href="#" class="post-comments"><i class="ion-ios-eye-outline"></i></a>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="col-xs-12 col-md-6 wow fadeInRight">
+			                            <div class="row inner-grid">
+			                                <div class="col-xs-12 col-sm-6">
+			                                    <div class="post-thumb">
+			                                        <a href="#">
+			                                            <img src="/v9_e_vertex_theme/static/src/images/blog/news2.jpg" alt=""/>
+			                                        </a>
+			                                    </div>
+			                                </div>
+			                                <div class="col-xs-12 col-sm-6 post-entry">
+			                                    <h4><a href="#">Standard Post</a></h4>
+			                                    <div class="post-hover">
+			                                        <p>This is the place to come to escape day to day life, sit back, have a cuppa or refreshing mineral.</p>
+			                                    </div>
+			                                    <div class="post-metas text-right">
+			                                        <span class="post-author">Paul Walker</span>
+			                                        <span class="post-date">Apr 27, 2015</span>
+			                                        <span class="post-cat">Image </span>
+			                                    </div>
+			                                    <div class="post-hover meta-icons">
+			                                        <a href="#" class="post-share"><i class="ion-android-share-alt"></i></a>
+			                                        <a href="#" class="post-view"><i class="ion-ios-chatbubble-outline"></i></a>
+			                                        <a href="#" class="post-comments"><i class="ion-ios-eye-outline"></i></a>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="col-xs-12 col-md-6 wow fadeInLeft">
+			                            <div class="row inner-grid img-right">
+			                                <div class="col-xs-12 col-sm-6">
+			                                    <div class="post-thumb">
+			                                        <a href="#">
+			                                            <img src="/v9_e_vertex_theme/static/src/images/blog/news3.jpg" alt=""/>
+			                                        </a>
+			                                    </div>
+			                                </div>
+			                                <div class="col-xs-12 col-sm-6 post-entry">
+			                                    <h4><a href="#">Standard Post</a></h4>
+			                                    <div class="post-hover">
+			                                        <p>This is the place to come to escape day to day life, sit back, have a cuppa or refreshing mineral.</p>
+			                                    </div>
+			                                    <div class="post-metas text-right">
+			                                        <span class="post-author">Paul Walker</span>
+			                                        <span class="post-date">Apr 27, 2015</span>
+			                                        <span class="post-cat">Image </span>
+			                                    </div>
+			                                    <div class="post-hover meta-icons">
+			                                        <a href="#" class="post-share"><i class="ion-android-share-alt"></i></a>
+			                                        <a href="#" class="post-view"><i class="ion-ios-chatbubble-outline"></i></a>
+			                                        <a href="#" class="post-comments"><i class="ion-ios-eye-outline"></i></a>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="col-xs-12 col-md-6 wow fadeInRight">
+			                            <div class="row inner-grid img-right">
+			                                <div class="col-xs-12 col-sm-6">
+			                                    <div class="post-thumb">
+			                                        <a href="#">
+			                                            <img src="/v9_e_vertex_theme/static/src/images/blog/news4.jpg" alt=""/>
+			                                        </a>
+			                                    </div>
+			                                </div>
+			                                <div class="col-xs-12 col-sm-6 post-entry">
+			                                    <h4><a href="#">Standard Post</a></h4>
+			                                    <div class="post-hover">
+			                                        <p>This is the place to come to escape day to day life, sit back, have a cuppa or refreshing mineral.</p>
+			                                    </div>
+			                                    <div class="post-metas text-right">
+			                                        <span class="post-author">Paul Walker</span>
+			                                        <span class="post-date">Apr 27, 2015</span>
+			                                        <span class="post-cat">Image </span>
+			                                    </div>
+			                                    <div class="post-hover meta-icons">
+			                                        <a href="#" class="post-share"><i class="ion-android-share-alt"></i></a>
+			                                        <a href="#" class="post-view"><i class="ion-ios-chatbubble-outline"></i></a>
+			                                        <a href="#" class="post-comments"><i class="ion-ios-eye-outline"></i></a>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="col-xs-12 col-md-12">
+			                            <div class="all-post">
+			                                <a href="blog.html" class="btn btn-main btn-shadow shutter-both">All Posts</a>
+			                            </div>
+			                        </div>
+			                    </div>     
+			                </div>      
+			            </section>
+														 <section class="section call-to-action">
+			                <div class="container">
+			                    <div class="cta">
+			                        <h2>So you're convinced that Ultra Digital agency is the best?</h2>
+			                        <div class="btn-set">
+			                            <a href="#" class="btn btn-main btn-shadow">Learn More</a>
+			                        </div>
+			                    </div>
+			                </div>
+			            </section>
+															<section id="contact" class="section">
+			                <div class="container">
+			                    <div class="row grid-blog">
+			                        <div class="col-sm-12 col-md-12">
+			                            <div class="sec-head text-left wow fadeInDown">
+			                                <h2>Get in Touch</h2>
+			                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta eligendi officiis<br class="hidden-xs"/> rerum voluptas impedit  ducimus nesciunt,  nam beatae mollitia, <br class="hidden-xs"/>sint culpa deserunt voluptate enim. Reiciendis nulla </p>
+			                            </div>
+			                        </div>
+			                        <div class="col-sm-4 col-md-4 wow fadeInLeft">
+			                            <div class="contact-block">
+			                                <h4 class="title-style">Our Address</h4>
+			                                <div class="media">
+			                                    <div class="media-left">
+			                                        <i class="ion ion-map"></i>
+			                                    </div>
+			                                    <div class="media-body">
+			                                        <p>1881 Sycamore Lake Road Fall River, WI 53932 </p>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                            <div class="contact-block">
+			                                <h4 class="title-style">Call us</h4>
+			                                <div class="media">
+			                                    <div class="media-left">
+			                                        <i class="ion-ios-telephone-outline"></i>
+			                                    </div>
+			                                    <div class="media-body">
+			                                        <p>+91 43 0576 3284 <br/> +82 03982 737737</p>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                            <div class="contact-block">
+			                                <h4 class="title-style">Mail Us</h4>
+			                                <div class="media">
+			                                    <div class="media-left">
+			                                        <i class="ion-ios-email-outline"></i>
+			                                    </div>
+			                                    <div class="media-body">
+			                                        <p><a class="__cf_email__" href="http://prothemes.co/cdn-cgi/l/email-protection" data-cfemail="c9babcb9b9a6bbbd89b9a0acbda1aca4ace7aaa6a4">[email&#160;protected]</a></p>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="col-sm-8 col-md-8 wow fadeInRight">
+			                            <form action="#" class="contact-form">
+			                                <div class="row">
+			                                    <div class="col-sm-6 input-wrap">
+			                                        <input type="text" name="name" placeholder="Name" class="form-control input-field"/>
+			                                    </div>
+			                                    <div class="col-sm-6 input-wrap">
+			                                        <input type="email" name="email" placeholder="Email" class="form-control input-field"/>
+			                                    </div>
+			                                    <div class="col-sm-12 input-wrap">
+			                                        <input type="text" name="subject" placeholder="Subject" class="form-control input-field"/>
+			                                    </div>
+			                                    <div class="col-sm-12 input-wrap">
+			                                        <textarea name="message" placeholder="Message" class="form-control input-field"></textarea>
+			                                    </div>
+			                                    <div class="col-sm-12 text-right">
+			                                        <button type="submit" class="btn btn-main btn-shadow shutter-both">Send Message</button>
+			                                    </div>
+			                                    <div class="col-sm-12">
+			                                        <div class="success">Your message was sent successfully.</div>
+			                                        <div class="error">Something is wrong, please try again.</div>
+			                                    </div>
+			                                </div>
+			                            </form>
+			                        </div>
+			                    </div>     
+			                </div>      
+			            </section>
+						<footer id="colophon" class="section site-footer wow fadeInUp" role="contentinfo">
+							<div class="container">
+								<div class="footer-logo">
+									<a href="#">
+										<img src="/v9_e_vertex_theme/static/src/images/icons/logo.png" alt=""/>
+									</a>
+								</div>
+								<div class="footer-social">
+									<ul class="inline text-center">
+										<li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+										<li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+										<li class="gplus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+										<li class="youtube"><a href="#"><i class="fa fa-youtube"></i></a></li>
+										<li class="pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+										<li class="instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
+									</ul>
+								</div>
+								<div class="copyright text-center">
+									<p>Copyright &amp;copy; 2015 Pietheme - All Rights Reserved.</p>
+								</div>
+							</div>
+						</footer>
+															<a href="javascript:;" id="back-top">
+			                <i class="fa fa-angle-up"></i>
+			            </a>
+
+					</div>
+				</body>
+             </xpath>
+        </template>    
+    </data>
+</openerp>

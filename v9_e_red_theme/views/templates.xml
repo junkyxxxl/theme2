@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!--  css and js filed added	-->
+        <template id="clean_script_footer" inherit_id="website.layout" name="Clean scripts">
+            <xpath expr="//footer[last()]" position="after">
+				<script type="text/javascript"  src="/v9_e_red_theme/static/src/js/"></script>
+		        <link rel="stylesheet" href="/v9_e_red_theme/static/src/vendor/ytplayer/css/jquery.mb.YTPlayer.min.css"/> 
+		        <link rel="stylesheet" href="/v9_e_red_theme/static/src/vendor/magnific-popup/css/magnific-popup.css"/> 
+		        <link rel="stylesheet" href="/v9_e_red_theme/static/src/vendor/owl-carousel/css/owl.carousel.css"/> 
+		        <link rel="stylesheet" href="/v9_e_red_theme/static/src/vendor/owl-carousel/css/owl.carousel.plugins.css"/> 
+		        <link rel="stylesheet" href="/v9_e_red_theme/static/src/vendor/owl-carousel/css/owl.theme.default.css"/> 
+		        <link rel="stylesheet" href="/v9_e_red_theme/static/src/css/menu.css"/>
+		        <link rel="stylesheet" href="/v9_e_red_theme/static/src/css/helper.css"/>
+		        <link rel="stylesheet" href="/v9_e_red_theme/static/src/css/theme.css"/>
+		        <link rel="stylesheet" href="/v9_e_red_theme/static/src/css/custom.css"/>
+					
+		        <script src="/v9_e_red_theme/static/src/vendor/jquery.easing.min.js"></script> 
+		        <script src="/v9_e_red_theme/static/src/vendor/jquery.stellar.min.js"></script> 
+		        <script src="/v9_e_red_theme/static/src/vendor/smoothscroll.js"></script> 
+		        <script src="/v9_e_red_theme/static/src/vendor/jquery.counterup.min.js"></script> 
+		        <script src="/v9_e_red_theme/static/src/vendor/waypoints.min.js"></script> 
+		        <script src="/v9_e_red_theme/static/src/vendor/ytplayer/js/jquery.mb.YTPlayer.min.js"></script> 
+		        <script src="/v9_e_red_theme/static/src/vendor/magnific-popup/js/jquery.magnific-popup.min.js"></script> 
+		        <script src="/v9_e_red_theme/static/src/vendor/masonry.pkgd.min.js"></script> 
+		        <script src="/v9_e_red_theme/static/src/vendor/imagesloaded.pkgd.min.js"></script> 
+		        <script src="/v9_e_red_theme/static/src/vendor/owl-carousel/js/owl.carousel.js"></script> 
+		        <script src="/v9_e_red_theme/static/src/vendor/owl-carousel/js/owl.carousel.plugins.js"></script>
+		        <script src="/v9_e_red_theme/static/src/js/theme.js"></script>
+		        <script src="/v9_e_red_theme/static/src/js/custom.js"></script>
+
+            </xpath>
+        </template>
+        <!--  footer added	-->
+        <template id="theme_lauout_footer_copyright" inherit_id="website.layout_footer_copyright" name="footer">
+            <xpath expr="//*[@id='footer']" position="replace">
+            </xpath>
+        </template>
+        <!--  user navigation	-->
+        <template id="header_top_main_menu_navbar" name="Header top hide" inherit_id="website.user_navbar">
+            <xpath expr="//nav[@id='oe_main_menu_navbar']" position="replace">
+            </xpath>
+        </template>
+        <!--  404	-->
+        <template id="404">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <div class="oe_structure oe_empty">
+                        <div class="container">
+                            <h1 class="mt32">Page not found!</h1>
+                            <p>Sorry, this Page is not available anymore.</p>
+                            <p><a t-attf-href="/about">Return to the About Us Page.</a></p>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+        <!--	header navigation odoo remove-->
+        <template id="homepage_top_header" inherit_id="website.layout">
+            <xpath expr="//div[@id='wrapwrap']/header/div" position="before"> 
+            </xpath>
+            <xpath expr="//header//div[@class='navbar navbar-default navbar-static-top']" position="attributes">
+                <attribute name='style'>display:none</attribute>
+            </xpath>
+        </template>
+        <template id="custom_layout_website" inherit_id="website.homepage">
+            <xpath expr="//div[@id='wrap']" position="replace">
+                <body> 
+					<div id="preloader"><div class="pulse"></div></div>
+					<div class="border-top"></div>
+			        <div class="border-bottom"></div>
+			        <div class="border-left"></div>
+			        <div class="border-right"></div>
+			        <header class="is-fixed">
+		            	<a id="cd-logo" href="#"><img src="/v9_e_red_theme/static/src/images/logo.png" alt="image"/></a>
+	            		<nav id="cd-top-nav">
+		            	</nav>
+		            	<a id="cd-menu-trigger" href="#0"><span class="cd-menu-icon"></span></a>
+        			</header>
+        			<nav id="cd-lateral-nav">
+			            <div class="nav-inner">
+			                <div class="menu-header">Menu</div>
+			                <ul class="cd-navigation cd-single-item-wrapper">
+			                    <li><a href="#" class="page-scroll">Home</a></li>
+			                    <li><a href="#section-1" class="page-scroll">Welcome</a></li>
+			                    <li><a href="#section-2" class="page-scroll">Who We Are</a></li>
+			                    <li><a href="#section-3" class="page-scroll">What We Do</a></li>
+			                    <li><a href="#section-5" class="page-scroll">Video Demo</a></li>
+			                    <li><a href="#section-6" class="page-scroll">Portfolio</a></li>
+			                    <li><a href="#section-8" class="page-scroll">FAQ</a></li>
+			                    <li><a href="#section-9" class="page-scroll">Blog</a></li>
+			                    <li><a href="#section-11" class="page-scroll">Contact</a></li>
+			                    <li class="menu-separator"></li>
+			                </ul>
+			                <div class="menu-separator"></div>
+			                <ul class="cd-navigation">
+			                    <li class="item-has-children">
+			                        <a href="#0">Sub Menu</a>
+			                        <ul class="sub-menu">
+			                            <li><a href="#">Sub Link 1</a></li>
+			                            <li><a href="#">Sub Link 2</a></li>
+			                            <li><a href="#">Sub Link 3</a></li>
+			                        </ul>
+			                    </li>
+			                    <li class="item-has-children">
+			                        <a href="#0">Another Sub Menu</a>
+			                        <ul class="sub-menu">
+			                            <li><a href="#">Sub Link 1</a></li>
+			                            <li><a href="#">Sub Link 2</a></li>
+			                        </ul>
+			                    </li>
+			                    <li class="item-has-children">
+			                        <a href="#0">Third Sub Menu</a>
+			                        <ul class="sub-menu">
+			                            <li><a href="#">Sub Link 1</a></li>
+			                            <li><a href="#">Sub Link 2</a></li>
+			                            <li><a href="#">Sub Link 3</a></li>
+			                        </ul>
+			                    </li>
+			                </ul>
+			                <div class="social-icons">
+			                    <a href="https://www.facebook.com/themetorium" target="_blank"><i class="fa fa-facebook-square"></i></a>
+			                    <a href="https://twitter.com/Themetorium" target="_blank"><i class="fa fa-twitter-square"></i></a>
+			                    <a href="https://plus.google.com/u/0/113335961768782000316/posts" target="_blank"><i class="fa fa-google-plus-square"></i></a>
+			                    <a href="https://www.linkedin.com/in/themetorium" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+			                </div>
+			            </div>
+			        </nav>
+			        <div id="body-content">
+        			    <section id="section-intro" class="intro-slider no-padding"> 
+								<div class="owl-carousel intro-carousel" data-items="1" data-loop="true" data-autoplay="true" data-autoplay-timeout="8000" data-autoplay-hover-pause="true" data-autoplay-speed="600" data-dots="true" data-dots-speed="600" data-nav="true" data-nav-speed="600" data-animate-in="fadeIn" data-animate-out="fadeOut">
+			                    <div class="slide-wrapper intro-slide-1 full-height bg-image">
+			                        <div class="cover"></div>
+			                        <div class="slide-image full-cover bg-image" style="background-image: url(/v9_e_red_theme/static/src/images/intro/slider/intro-slide-bg-2.jpg);"></div>
+			                        <div class="intro-caption text-white">
+			                            <h1><span class="bg-main text-white">ex't</span> cepteur<br/>
+			                                sint occaecat<br/>
+			                                cupid proident
+			                            </h1>
+			                            <p>ute enim ad venim</p>
+			                        </div>
+			                    </div>
+			                    <div class="slide-wrapper intro-slide-2 full-height bg-image">
+			                        <div class="cover"></div>
+			                        <div class="slide-image full-cover bg-image" style="background-image: url(/v9_e_red_theme/static/src/images/intro/slider/intro-slide-bg-3.jpg);"></div>
+			                        <div class="intro-caption text-white">
+			                            <h1><span class="bg-main text-white">maur</span> is augue <br/> 
+			                                fattrie tellus<br/>
+			                                integer
+			                            </h1>
+			                            <p>cras vel nibh</p>
+			                        </div>
+			                    </div>
+			                    <div class="slide-wrapper intro-slide-3 full-height bg-image">
+			                        <div class="cover"></div>
+			                        <div class="slide-image full-cover bg-image" style="background-image: url(/v9_e_red_theme/static/src/images/intro/slider/intro-slide-bg-1.jpg);"></div>
+			                        <div class="intro-caption text-white">
+			                            <h1><span class="bg-main text-white">etiam</span> purus felis<br/>
+			                                curabitur rute<br/>
+			                                imperdiet
+			                            </h1>
+			                            <p>tempus odio fusce</p>
+			                        </div>
+			                    </div>
+			                </div>
+			                <div class="made-with-love hidden-xs">
+			                    <p class="text-white">made with <span class="text-red"><i class="fa fa-heart-o"></i></span></p>
+			                </div>
+			                <a class="scroll-down-arrow page-scroll text-center" href="#section-1"><span class="text-white"><i class="fa fa-arrow-down"></i></span></a>
+			            </section>
+			            
+						<section id="section-1" class="welcome bg-dark text-white">
+			                <div class="container">
+			                    <div class="row">
+			                        <div class="col-left col-md-6">
+			                            <div class="col-inner">
+			                                <div class="heading heading-xlg">
+			                                    <h1><span class="bg-white text-dark">Wel</span><span class="bg-white text-dark">come</span></h1>
+			                                </div>
+			                                <p class="lead">inspiring / cool / stylish / simple / creative</p>
+			                            </div> 
+			                        </div> 
+			                        <div class="col-right col-md-6">
+			                            <div class="col-inner">
+			                                <p class="lead">
+			                                    In ut mi dapibus, aliquet justo et, lobortis neque. Duis lobortis urna vel velit mattis, 
+			                                    nec aliquam mauris convallis. Quisque molestie ipsum sit amet mauris bibendum, vel vehicula 
+			                                    diam vehicula. Fusce dui augue, feugiat ultrices urna vitae, gravida tempor. <a href="https://shapebootstrap.net/item/1525141-red-one-page-html5-template" target="_blank">Buy This Template Now!</a>
+			                                </p>
+			                            </div>
+			                        </div> 
+			                    </div> 
+			                </div> 
+			            </section>
+			            
+						<section id="section-2" class="team split-box no-padding">
+			                <div class="container-fluid">
+			                    <div class="row">
+			                        <div class="row-same-height"> 
+			                            <div class="col-left col-lg-6 col-lg-height no-padding">
+			                                <img src="/v9_e_red_theme/static/src/images/team.jpg" alt="image"/>
+			                            </div> 
+			                            <div class="col-right col-lg-6 col-lg-height col-middle no-padding">
+			                                <div class="col-inner">
+			                                    <div class="heading heading-xlg">
+			                                        <h1><span class="bg-dark text-white">Who</span><span class="bg-main text-white">We Are</span></h1>
+			                                    </div>
+			                                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			                                    consequat.</p>
+			                                    <br/>
+			                                    <a href="#" class="btn btn-inverse btn-rounded btn-lg">Read More</a>
+			                                </div> 
+			                            </div> 
+			                        </div>
+			                    </div> 
+			                </div> 
+			            </section>
+			            
+						<section id="section-3" class="work split-box bg-image" style="background-image: url(/v9_e_red_theme/static/src/images/work-bg.jpg);">
+			                <div class="cover"></div>
+			                <div class="container-fluid text-white">
+			                    <div class="row">
+			                        <div class="row-same-height"> 
+			                            <div class="col-left col-lg-6 col-lg-height col-middle no-padding">
+			                                <div class="col-inner">
+			                                    <div class="heading heading-xlg">
+			                                        <h1><span class="bg-white text-dark">What</span><span class="bg-main text-white">We Do</span></h1>
+			                                    </div>
+			                                    <p class="lead">Cras elementum, lacus nec egestas ultrices, felis purus lacinia ante, 
+			                                    sollicitudin viverra ex eros ac elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+			                                    Ut sagittis elit odio, a ultrices dolor dignissim eu.</p>
+			                                    <br/>
+			                                    <a href="#" class="btn btn-white btn-rounded btn-lg">Read More</a>
+			                                </div> 
+			                            </div> 
+			                            <div class="col-right col-lg-6 col-lg-height">
+			                                <div class="col-inner">
+			                                    <div class="info-box-wrapper">
+			                                        <div class="row">
+			                                            <div class="col col-sm-6 col-lg-6">
+			                                                <div class="info-box">
+			                                                    <span class="info-box-icon"><i class="fa fa-paint-brush"></i></span>
+			                                                    <div class="info-box-heading">
+			                                                        <h3>Designing</h3>
+			                                                        <div class="divider"></div>
+			                                                    </div>
+			                                                    <div class="info-box-info">
+			                                                        <p>Lorem ipsum dolor sit amet set, consectetur adipisicing elit, 
+			                                                        sed do eiusmod tempor incididunt ut labore.</p>
+			                                                    </div>
+			                                                </div>
+			                                            </div>
+			                                            <div class="col col-sm-6 col-lg-6">
+			                                                <div class="info-box">
+			                                                    <span class="info-box-icon"><i class="fa fa-code"></i></span>
+			                                                    <div class="info-box-heading">
+			                                                        <h3>Developing</h3>
+			                                                        <div class="divider"></div>
+			                                                    </div>
+			                                                    <div class="info-box-info">
+			                                                        <p>Lorem ipsum dolor sit amet set, consectetur adipisicing elit, 
+			                                                        sed do eiusmod tempor incididunt ut labore.</p>
+			                                                    </div>
+			                                                </div>
+			                                            </div>
+			                                            <div class="col col-sm-6 col-lg-6">
+			                                                <div class="info-box">
+			                                                    <span class="info-box-icon"><i class="fa fa-users"></i></span>
+			                                                    <div class="info-box-heading">
+			                                                        <h3>Marketing</h3>
+			                                                        <div class="divider"></div>
+			                                                    </div>
+			                                                    <div class="info-box-info">
+			                                                        <p>Lorem ipsum dolor sit amet set, consectetur adipisicing elit, 
+			                                                        sed do eiusmod tempor incididunt ut labore.</p>
+			                                                    </div>
+			                                                </div>
+			                                            </div>
+			                                            <div class="col col-sm-6 col-lg-6">
+			                                                <div class="info-box">
+			                                                    <span class="info-box-icon"><i class="fa fa-line-chart"></i></span>
+			                                                    <div class="info-box-heading">
+			                                                        <h3>Analytics</h3>
+			                                                        <div class="divider"></div>
+			                                                    </div>
+			                                                    <div class="info-box-info">
+			                                                        <p>Lorem ipsum dolor sit amet set, consectetur adipisicing elit, 
+			                                                        sed do eiusmod tempor incididunt ut labore.</p>
+			                                                    </div>
+			                                                </div>
+			                                            </div>
+			                                            <div class="col col-sm-6 col-lg-6">
+			                                                <div class="info-box">
+			                                                    <span class="info-box-icon"><i class="fa fa-globe"></i></span>
+			                                                    <div class="info-box-heading">
+			                                                        <h3>Branding</h3>
+			                                                        <div class="divider"></div>
+			                                                    </div>
+			                                                    <div class="info-box-info">
+			                                                        <p>Lorem ipsum dolor sit amet set, consectetur adipisicing elit, 
+			                                                        sed do eiusmod tempor incididunt ut labore.</p>
+			                                                    </div>
+			                                                </div>
+			                                            </div>
+			                                            <div class="col col-sm-6 col-lg-6">
+			                                                <div class="info-box">
+			                                                    <span class="info-box-icon"><i class="fa fa-life-ring"></i></span>
+			                                                    <div class="info-box-heading">
+			                                                        <h3>Support</h3>
+			                                                        <div class="divider"></div>
+			                                                    </div>
+			                                                    <div class="info-box-info">
+			                                                        <p>Lorem ipsum dolor sit amet set, consectetur adipisicing elit, 
+			                                                        sed do eiusmod tempor incididunt ut labore.</p>
+			                                                    </div>
+			                                                </div>
+			                                            </div>
+			                                        </div> 
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div> 
+			                </div>
+			            </section> 
+				
+						<section id="section-4" class="counter-up">
+			                <div class="container">
+			                    <div class="row">
+			                        <div class="col count-1 col-md-3 col-sm-6">
+			                            <div class="counter-up-inner">
+			                                <div class="counter-icon"><i class="fa fa-users"></i></div>
+			                                <div class="counter">6211</div>
+			                                <div class="divider divider-center"></div>
+			                                <h4>Satisfied Customers</h4>
+			                            </div>
+			                        </div> 
+			                        <div class="col count-2 col-md-3 col-sm-6">
+			                            <div class="counter-up-inner">
+			                                <div class="counter-icon"><i class="fa fa-leaf"></i></div>
+			                                <div class="counter">126</div>
+			                                <div class="divider divider-center"></div>
+			                                <h4>Completed Projects</h4>
+			                            </div>
+			                        </div> 
+			                        <div class="col count-3 col-md-3 col-sm-6">
+			                            <div class="counter-up-inner">
+			                                <div class="counter-icon"><i class="fa fa-trophy"></i></div>
+			                                <div class="counter">18</div>
+			                                <div class="divider divider-center"></div>
+			                                <h4>Winning Awards</h4>
+			                            </div>
+			                        </div> 
+			                        <div class="col count-4 col-md-3 col-sm-6">
+			                            <div class="counter-up-inner">
+			                                <div class="counter-icon"><i class="fa fa-cutlery"></i></div>
+			                                <div class="counter">459</div>
+			                                <div class="divider divider-center"></div>
+			                                <h4>Pizza's Ordered</h4>
+			                            </div>
+			                        </div> 
+			                    </div> 
+			                </div> 
+			            </section>
+			            
+						<section id="section-5" class="video-demonstration split-box no-padding">
+			                <div class="container-fluid">
+			                    <div class="row">
+			                        <div class="row-same-height"> 
+			                            <div class="col-left col-lg-6 col-lg-height no-padding">
+			                                <div class="col-inner no-padding">
+			                                    <div class="embed-responsive embed-responsive-16by9">
+			                                        <iframe data-src="/v9_e_red_theme/static/src/videos/video.mp4" width="500" height="281" allowfullscreen=""></iframe>
+			                                    </div>
+			                                </div> 
+			                            </div> 
+			                            <div class="col-right col-lg-6 col-lg-height col-middle no-padding bg-light-gray">
+			                                <div class="col-inner">
+			                                    <div class="heading heading-xlg">
+			                                        <h1><span class="bg-main text-white">Watch</span> Our Video Demo</h1>
+			                                    </div>
+			                                    <p class="lead">Cras elementum, lacus nec egestas ultrices, felis purus lacinia ante, 
+			                                    sollicitudin viverra ex eros ac elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+			                                    Ut sagittis elit odio, a ultrices dolor dignissim eu.</p>
+			                                </div> 
+			                            </div> 
+			                        </div>
+			                    </div> 
+			                </div> 
+			            </section>
+			            		
+						<section id="section-6" class="portfolio no-padding-bottom">
+			                <div class="container-fluid">
+			                    <div class="row">
+			                        <div class="masonry popup-gallery">
+			                            <div class="box col-md-4 col-sm-6">
+			                                <div class="box-inner portfolio-heading">
+			                                    <a href="#" target="_blank" class="portfolio-link"></a>
+			                                    <div class="cover"></div>
+			                                    <img src="/v9_e_red_theme/static/src/images/portfolio/portfolio-heading-img.jpg" alt="image"/>
+			                                    <div class="heading heading-md align-center">
+			                                        <h1><span class="bg-main text-white">P</span>ortfolio</h1>
+			                                        <p>see the entire portfolio <i class="fa fa-arrow-right"></i></p>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                            <div class="box box-1 col-md-4 col-sm-6">
+			                                <div class="box-inner">
+			                                    <a href="#portfolio-1" class="portfolio-link inline-popup-trigger"></a>
+			                                    <div class="cover"></div>
+			                                    <img class="thumbnail" src="/v9_e_red_theme/static/src/images/portfolio/portfolio-img-1.jpg" alt="image"/>
+			                                    <div class="caption align-center">
+			                                        <img src="/v9_e_red_theme/static/src/images/portfolio/caption-img/1.png" alt="image"/>
+			                                    </div>
+			                                    <h3 class="entry-count"># 01</h3>
+			                                </div>
+			                                <div id="portfolio-1" class="inline-popup mfp-hide">
+			                                    <div class="inline-popup-inner">
+			                                        <div class="row">
+			                                            <div class="col-md-12">
+			                                                <img class="thumbnail margin-bottom-40" src="/v9_e_red_theme/static/src/images/portfolio/portfolio-img-1.jpg" alt="image"/>
+			                                            </div>
+			                                            <div class="col-md-8 margin-bottom-20">
+			                                                <h1 class="no-margin-top">Portfolio Single Item</h1>
+			                                                <p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius quo magni dolorum vero placeat, repellendus nisi ipsam. Alias, qui vitae deserunt modi est nemo quidem error quis natus. Facere?
+			                                                This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.</p>
+			                                            </div>
+			                                            <div class="col-md-4 margin-bottom-20 padding-left-40">
+			                                                <ul>
+			                                                    <li>Client: <strong><a href="https://shapebootstrap.net/profile/Themetorium/items" target="_blank">MockCo INC</a></strong></li>
+			                                                    <li>Date: <strong><a href="https://shapebootstrap.net/profile/Themetorium/items" target="_blank">18 may, 2015</a></strong></li>
+			                                                    <li>Service: <strong><a href="https://shapebootstrap.net/profile/Themetorium/items" target="_blank">Photography</a></strong></li>
+			                                                    <li>Copyright ©2014, All Rights Reserved</li>
+			                                                </ul>
+			                                                <a href="#" target="_blank" class="btn btn-danger btn-rounded btn-lg margin-top-40">Launch Project</a>
+			                                            </div>
+			                                        </div>
+			                                    </div>
+			                                    <a class="inline-popup-close" href="#"><i class="fa fa-times"></i></a>
+			                                </div>
+			                            </div>
+			                            <div class="box box-2 col-md-4 col-sm-6">
+			                                <div class="box-inner">
+			                                    <a href="#portfolio-2" class="portfolio-link inline-popup-trigger"></a>
+			                                    <div class="cover"></div>
+			                                    <img class="thumbnail" src="/v9_e_red_theme/static/src/images/portfolio/portfolio-img-2.jpg" alt="image"/>
+			                                    <div class="caption align-center">
+			                                        <img src="/v9_e_red_theme/static/src/images/portfolio/caption-img/2.png" alt="image"/>
+			                                    </div>
+			                                    <h3 class="entry-count"># 02</h3>
+			                                </div>
+			                                <div id="portfolio-2" class="inline-popup mfp-hide">
+			                                    <div class="inline-popup-inner">
+			                                        <div class="row">
+			                                            <div class="col-md-12">
+			                                                <div class="owl-carousel margin-bottom-50" data-items="1" data-loop="true" data-dots="true" data-dots-speed="600" data-nav="true" data-nav-speed="600">
+			                                                    <img class="thumbnail" src="/v9_e_red_theme/static/src/images/portfolio/portfolio-img-2.jpg" alt="image"/>
+			                                                    <img class="thumbnail" src="/v9_e_red_theme/static/src/images/portfolio/portfolio-img-3.jpg" alt="image"/>
+			                                                    <img class="thumbnail" src="/v9_e_red_theme/static/src/images/portfolio/portfolio-img-4.jpg" alt="image"/>
+			                                                </div>
+			                                            </div>
+			                                            <div class="col-md-8 margin-bottom-20">
+			                                                <h1 class="no-margin-top">Portfolio Single Item</h1>
+			                                                <p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius quo magni dolorum vero placeat, repellendus nisi ipsam. Alias, qui vitae deserunt modi est nemo quidem error quis natus. Facere?
+			                                                This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.</p>
+			                                            </div>
+			                                            <div class="col-md-4 margin-bottom-20 padding-left-40">
+			                                                <ul>
+			                                                    <li>Client: <strong><a href="https://shapebootstrap.net/profile/Themetorium/items" target="_blank">MockCo INC</a></strong></li>
+			                                                    <li>Date: <strong><a href="https://shapebootstrap.net/profile/Themetorium/items" target="_blank">18 may, 2015</a></strong></li>
+			                                                    <li>Service: <strong><a href="https://shapebootstrap.net/profile/Themetorium/items" target="_blank">Carousel</a></strong></li>
+			                                                    <li>Copyright ©2014, All Rights Reserved</li>
+			                                                </ul>
+			                                                <a href="#" target="_blank" class="btn btn-danger btn-rounded btn-lg margin-top-40">Launch Project</a>
+			                                            </div>
+			                                        </div>
+			                                    </div>
+			                                    <a class="inline-popup-close" href="#"><i class="fa fa-times"></i></a>
+			                                </div>
+			                            </div>
+			                            <div class="box box-3 col-md-4 col-sm-6">
+			                                <div class="box-inner">
+			                                    <a href="#portfolio-3" class="portfolio-link inline-popup-trigger"></a>
+			                                    <div class="cover"></div>
+			                                    <img class="thumbnail" src="/v9_e_red_theme/static/src/images/portfolio/portfolio-img-3.jpg" alt="image"/>
+			                                    <div class="caption align-center">
+			                                        <img src="/v9_e_red_theme/static/src/images/portfolio/caption-img/3.png" alt="image"/>
+			                                    </div>
+			                                    <h3 class="entry-count"># 03</h3>
+			                                </div>
+			                                <div id="portfolio-3" class="inline-popup mfp-hide">
+			                                    <div class="inline-popup-inner">
+			                                        <div class="row">
+			                                            <div class="col-md-12">
+			                                                <div class="embed-responsive embed-responsive-16by9 margin-bottom-40">
+			                                                    <iframe data-src="/v9_e_red_theme/static/src/videos/video.mp4" width="500" height="281" allowfullscreen=""></iframe>
+			                                                </div>
+			                                            </div>
+			                                            <div class="col-md-8 margin-bottom-20">
+			                                                <h1 class="no-margin-top">Portfolio Single Item</h1>
+			                                                <p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius quo magni dolorum vero placeat, repellendus nisi ipsam. Alias, qui vitae deserunt modi est nemo quidem error quis natus. Facere?
+			                                                This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.</p>
+			                                            </div>
+			                                            <div class="col-md-4 margin-bottom-20 padding-left-40">
+			                                                <ul>
+			                                                    <li>Client: <strong><a href="https://shapebootstrap.net/profile/Themetorium/items" target="_blank">MockCo INC</a></strong></li>
+			                                                    <li>Date: <strong><a href="https://shapebootstrap.net/profile/Themetorium/items" target="_blank">18 may, 2015</a></strong></li>
+			                                                    <li>Service: <strong><a href="https://shapebootstrap.net/profile/Themetorium/items" target="_blank">Video</a></strong></li>
+			                                                    <li>Copyright ©2014, All Rights Reserved</li>
+			                                                </ul>
+			                                                <a href="#" target="_blank" class="btn btn-danger btn-rounded btn-lg margin-top-40">Launch Project</a>
+			                                            </div>
+			                                        </div>
+			                                    </div>
+			                                    <a class="inline-popup-close" href="#"><i class="fa fa-times"></i></a>
+			                                </div>
+			                            </div>
+			                            <div class="box box-4 col-md-4 col-sm-6">
+			                                <div class="box-inner">
+			                                    <a href="#portfolio-4" class="portfolio-link inline-popup-trigger"></a>
+			                                    <div class="cover"></div>
+			                                    <img class="thumbnail" src="/v9_e_red_theme/static/src/images/portfolio/portfolio-img-4.jpg" alt="image"/>
+			                                    <div class="caption align-center">
+			                                        <img src="/v9_e_red_theme/static/src/images/portfolio/caption-img/4.png" alt="image"/>
+			                                    </div>
+			                                    <h3 class="entry-count"># 04</h3>
+			                                </div>
+			                                <div id="portfolio-4" class="inline-popup mfp-hide">
+			                                    <div class="inline-popup-inner">
+			                                        <div class="row">
+			                                            <div class="col-md-12">
+			                                                <img class="thumbnail margin-bottom-40" src="/v9_e_red_theme/static/src/images/portfolio/portfolio-img-4.jpg" alt="image"/>
+			                                            </div>
+			                                            <div class="col-md-8 margin-bottom-20">
+			                                                <h1 class="no-margin-top">Portfolio Single Item</h1>
+			                                                <p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius quo magni dolorum vero placeat, repellendus nisi ipsam. Alias, qui vitae deserunt modi est nemo quidem error quis natus. Facere?
+			                                                This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.</p>
+			                                            </div>
+			                                            <div class="col-md-4 margin-bottom-20 padding-left-40">
+			                                                <ul>
+			                                                    <li>Client: <strong><a href="https://shapebootstrap.net/profile/Themetorium/items" target="_blank">MockCo INC</a></strong></li>
+			                                                    <li>Date: <strong><a href="https://shapebootstrap.net/profile/Themetorium/items" target="_blank">18 may, 2015</a></strong></li>
+			                                                    <li>Service: <strong><a href="https://shapebootstrap.net/profile/Themetorium/items" target="_blank">Photography</a></strong></li>
+			                                                    <li>Copyright ©2014, All Rights Reserved</li>
+			                                                </ul>
+			                                                <a href="#" target="_blank" class="btn btn-danger btn-rounded btn-lg margin-top-40">Launch Project</a>
+			                                            </div>
+			                                        </div>
+			                                    </div>
+			                                    <a class="inline-popup-close" href="#"><i class="fa fa-times"></i></a>
+			                                </div>
+			                            </div>
+			                            <div class="box box-5 col-md-4 col-sm-6">
+			                                <div class="box-inner">
+			                                    <a href="#portfolio-5" class="portfolio-link inline-popup-trigger"></a>
+			                                    <div class="cover"></div>
+			                                    <img class="thumbnail" src="/v9_e_red_theme/static/src/images/portfolio/portfolio-img-5.jpg" alt="image"/>
+			                                    <div class="caption align-center">
+			                                        <img src="/v9_e_red_theme/static/src/images/portfolio/caption-img/5.png" alt="image"/>
+			                                    </div>
+			                                    <h3 class="entry-count"># 05</h3>
+			                                </div>
+			                                <div id="portfolio-5" class="inline-popup mfp-hide">
+			                                    <div class="inline-popup-inner">
+			                                        <div class="row">
+			                                            <div class="col-md-12">
+			                                                <div class="embed-responsive embed-responsive-16by9 margin-bottom-40">
+			                                                    <iframe src="/v9_e_red_theme/static/src/videos/video.mp4" frameborder="0" allowfullscreen=""></iframe>
+			                                                </div>
+			                                            </div>
+			                                            <div class="col-md-8 margin-bottom-20">
+			                                                <h1 class="no-margin-top">Portfolio Single Item</h1>
+			                                                <p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius quo magni dolorum vero placeat, repellendus nisi ipsam. Alias, qui vitae deserunt modi est nemo quidem error quis natus. Facere?
+			                                                This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.</p>
+			                                            </div>
+			                                            <div class="col-md-4 margin-bottom-20 padding-left-40">
+			                                                <ul>
+			                                                    <li>Client: <strong><a href="https://shapebootstrap.net/profile/Themetorium/items" target="_blank">MockCo INC</a></strong></li>
+			                                                    <li>Date: <strong><a href="https://shapebootstrap.net/profile/Themetorium/items" target="_blank">18 may, 2015</a></strong></li>
+			                                                    <li>Service: <strong><a href="https://shapebootstrap.net/profile/Themetorium/items" target="_blank">Video</a></strong></li>
+			                                                    <li>Copyright ©2014, All Rights Reserved</li>
+			                                                </ul>
+			                                                <a href="#" target="_blank" class="btn btn-danger btn-rounded btn-lg margin-top-40">Launch Project</a>
+			                                            </div>
+			                                        </div>
+			                                    </div>
+			                                    <a class="inline-popup-close" href="#"><i class="fa fa-times"></i></a>
+			                                </div>
+			                            </div>
+			                            <div class="box box-6 col-md-4 col-sm-6">
+			                                <div class="box-inner">
+			                                    <a href="#portfolio-6" class="portfolio-link inline-popup-trigger"></a>
+			                                    <div class="cover"></div>
+			                                    <img class="thumbnail" src="/v9_e_red_theme/static/src/images/portfolio/portfolio-img-6.jpg" alt="image"/>
+			                                    <div class="caption align-center">
+			                                        <img src="/v9_e_red_theme/static/src/images/portfolio/caption-img/6.png" alt="image"/>
+			                                    </div>
+			                                    <h3 class="entry-count"># 06</h3>
+			                                </div>
+			                                <div id="portfolio-6" class="inline-popup mfp-hide">
+			                                    <div class="inline-popup-inner">
+			                                        <div class="row">
+			                                            <div class="col-md-12">
+			                                                <img class="thumbnail margin-bottom-40" src="/v9_e_red_theme/static/src/images/portfolio/portfolio-img-6.jpg" alt="image"/>
+			                                            </div>
+			                                            <div class="col-md-8 margin-bottom-20">
+			                                                <h1 class="no-margin-top">Portfolio Single Item</h1>
+			                                                <p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius quo magni dolorum vero placeat, repellendus nisi ipsam. Alias, qui vitae deserunt modi est nemo quidem error quis natus. Facere?
+			                                                This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.</p>
+			                                            </div>
+			                                            <div class="col-md-4 margin-bottom-20 padding-left-40">
+			                                                <ul>
+			                                                    <li>Client: <strong><a href="https://shapebootstrap.net/profile/Themetorium/items" target="_blank">MockCo INC</a></strong></li>
+			                                                    <li>Date: <strong><a href="https://shapebootstrap.net/profile/Themetorium/items" target="_blank">18 may, 2015</a></strong></li>
+			                                                    <li>Service: <strong><a href="https://shapebootstrap.net/profile/Themetorium/items" target="_blank">Photography</a></strong></li>
+			                                                    <li>Copyright ©2014, All Rights Reserved</li>
+			                                                </ul>
+			                                                <a href="#" target="_blank" class="btn btn-danger btn-rounded btn-lg margin-top-40">Launch Project</a>
+			                                            </div>
+			                                        </div>
+			                                    </div>
+			                                    <a class="inline-popup-close" href="#"><i class="fa fa-times"></i></a>
+			                                </div>
+			                            </div>
+			                            <div class="box box-7 col-md-4 col-sm-6">
+			                                <div class="box-inner">
+			                                    <a href="#portfolio-7" class="portfolio-link inline-popup-trigger"></a>
+			                                    <div class="cover"></div>
+			                                    <img class="thumbnail" src="/v9_e_red_theme/static/src/images/portfolio/portfolio-img-7.jpg" alt="image"/>
+			                                    <div class="caption align-center">
+			                                        <img src="/v9_e_red_theme/static/src/images/portfolio/caption-img/7.png" alt="image"/>
+			                                    </div>
+			                                    <h3 class="entry-count"># 07</h3>
+			                                </div>
+			                                <div id="portfolio-7" class="inline-popup mfp-hide">
+			                                    <div class="inline-popup-inner">
+			                                        <div class="row">
+			                                            <div class="col-md-12">
+			                                                <img class="thumbnail margin-bottom-40" src="/v9_e_red_theme/static/src/images/portfolio/portfolio-img-7.jpg" alt="image"/>
+			                                            </div>
+			                                            <div class="col-md-8 margin-bottom-20">
+			                                                <h1 class="no-margin-top">Portfolio Single Item</h1>
+			                                                <p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius quo magni dolorum vero placeat, repellendus nisi ipsam. Alias, qui vitae deserunt modi est nemo quidem error quis natus. Facere?
+			                                                This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.</p>
+			                                            </div>
+			                                            <div class="col-md-4 margin-bottom-20 padding-left-40">
+			                                                <ul>
+			                                                    <li>Client: <strong><a href="https://shapebootstrap.net/profile/Themetorium/items" target="_blank">MockCo INC</a></strong></li>
+			                                                    <li>Date: <strong><a href="https://shapebootstrap.net/profile/Themetorium/items" target="_blank">18 may, 2015</a></strong></li>
+			                                                    <li>Service: <strong><a href="https://shapebootstrap.net/profile/Themetorium/items" target="_blank">Photography</a></strong></li>
+			                                                    <li>Copyright ©2014, All Rights Reserved</li>
+			                                                </ul>
+			                                                <a href="#" target="_blank" class="btn btn-danger btn-rounded btn-lg margin-top-40">Launch Project</a>
+			                                            </div>
+			                                        </div>
+			                                    </div>
+			                                    <a class="inline-popup-close" href="#"><i class="fa fa-times"></i></a>
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div> 
+			                </div> 
+			            </section>
+			            	
+						<section id="section-7" class="testimonial bg-dark text-white">
+			                <div class="container">
+			                    <div class="owl-carousel testimonial-carousel text-center" data-items="1" data-loop="true" data-autoplay="true" data-autoplay-timeout="8000" data-autoplay-hover-pause="true" data-autoplay-speed="600" data-dots="true" data-dots-speed="600">
+			                        <blockquote>
+			                            <p>"I never did anything by accident, nor did any of my inventions come by accident; they came by work."</p>
+			                            <footer><cite title="Source Title">Thomas A. Edison</cite></footer>
+			                        </blockquote>
+			                        <blockquote>
+			                            <p>"Technology is just a tool. In terms of getting the kids working together and motivating them, the teacher is the most important."</p>
+			                            <footer><cite title="Source Title">Bill Gates</cite></footer>
+			                        </blockquote>
+			                        <blockquote>
+			                            <p>"If you want others to be happy, practice compassion. If you want to be happy, practice compassion."</p>
+			                            <footer><cite title="Source Title">Dalai Lama</cite></footer>
+			                        </blockquote>
+			                        <blockquote>
+			                            <p>"Some painters transform the sun into a yellow spot, others transform a yellow spot into the sun."</p>
+			                            <footer><cite title="Source Title">Pablo Picasso</cite></footer>
+			                        </blockquote>
+			                    </div>
+			                </div> 
+			            </section>
+			            
+						<section id="section-8" class="faq">
+			                <div class="container">
+			                    <div class="row">
+			                        <div class="col col-lg-12">
+			                            <div class="col-inner">
+			                                <div class="heading heading-xlg heading-center">
+			                                    <h1>FAQ</h1>
+			                                </div>
+			                                <p class="lead text-center">Egestas ultrices, felis purus lacinia ante, 
+			                                sollicitudin viverra ex eros ac elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+			                                Ut sagittis elit odio, a ultrices dolor dignissim. Duis aute irure dolor in reprehenderit.</p>
+			                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			                                    <div class="panel panel-default">
+			                                        <div class="panel-heading" role="tab" id="heading-1">
+			                                            <h4 class="panel-title">
+			                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+			                                                    <span class="vertical-align-center">#1</span> Excepteur sint occaecat cupidatat non proident?
+			                                                </a>
+			                                            </h4>
+			                                        </div>
+			                                        <div id="collapse-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-1">
+			                                            <div class="panel-body">
+			                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			                                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			                                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			                                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			                                            </div>
+			                                        </div>
+			                                    </div>
+			                                    <div class="panel panel-default">
+			                                        <div class="panel-heading" role="tab" id="heading-2">
+			                                            <h4 class="panel-title">
+			                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+			                                                    <span class="vertical-align-center">#2</span> Duis aute irure dolor in reprehenderit?
+			                                                </a>
+			                                            </h4>
+			                                        </div>
+			                                        <div id="collapse-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-2">
+			                                            <div class="panel-body">
+			                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			                                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			                                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			                                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			
+			                                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+			                                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			                                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			                                            </div>
+			                                        </div>
+			                                    </div>
+			                                    <div class="panel panel-default">
+			                                        <div class="panel-heading" role="tab" id="heading-3">
+			                                            <h4 class="panel-title">
+			                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+			                                                    <span class="vertical-align-center">#3</span> Consectetur adipisicing elit?
+			                                                </a>
+			                                            </h4>
+			                                        </div>
+			                                        <div id="collapse-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-3">
+			                                            <div class="panel-body">
+			                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			                                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			                                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			                                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			                                            </div>
+			                                        </div>
+			                                    </div>
+			                                    <div class="panel panel-default">
+			                                        <div class="panel-heading" role="tab" id="heading-4">
+			                                            <h4 class="panel-title">
+			                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+			                                                    <span class="vertical-align-center">#4</span> Ullamo laboris nisi ut aliquip?
+			                                                </a>
+			                                            </h4>
+			                                        </div>
+			                                        <div id="collapse-4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-4">
+			                                            <div class="panel-body">
+			                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			                                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			                                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			                                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			                                            </div>
+			                                        </div>
+			                                    </div>
+			                                    <div class="panel panel-default">
+			                                        <div class="panel-heading" role="tab" id="heading-5">
+			                                            <h4 class="panel-title">
+			                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
+			                                                    <span class="vertical-align-center">#5</span> Mollit anim id est laborum?
+			                                                </a>
+			                                            </h4>
+			                                        </div>
+			                                        <div id="collapse-5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-5">
+			                                            <div class="panel-body">
+			                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			                                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			                                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			                                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			                                            </div>
+			                                        </div>
+			                                    </div>
+			                                </div>
+			                            </div> 
+			                        </div> 
+			                    </div> 
+			                </div> 
+			            </section>
+			            
+						<section id="section-9" class="blog no-padding">
+			                <div class="container-fluid">
+			                    <div class="row">
+			                        <div class="col-left col-sm-3 no-padding">
+			                            <div class="col-inner blog-heading">
+			                                <a href="#" target="_blank" class="article-link"></a>
+			                                <div class="heading heading-md align-center">
+			                                    <h1><span class="bg-white text-red">B</span>log</h1>
+			                                    <p>read all articles <i class="fa fa-arrow-right"></i></p>
+			                                </div>
+			                            </div> 
+			                        </div> 
+			                        <div class="col-right col-sm-9 no-padding">
+			                            <div class="col-inner owl-carousel article-carousel" data-items="4" data-items-tablet="3" data-items-mobile-landscape="2" data-items-mobile-portrait="1" data-loop="true" data-autoplay="true" data-autoplay-timeout="8000" data-autoplay-hover-pause="true" data-autoplay-speed="600" data-dots="false" data-nav="true" data-nav-speed="600">
+			                                <article class="article article-1 bg-image" style="background-image: url(/v9_e_red_theme/static/src/images/article/article-1.jpg);">
+			                                    <a href="#" target="_blank" class="article-link"></a> <!-- link to your article -->
+			                                    <div class="caption">
+			                                        <h2 class="article-title">Vestibulum dictum metus ipsum</h2>
+			                                        <div class="entry-meta">
+			                                            <span class="published">Yesterday</span>
+			                                            <span class="posted-by">- By <a href="#" title="View all posts by Admin">Admin</a></span>
+			                                            <span class="posted-in">- in <a href="#" title="View all posts in Holiday">Holiday</a></span>
+			                                        </div>
+			                                    </div>
+			                                </article>
+			                                <article class="article article-2 bg-image" style="background-image: url(/v9_e_red_theme/static/src/images/article/article-2.jpg);">
+			                                    <a href="#" target="_blank" class="article-link"></a> <!-- link to your article -->
+			                                    <div class="caption">
+			                                        <h2 class="article-title">At tempor malesuada mentor</h2>
+			                                        <div class="entry-meta">
+			                                            <span class="published">1 day ago</span>
+			                                            <span class="posted-by">- By <a href="#" title="View all posts by Admin">Admin</a></span>
+			                                            <span class="posted-in">- in <a href="#" title="View all posts in Holiday">Holiday</a></span>
+			                                        </div>
+			                                    </div>
+			                                </article>
+			                                <article class="article article-3 bg-image" style="background-image: url(/v9_e_red_theme/static/src/images/article/article-3.jpg);">
+			                                    <a href="#" target="_blank" class="article-link"></a> <!-- link to your article -->
+			                                    <div class="caption">
+			                                        <h2 class="article-title">Morbi non porta felis nutter sent</h2>
+			                                        <div class="entry-meta">
+			                                            <span class="published">3 day ago</span>
+			                                            <span class="posted-by">- By <a href="#" title="View all posts by Admin">Admin</a></span>
+			                                            <span class="posted-in">- in <a href="#" title="View all posts in Holiday">Holiday</a></span>
+			                                        </div>
+			                                    </div>
+			                                </article>
+			                                <article class="article article-4 bg-image" style="background-image: url(/v9_e_red_theme/static/src/images/article/article-4.jpg);">
+			                                    <a href="#" target="_blank" class="article-link"></a> <!-- link to your article -->
+			                                    <div class="caption">
+			                                        <h2 class="article-title">Vivamus vulputate velit in libero pharetra</h2>
+			                                        <div class="entry-meta">
+			                                            <span class="published">6 days ago</span>
+			                                            <span class="posted-by">- By <a href="#" title="View all posts by Admin">Admin</a></span>
+			                                            <span class="posted-in">- in <a href="#" title="View all posts in Holiday">Holiday</a></span>
+			                                        </div>
+			                                    </div>
+			                                </article>
+			                                <article class="article article-5 bg-image" style="background-image: url(/v9_e_red_theme/static/src/images/article/article-5.jpg);">
+			                                    <a href="#" target="_blank" class="article-link"></a> <!-- link to your article -->
+			                                    <div class="caption">
+			                                        <h2 class="article-title">Praesent maximus venenatis ligula molestie</h2>
+			                                        <div class="entry-meta">
+			                                            <span class="published">1 week ago</span>
+			                                            <span class="posted-by">- By <a href="#" title="View all posts by Admin">Admin</a></span>
+			                                            <span class="posted-in">- in <a href="#" title="View all posts in Holiday">Holiday</a></span>
+			                                        </div>
+			                                    </div>
+			                                </article>
+			                            </div> 
+			                        </div> 
+			                    </div> 
+			                </div> 
+			            </section>
+			            	
+						<section id="section-10" class="clients bg-dark text-white">
+			                <div class="container">
+			                    <div class="owl-carousel clients-carousel text-center" data-items="4" data-margin="10" data-items-tablet="3" data-items-mobile-landscape="2" data-items-mobile-portrait="1" data-loop="true" data-autoplay="true" data-autoplay-timeout="7000" data-autoplay-hover-pause="true" data-autoplay-speed="600" data-dots="false">
+			                        <a href="#" target="_blank" class="client-logo" title="Client-1"><img src="/v9_e_red_theme/static/src/images/clients/1.png" alt="image"/></a>
+			                        <a href="#" target="_blank" class="client-logo" title="Client-2"><img src="/v9_e_red_theme/static/src/images/clients/2.png" alt="image"/></a>
+			                        <a href="#" target="_blank" class="client-logo" title="Client-3"><img src="/v9_e_red_theme/static/src/images/clients/3.png" alt="image"/></a>
+			                        <a href="#" target="_blank" class="client-logo" title="Client-4"><img src="/v9_e_red_theme/static/src/images/clients/4.png" alt="image"/></a>
+			                        <a href="#" target="_blank" class="client-logo" title="Client-5"><img src="/v9_e_red_theme/static/src/images/clients/5.png" alt="image"/></a>
+			                        <a href="#" target="_blank" class="client-logo" title="Client-6"><img src="/v9_e_red_theme/static/src/images/clients/6.png" alt="image"/></a>
+			                        <a href="#" target="_blank" class="client-logo" title="Client-7"><img src="/v9_e_red_theme/static/src/images/clients/7.png" alt="image"/></a>
+			                    </div>
+			                </div> 
+			            </section>
+			            
+						<section id="section-11" class="page contact-section bg-dark text-white bg-image" style="background-image: url(/v9_e_red_theme/static/src/images/map-bg.jpg);">
+			                <div class="cover"></div>
+			                <div class="container">
+			                    <div class="row">
+			                        <div class="col-left col-md-6">
+			                            <div class="col-inner">
+			                                <div class="heading heading-xlg">
+			                                    <h1>Contact <span class="bg-main text-white">Us</span></h1>
+			                                </div>
+											<div class="contact-info">
+				                                <p><i class="fa fa-home"></i> 121 King Street, Melbourne Victoria 3000 Australia</p>
+				                                <p><i class="fa fa-phone"></i> phone: +123 456 789 00</p>
+				                                <p><i class="fa fa-envelope"></i> your.email@info.com</p>
+			                                </div>
+			                            </div> 
+			                        </div> 
+			                        <div class="col-right col-md-6">
+			                            <div class="col-inner">
+			                                <div class="social-icons">
+			                                    <a href="https://www.facebook.com/themetorium" target="_blank"><i class="fa fa-facebook"></i></a>
+			                                    <a href="https://twitter.com/Themetorium" target="_blank"><i class="fa fa-twitter"></i></a>
+			                                    <a href="https://plus.google.com/u/0/113335961768782000316/posts" target="_blank"><i class="fa fa-google-plus"></i></a>
+			                                    <a href="https://www.linkedin.com/in/themetorium" target="_blank"><i class="fa fa-linkedin"></i></a>
+			                                </div>
+			                                <a href="mailto:your@email.com" target="_blank" class="btn btn-danger btn-rounded btn-lg">say hello <i class="fa fa-paper-plane-o"></i></a>
+			                            </div> 
+			                        </div> 
+			                    </div> 
+			                </div> 
+			            </section>
+			            
+						<footer id="footer" class="bg-dark text-white">
+			                <div class="container">
+			                    <div class="row">
+			                        <div class="col-md-12">
+			                            <div class="copyright small">
+			                                <a href="#">RED</a>
+			                                <p>Copyright © All Rights Reserved</p>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </footer>
+					</div>
+					<a href="#" class="scrolltotop hidden-xs"><i class="fa fa-arrow-up"></i></a>
+				</body>
+            </xpath>
+        </template>
+    </data>
+</openerp>
